@@ -1,0 +1,20 @@
+name: microbin
+tags:
+    - 实用工具
+title: 一个超级小、功能丰富、可配置、自包含和自托管的粘贴箱 Web 应用程序
+type: 实用工具
+description: 一个超级小、功能丰富、可配置、自包含和自托管的粘贴箱 Web 应用程序
+additionalProperties:
+  key: microbin
+  name: microbin
+  tags:
+    - Tool
+  shortDescZh: 一个超级小、功能丰富、可配置、自包含和自托管的粘贴箱 Web 应用程序
+  shortDescEn: a super tiny, feature rich, configurable, self-contained and self-hosted paste bin web application
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website:  https://hub.docker.com/r/lanqiguoguo/microbin
+  github:  https://hub.docker.com/r/lanqiguoguo/microbin
+  document:  https://hub.docker.com/r/lanqiguoguo/microbin

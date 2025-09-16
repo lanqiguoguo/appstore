@@ -1,0 +1,31 @@
+additionalProperties:
+  formFields:
+    - default: admin
+      envKey: MICROBIN_AUTH_USERNAME
+      labelEn: Username
+      labelZh: 用户名
+      required: true
+      type: text
+    - default: microbin
+      envKey: MICROBIN_AUTH_PASSWORD
+      labelEn: Password
+      labelZh: 密码
+      random: true
+      required: true
+      type: password
+    - default: 5986
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: http://localhost:8080
+      edit: true
+      envKey: MICROBIN_PUBLIC_PATH
+      labelEn: External URL
+      labelZh: 公开的访问地址
+      required: true
+      rule: paramExtUrl
+      type: number

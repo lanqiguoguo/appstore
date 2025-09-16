@@ -1,0 +1,61 @@
+version: '3.5'
+services:
+  microbin:
+    image: lanqiguoguo/microbin
+    container_name: ${CONTAINER_NAME}
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Shanghai
+      # 高亮
+      - MICROBIN_HIGHLIGHTSYNTAX=true
+      # 在 URL 中使用短哈希字符串而不是动物名称来缩短 URL
+      - MICROBIN_HASH_IDS=false
+      # 可编辑
+      - MICROBIN_EDITABLE=true
+      # 私有，永不显示在列表
+      - MICROBIN_PRIVATE=false
+      # 隐藏页脚
+      - MICROBIN_HIDE_FOOTER=true
+      # 帮助
+      - MICROBIN_HELP=false
+      # 页脚文本
+      - MICROBIN_FOOTER_TEXT=microbin
+      # 隐藏页眉
+      - MICROBIN_HIDE_HEADER=false
+      # 隐藏 logo
+      - MICROBIN_HIDE_LOGO=false
+      # 永不过期
+      - MICROBIN_NO_ETERNAL_PASTA=false
+      # 禁用文件上传
+      - MICROBIN_NO_FILE_UPLOAD=false
+      # 不显示列表
+      - MICROBIN_NO_LISTING=false
+      # 标题
+      - MICROBIN_TITLE=microbin
+      # 公开的访问地址
+      - MICROBIN_PUBLIC_PATH=${MICROBIN_PUBLIC_PATH}
+      # 身份验证用户名
+      - MICROBIN_AUTH_USERNAME=${MICROBIN_AUTH_USERNAME}
+      # 身份验证密码
+      - MICROBIN_AUTH_PASSWORD=${MICROBIN_AUTH_PASSWORD}
+      # 阅后即焚
+      - MICROBIN_ENABLE_BURN_AFTER=false
+      # 阅后即焚默认次数
+      - MICROBIN_DEFAULT_BURN_AFTER=0
+      # 二维码
+      - MICROBIN_QR=true
+      # 页面宽度
+      - MICROBIN_WIDE=1080
+      # 是否开启自定义标识
+      - MICROBIN_SLUGS=true
+      # 默认过期时间
+      - MICROBIN_DEFAULT_EXPIRY=never
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8080
+    volumes:
+      - ./data:/app/pasta_data
+    networks:
+      - 1panel-network
+networks:
+    1panel-network:
+        external: true
