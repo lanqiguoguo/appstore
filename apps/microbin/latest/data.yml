@@ -28,4 +28,4 @@ additionalProperties:
       labelZh: 公开的访问地址
       required: true
       rule: paramExtUrl
-      type: number
+      type: text
