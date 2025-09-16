@@ -1,0 +1,14 @@
+services:
+  hubproxy:
+    image: ghcr.io/sky22333/hubproxy
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:5000
+    labels:
+      createdBy: Apps
+    networks:
+      - 1panel-network
+networks:
+  1panel-network:
+    external: true

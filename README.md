@@ -4,3 +4,4 @@
 - 2025年9月17日
   - obsidian_livesync
   - microbin
+  - hubproxy

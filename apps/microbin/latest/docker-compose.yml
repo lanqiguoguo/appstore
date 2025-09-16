@@ -54,8 +54,10 @@ services:
       - ${PANEL_APP_PORT_HTTP}:8080
     volumes:
       - ./data:/app/pasta_data
+    labels:
+      createdBy: Apps
     networks:
       - 1panel-network
 networks:
-    1panel-network:
-        external: true
+  1panel-network:
+    external: true
