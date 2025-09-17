@@ -5,4 +5,5 @@
   - obsidian_livesync
   - microbin
   - hubproxy
-  - Wallos
+  - ~~Wallos~~
+  - 3xui
