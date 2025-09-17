@@ -1,0 +1,22 @@
+name: Wallos
+tags:
+    - 实用工具
+title: Wallos开源个人订阅跟踪器
+description: Wallos开源个人订阅跟踪器
+additionalProperties:
+  key: wallos
+  name: Wallos
+  tags:
+    - Tool
+  shortDescZh: Wallos开源个人订阅跟踪器
+  shortDescEn: Wallos Open-Source Personal Subscription Tracker
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website:  https://github.com/ellite/Wallos
+  github:  https://github.com/ellite/Wallos
+  document:  https://github.com/ellite/Wallos
+  description:
+    en: Wallos Open-Source Personal Subscription Tracker
+    zh: Wallos开源个人订阅跟踪器
