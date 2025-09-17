@@ -8,6 +8,7 @@ additionalProperties:
   name: Obsidian LiveSync
   tags:
     - Tool
+    - Local
   shortDescZh: Obsidian 在线同步插件
   shortDescEn: Obsidian Self-hosted LiveSync
   type: website

@@ -8,6 +8,7 @@ additionalProperties:
   name: Wallos
   tags:
     - Tool
+    - Local
   shortDescZh: Wallos开源个人订阅跟踪器
   shortDescEn: Wallos Open-Source Personal Subscription Tracker
   type: website
