@@ -1,0 +1,24 @@
+additionalProperties:
+  formFields:
+    - default: Asia/Shanghai
+      envKey: TIME_ZONE
+      labelEn: TZ
+      labelZh: 时区
+      label:
+        en: TZ
+        zh: 时区
+      type: text
+    - default: true
+      edit: true
+      envKey: XUI_ENABLE_FAIL2BAN
+      labelEn: enable fail2ban
+      labelZh: 启用fail2ban
+      label:
+        en: enable fail2ban
+        zh: 启用fail2ban
+      type: select
+      values:
+        - label: 启用
+          value: true
+        - label: 禁用
+          value: false
