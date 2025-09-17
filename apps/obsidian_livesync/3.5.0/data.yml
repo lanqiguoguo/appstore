@@ -31,7 +31,7 @@ additionalProperties:
       random: true
       required: true
       type: password
-    - default: 5984
+    - default: 3020
       edit: true
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port

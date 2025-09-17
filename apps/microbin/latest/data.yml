@@ -6,14 +6,14 @@ additionalProperties:
       labelZh: 用户名
       required: true
       type: text
-    - default: microbin
+    - default: admin
       envKey: MICROBIN_AUTH_PASSWORD
       labelEn: Password
       labelZh: 密码
       random: true
       required: true
       type: password
-    - default: 5986
+    - default: 3003
       edit: true
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port

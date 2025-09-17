@@ -1,11 +1,8 @@
 [English](/README.md) | [فارسی](/README.fa_IR.md) | [العربية](/README.ar_EG.md) |  [中文](/README.zh_CN.md) | [Español](/README.es_ES.md) | [Русский](/README.ru_RU.md)
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./media/3x-ui-dark.png">
-    <img alt="3x-ui" src="./media/3x-ui-light.png">
-  </picture>
-</p>
+    # default_port <- 2053
+    # default_username <- admin
+    # default_password <- admin
 
 [![](https://img.shields.io/github/v/release/mhsanaei/3x-ui.svg?style=for-the-badge)](https://github.com/MHSanaei/3x-ui/releases)
 [![](https://img.shields.io/github/actions/workflow/status/mhsanaei/3x-ui/release.yml.svg?style=for-the-badge)](https://github.com/MHSanaei/3x-ui/actions)

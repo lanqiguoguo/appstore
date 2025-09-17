@@ -5,6 +5,8 @@ services:
     restart: always
     ports:
       - ${PANEL_APP_PORT_HTTP}:5000
+    volumes:
+      - ./conf/config.toml:/root/config.toml
     labels:
       createdBy: Apps
     networks:
