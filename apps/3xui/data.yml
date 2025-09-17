@@ -1,11 +1,12 @@
 name: 3xui
 tags:
-    - 实用工具
-title: 3X-UI — 一个基于网页的高级开源控制面板
+  - 实用工具
+  - 本地
+title: 3xui — 一个基于网页的高级开源控制面板
 description: 3X-UI — 一个基于网页的高级开源控制面板，专为管理 Xray-core 服务器而设计。它提供了用户友好的界面，用于配置和监控各种 VPN 和代理协议。
 additionalProperties:
   key: 3xui
-  name: 3X-UI
+  name: 3xui
   tags:
     - Tool
     - Local
