@@ -1,0 +1,17 @@
+additionalProperties:
+  formFields:
+    - default: 6004
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 自定义端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 1MB 10MB 100MB 1GB
+      edit: true
+      envKey: SPEEDTEST_FILE_LIST
+      labelEn: size of static test files, separate with space
+      labelZh: 静态测试文件的大小，用空格分隔
+      required: true
+      type: text

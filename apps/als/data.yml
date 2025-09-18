@@ -1,0 +1,24 @@
+name: ALS
+tags:
+  - 实用工具
+  - 本地
+title: 一个 Looking-glass 服务器
+description: 一个 Looking-glass 服务器
+additionalProperties:
+  key: als
+  name: ALS
+  tags:
+    - Tool
+    - Local
+  shortDescZh: 一个 Looking-glass 服务器
+  shortDescEn: Another Looking-glass Server
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website:  https://github.com/wikihost-opensource/als
+  github:  https://github.com/wikihost-opensource/als
+  document:  https://github.com/wikihost-opensource/als
+  description:
+    en: Another Looking-glass Server
+    zh: 一个 Looking-glass 服务器
