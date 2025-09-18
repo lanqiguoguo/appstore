@@ -1,0 +1,24 @@
+name: komari
+tags:
+  - 实用工具
+  - 本地
+title: Komari 是一款轻量级的自托管服务器监控工具
+description: Komari 是一款轻量级的自托管服务器监控工具
+additionalProperties:
+  key: komari
+  name: komari
+  tags:
+    - Tool
+    - Local
+  shortDescZh: Komari 是一款轻量级的自托管服务器监控工具
+  shortDescEn: Komari is a lightweight, self-hosted server monitoring tool
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website:  https://github.com/komari-monitor/komari
+  github:  https://github.com/komari-monitor/komari
+  document:  https://github.com/komari-monitor/komari
+  description:
+    en: Komari is a lightweight, self-hosted server monitoring tool designed to provide a simple and efficient solution for monitoring server performance.
+    zh: Komari 是一款轻量级的自托管服务器监控工具
