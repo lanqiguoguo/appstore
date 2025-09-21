@@ -1,7 +1,7 @@
 ﻿version: '3.8'
 services:
   komari:
-    image: ghcr.io/komari-monitor/komari:1.0.8-fix1
+    image: ghcr.io/komari-monitor/komari:1.0.8-fix2
     container_name: komari
     ports:
       - ${PANEL_APP_PORT_HTTP}:25774
