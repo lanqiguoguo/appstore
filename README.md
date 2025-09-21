@@ -7,3 +7,6 @@
   - hubproxy
   - ~~Wallos~~
   - 3xui
+- 2025年9月18日
+  - als
+  - komari
