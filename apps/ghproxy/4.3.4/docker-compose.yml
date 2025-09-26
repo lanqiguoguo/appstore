@@ -1,0 +1,15 @@
+services:
+  ghproxy:
+    image: 'wjqserver/ghproxy:4.3.4'
+    container_name: ghproxy
+    restart: always
+    volumes:
+      - './log:/data/ghproxy/log'
+      - './conf:/data/ghproxy/config'
+    ports:
+      - '6008:8080'
+    networks:
+      - 1panel-network
+networks:
+  1panel-network:
+    external: true
