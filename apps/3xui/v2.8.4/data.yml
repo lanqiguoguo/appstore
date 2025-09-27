@@ -1,0 +1,18 @@
+additionalProperties:
+  formFields:
+    - default: Asia/Shanghai
+      envKey: TIME_ZONE
+      labelEn: TZ
+      labelZh: 时区
+      label:
+        en: TZ
+        zh: 时区
+      type: text
+    - default: 6003
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 自定义端口
+      required: true
+      rule: paramPort
+      type: number
