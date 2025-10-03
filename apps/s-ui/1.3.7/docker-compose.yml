@@ -1,0 +1,24 @@
+﻿---
+services:
+  s-ui:
+    image: alireza7/s-ui:1.3.7
+    container_name: s-ui
+    hostname: "s-ui"
+    volumes:
+      - "./db:/app/db"
+      - "./cert:/app/cert"
+    tty: true
+    restart: unless-stopped
+    environment:
+      - TZ=${TIME_ZONE}
+    ports:
+      - "${PANEL_PORT}:2095"
+      - "${PANEL_SUBSCRIPTION_PORT}:2096"
+    entrypoint: "./entrypoint.sh"
+    labels:
+      createdBy: "Apps"
+    networks:
+      - 1panel-network
+networks:
+  1panel-network:
+    external: true
