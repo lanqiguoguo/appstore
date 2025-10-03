@@ -12,8 +12,8 @@ services:
     environment:
       - TZ=${TIME_ZONE}
     ports:
-      - "${PANEL_PORT}:2095"
-      - "${PANEL_SUBSCRIPTION_PORT}:2096"
+      - "${PANEL_APP_PORT_HTTP}:2095"
+      - "${PANEL_APP_PORT_HTTPS}:2096"
     entrypoint: "./entrypoint.sh"
     labels:
       createdBy: "Apps"

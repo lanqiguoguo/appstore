@@ -10,7 +10,7 @@ additionalProperties:
       type: text
     - default: 6010
       edit: true
-      envKey: PANEL_PORT
+      envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
       labelZh: 面板端口
       required: true
@@ -18,7 +18,7 @@ additionalProperties:
       type: number
     - default: 60101
       edit: true
-      envKey: PANEL_SUBSCRIPTION_PORT
+      envKey: PANEL_APP_PORT_HTTPS
       labelEn: Port
       labelZh: 订阅端口
       required: true
