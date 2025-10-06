@@ -1,0 +1,24 @@
+name: x-ui
+tags:
+  - 实用工具
+  - 本地
+title: 高级网页控制面板，基于Xray核心构建
+description: 高级网页控制面板，基于Xray核心构建
+additionalProperties:
+  key: x-ui
+  name: x-ui
+  tags:
+    - Tool
+    - Local
+  shortDescZh: 高级网页控制面板，基于Xray核心构建
+  shortDescEn: An Advanced Web Panel • Built on Xray Core
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website:  https://github.com/alireza0/x-ui
+  github:  https://github.com/alireza0/x-ui
+  document:  https://github.com/alireza0/x-ui
+  description:
+    en: An Advanced Web Panel • Built on Xray Core
+    zh: 高级网页控制面板，基于Xray核心构建

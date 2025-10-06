@@ -1,0 +1,15 @@
+﻿services:
+  xui:
+    image: alireza7/x-ui:1.9.1
+    container_name: x-ui
+    hostname: x-ui
+    volumes:
+      - ./db/:/etc/x-ui/
+      - ./cert/:/root/cert/
+    environment:
+      XRAY_VMESS_AEAD_FORCED: "false"
+    tty: true
+    network_mode: host
+    restart: unless-stopped
+    labels:
+      createdBy: "Apps"
