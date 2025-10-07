@@ -2,6 +2,7 @@
   3xui:
     image: ghcr.io/mhsanaei/3x-ui:v2.8.4
     container_name: ${CONTAINER_NAME}
+    hostname: 3xui
     # hostname: yourhostname <- optional
     # default_port <- 2053
     # default_username <- admin
