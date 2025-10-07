@@ -1,6 +1,7 @@
 additionalProperties:
   formFields:
     - default: 3xui
+      edit: true
       envKey: HOSTNAME
       labelEn: hostname
       labelZh: 主机名
@@ -9,6 +10,7 @@ additionalProperties:
         zh: 主机名
       type: text
     - default: Asia/Shanghai
+      edit: true
       envKey: TIME_ZONE
       labelEn: TZ
       labelZh: 时区
