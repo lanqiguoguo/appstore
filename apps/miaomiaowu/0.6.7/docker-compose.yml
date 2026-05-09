@@ -7,7 +7,7 @@ services:
     restart: unless-stopped
     user: root
     environment:
-      - PORT=${PANEL_APP_PORT_HTTP}
+      - PORT=8080
       - DATABASE_PATH=/app/data/traffic.db
       - LOG_LEVEL=info
     ports:
