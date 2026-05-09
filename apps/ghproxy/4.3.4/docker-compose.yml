@@ -1,7 +1,7 @@
 services:
   ghproxy:
     image: 'wjqserver/ghproxy:4.3.4'
-    container_name: ghproxy
+    container_name: ${CONTAINER_NAME}
     restart: always
     volumes:
       - './log:/data/ghproxy/log'

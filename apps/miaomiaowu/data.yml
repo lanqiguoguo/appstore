@@ -1,0 +1,21 @@
+name: miaomiaowu
+tags:
+    - 实用工具
+title: 一个轻量级、易部署的Clash订阅管理系统，支持 Nezha、DStatus 和 Komari 探针获取流量信息，导入外部机场节点等功能。
+type: 实用工具
+description: 一个轻量级、易部署的Clash订阅管理系统，支持 Nezha、DStatus 和 Komari 探针获取流量信息，导入外部机场节点等功能。
+additionalProperties:
+  key: miaomiaowu
+  name: miaomiaowu
+  tags:
+    - Tool
+    - Local
+  shortDescZh: 一个轻量级、易部署的Clash订阅管理系统，支持 Nezha、DStatus 和 Komari 探针获取流量信息，导入外部机场节点等功能。
+  shortDescEn: A lightweight, easy-to-deploy Clash subscription management system that supports obtaining traffic information from probes such as Nezha, DStatus, and Komari, as well as importing external airport nodes.
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website:  https://github.com/iluobei/miaomiaowu
+  github:  https://github.com/iluobei/miaomiaowu
+  document:  https://github.com/iluobei/miaomiaowu

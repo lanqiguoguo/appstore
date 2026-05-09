@@ -2,7 +2,7 @@
 services:
   komari:
     image: ghcr.io/komari-monitor/komari:1.1.1a
-    container_name: komari
+    container_name: ${CONTAINER_NAME}
     ports:
       - ${PANEL_APP_PORT_HTTP}:25774
     volumes:
