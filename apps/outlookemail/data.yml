@@ -1,0 +1,21 @@
+name: outlookemail
+tags:
+    - 实用工具
+title: 一个面向多邮箱账号场景的邮件管理工具
+type: 实用工具
+description: 一个面向多邮箱账号场景的邮件管理工具
+additionalProperties:
+  key: outlookemail
+  name: outlookemail
+  tags:
+    - Tool
+    - Local
+  shortDescZh: 一个面向多邮箱账号场景的邮件管理工具
+  shortDescEn: An email management tool for multiple email accounts.
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website:  https://github.com/assast/outlookEmail
+  github:  https://github.com/assast/outlookEmail
+  document:  https://github.com/assast/outlookEmail

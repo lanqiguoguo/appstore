@@ -1,0 +1,23 @@
+additionalProperties:
+  formFields:
+    - default: 6008
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: admin
+      envKey: OUTLOOKEMAIL_LOGIN_PASSWORD
+      labelEn: Password
+      labelZh: 登录密码
+      random: true
+      required: true
+      type: password
+    - default: admin
+      envKey: OUTLOOKEMAIL_SECRET_KEY
+      labelEn: Password
+      labelZh: 密钥
+      required: true
+      type: text
