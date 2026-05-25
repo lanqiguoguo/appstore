@@ -8,14 +8,6 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: 60091
-      edit: true
-      envKey: PANEL_BACKEND_PORT
-      labelEn: Backend Port
-      labelZh: API 端口
-      required: true
-      rule: paramPort
-      type: number
     - default: ""
       edit: true
       envKey: PANEL_SESSION_SECRET

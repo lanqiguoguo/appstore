@@ -25,7 +25,7 @@
     restart: unless-stopped
     environment:
       NODE_ENV: production
-      PORT: ${PANEL_BACKEND_PORT}
+      PORT: 3000
       SESSION_SECRET: ${PANEL_SESSION_SECRET}
       APP_URL: ${PANEL_APP_URL}
       FRONTEND_URL: ${PANEL_APP_URL}
@@ -41,7 +41,7 @@
       VAPID_PRIVATE_KEY: ${PANEL_VAPID_PRIVATE_KEY}
       VAPID_SUBJECT: ${PANEL_VAPID_SUBJECT}
     healthcheck:
-      test: ["CMD-SHELL", "wget -qO- http://localhost:${PANEL_BACKEND_PORT}/api/health || exit 1"]
+      test: ["CMD-SHELL", "wget -qO- http://localhost:3000/api/health || exit 1"]
       interval: 15s
       timeout: 5s
       retries: 3
