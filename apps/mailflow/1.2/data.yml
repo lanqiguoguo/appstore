@@ -30,7 +30,7 @@ additionalProperties:
       labelEn: Full URL users see in the browser — used in invite emails and CORS.
       labelZh: 用户在浏览器中看到的完整URL——用于邀请邮件和CORS。
       required: true
-      rule: paramCommon
+      rule: paramExtUrl
       type: text
     - default: ""
       edit: true
