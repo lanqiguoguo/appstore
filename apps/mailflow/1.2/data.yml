@@ -1,0 +1,88 @@
+additionalProperties:
+  formFields:
+    - default: 6009
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 60091
+      edit: true
+      envKey: PANEL_BACKEND_PORT
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      edit: true
+      envKey: PANEL_SESSION_SECRET
+      labelEn: Session Secret(openssl rand -hex 32)
+      labelZh: 会话密钥（生成：openssl rand -hex 32）
+      required: true
+      rule: paramCommon
+      type: text
+    - default: ""
+      edit: true
+      envKey: PANEL_APP_URL
+      labelEn: Full URL users see in the browser — used in invite emails and CORS.
+      labelZh: 用户在浏览器中看到的完整URL——用于邀请邮件和CORS。
+      required: true
+      rule: paramCommon
+      type: text
+    - default: ""
+      edit: true
+      envKey: PANEL_DB_HOST
+      key: postgresql
+      labelEn: Database Service
+      labelZh: 数据库服务
+      required: true
+      type: service
+    - default: mailflow
+      edit: true
+      envKey: PANEL_DB_NAME
+      labelEn: Database Name
+      labelZh: 数据库名
+      required: true
+      rule: paramCommon
+      type: text
+    - default: ""
+      edit: true
+      envKey: PANEL_DB_USER
+      labelEn: Database User Name
+      labelZh: 数据库用户名
+      required: true
+      rule: paramCommon
+      type: text
+    - default: ""
+      edit: true
+      envKey: PANEL_DB_PASSWORD
+      labelEn: Database User Password
+      labelZh: 数据库密码
+      required: true
+      type: password
+    - default: ""
+      edit: true
+      envKey: PANEL_REDIS_HOST
+      key: redis
+      labelEn: Servicio de Redis
+      labelZh: Redis 服務
+      required: true
+      type: service
+    - default: ""
+      edit: true
+      envKey: PANEL_REDIS_ROOT_PASSWORD
+      labelEn: Redis Service Password
+      labelZh: 缓存服务服务密码
+      required: true
+      type: password
+    - default: ""
+      edit: true
+      envKey: ENCRYPTION_KEY
+      labelEn: Used to encrypt stored email credentials (passwords, OAuth tokens) at rest.(openssl rand -hex 32)
+      labelZh: 用于加密静态存储的电子邮件凭据（密码、OAuth令牌）。（openssl rand -hex 32）
+      required: true
+      rule: paramCommon
+      type: text

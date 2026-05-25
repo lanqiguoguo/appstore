@@ -2,7 +2,7 @@ version: '3.8'
 services:
   outlookemail:
     image: ghcr.io/assast/outlookemail:v2.0.53
-    container_name: outlookemail
+    container_name: ${CONTAINER_NAME}
     ports:
       - "${PANEL_APP_PORT_HTTP}:5000"
     volumes:
