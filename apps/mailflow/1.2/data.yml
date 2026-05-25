@@ -80,7 +80,7 @@ additionalProperties:
       type: password
     - default: ""
       edit: true
-      envKey: ENCRYPTION_KEY
+      envKey: PANEL_ENCRYPTION_KEY
       labelEn: Used to encrypt stored email credentials (passwords, OAuth tokens) at rest.(openssl rand -hex 32)
       labelZh: 用于加密静态存储的电子邮件凭据（密码、OAuth令牌）。（openssl rand -hex 32）
       required: true
