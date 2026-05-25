@@ -59,15 +59,15 @@ additionalProperties:
       edit: true
       envKey: PANEL_REDIS_HOST
       key: redis
-      labelEn: Servicio de Redis
-      labelZh: Redis 服務
+      labelEn: Redis Service
+      labelZh: 缓存服务
       required: true
       type: service
     - default: ""
       edit: true
       envKey: PANEL_REDIS_ROOT_PASSWORD
       labelEn: Redis Service Password
-      labelZh: 缓存服务服务密码
+      labelZh: 缓存服务密码
       required: true
       type: password
     - default: ""
@@ -77,4 +77,27 @@ additionalProperties:
       labelZh: 用于加密静态存储的电子邮件凭据（密码、OAuth令牌）。（openssl rand -hex 32）
       required: true
       rule: paramCommon
+      type: text
+    - default: ""
+      edit: true
+      envKey: PANEL_VAPID_PUBLIC_KEY
+      labelEn: Web Push public key. Generate with npx web-push generate-vapid-keys. Required for push notifications.
+      labelZh: Web Push 公钥。使用 npx web-push generate-vapid-keys 生成。推送通知必需。
+      required: false
+      rule: paramCommon
+      type: text
+    - default: ""
+      edit: true
+      envKey: PANEL_VAPID_PRIVATE_KEY
+      labelEn: Web Push private key (keep secret).
+      labelZh: Web Push 私钥（请保密）。
+      required: false
+      rule: paramCommon
+      type: text
+    - default: ""
+      edit: true
+      envKey: PANEL_VAPID_SUBJECT
+      labelEn: Contact for the push service, e.g. mailto:admin@example.com or your APP_URL.
+      labelZh: 推送服务的联系人，例如 mailto:admin@example.com 或您的 APP_URL。
+      required: false
       type: text
