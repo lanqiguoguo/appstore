@@ -3,16 +3,16 @@ additionalProperties:
     - default: 6009
       edit: true
       envKey: PANEL_APP_PORT_HTTP
-      labelEn: Port
-      labelZh: 端口
+      labelEn: APP Port
+      labelZh: 应用端口
       required: true
       rule: paramPort
       type: number
     - default: 60091
       edit: true
       envKey: PANEL_BACKEND_PORT
-      labelEn: Port
-      labelZh: 端口
+      labelEn: Backend Port
+      labelZh: API 端口
       required: true
       rule: paramPort
       type: number
@@ -20,7 +20,7 @@ additionalProperties:
       edit: true
       envKey: PANEL_SESSION_SECRET
       labelEn: Session Secret(openssl rand -hex 32)
-      labelZh: 会话密钥（生成：openssl rand -hex 32）
+      labelZh: 会话密钥（openssl rand -hex 32）
       required: true
       rule: paramCommon
       type: text
