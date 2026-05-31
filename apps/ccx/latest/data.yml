@@ -3,7 +3,7 @@ additionalProperties:
     - default: ""
       envKey: PANEL_PROXY_ACCESS_KEY
       labelEn: Password
-      labelZh: 密码
+      labelZh: 代理访问密钥
       random: true
       required: true
       type: password
