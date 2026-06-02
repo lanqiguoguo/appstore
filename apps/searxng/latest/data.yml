@@ -1,0 +1,32 @@
+﻿additionalProperties:
+  formFields:
+    - default: 6013
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      envKey: PANEL_SEARXNG_BASE_URL
+      labelEn: The base URL
+      labelZh: 部署的基础 URL。用于生成正确的入站链接。
+      required: true
+      rule: paramExtUrl
+      type: text
+    - default: ""
+      envKey: PANEL_SEARXNG_SECRET_KEY
+      labelEn: secret_key
+      labelZh: 密钥
+      random: true
+      required: true
+      type: password
+    - default: 6389
+      edit: true
+      envKey: PANEL_VALKEY_PORT
+      labelEn: Valkey Port
+      labelZh: 缓存服务端口
+      required: true
+      rule: paramPort
+      type: number
