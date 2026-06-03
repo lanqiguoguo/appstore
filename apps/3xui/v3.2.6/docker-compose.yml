@@ -1,6 +1,6 @@
 ﻿services:
   3xui:
-    image: ghcr.io/mhsanaei/3x-ui:v3.0.1
+    image: ghcr.io/mhsanaei/3x-ui:v3.2.6
     container_name: ${CONTAINER_NAME}
     hostname: ${HOSTNAME}
     # hostname: yourhostname <- optional
