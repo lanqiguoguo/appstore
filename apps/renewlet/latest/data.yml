@@ -1,0 +1,132 @@
+﻿additionalProperties:
+  formFields:
+    - default: "6013"
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "Asia/Shanghai"
+      edit: true
+      envKey: PANEL_TZ
+      labelEn: Container time zone
+      labelZh: 容器时区
+      required: false
+#      rule: paramExtUrl
+      type: text
+    - default: ""
+      envKey: PANEL_APP_URL
+      labelEn: Application External URL
+      labelZh: 应用对外 URL，用于通知和密码重置邮件链接。
+      rule: paramExtUrl
+#      random: true
+      required: true
+      type: password
+    - default: ""
+      edit: true
+      envKey: PANEL_PB_ENCRYPTION_KEY
+      labelEn: PB_ENCRYPTION_KEY
+      labelZh: PB 加密密钥 必须正好 32 个字符；不要随意轮换。
+      required: true
+#      rule: paramPort
+      type: text
+    - default: ""
+      edit: true
+      envKey: PANEL_SMTP_HOST
+      labelEn: SMTP_HOST
+      labelZh: 主机名：smtp.example.com,可选：启用 PocketBase 密码重置邮件。
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: PANEL_SMTP_PORT
+      labelEn: SMTP_PORT
+      labelZh: 端口：587
+      required: false
+      type: number
+    - default: ""
+      edit: true
+      envKey: PANEL_SMTP_USER
+      labelEn: SMTP_USER
+      labelZh: 用户名：user@example.com
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: PANEL_SMTP_PASSWORD
+      labelEn: SMTP_PASSWORD
+      labelZh: 密码/应用密码
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: PANEL_SMTP_FROM
+      labelEn: SMTP_FROM
+      labelZh: 发件人：noreply@example.com
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: PANEL_SMTP_TLS
+      labelEn: SMTP_TLS
+      labelZh: 是否启用 tls。true/fasle
+      required: false
+      type: text
+    - default: "0 3 * * *"
+      edit: true
+      envKey: PANEL_BACKUPS_CRON
+      labelEn: BACKUPS_CRON
+      labelZh: 可选：启用 PocketBase 自动备份，例如每天 03:00 执行并保留 7 份。
+      required: false
+      type: text
+    - default: "7"
+      edit: true
+      envKey: PANEL_BACKUPS_CRON_MAX_KEEP
+      labelEn: BACKUPS_CRON_MAX_KEEP
+      labelZh: 可选：启用 PocketBase 自动备份，例如每天 03:00 执行并保留 7 份。
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: PANEL_CRON_SECRET
+      labelEn: CRON_SECRET
+      labelZh: CRON_SECRET 是外部通知 cron 调用使用的 Bearer token。
+      required: false
+      type: text
+    - default: "true"
+      edit: true
+      envKey: PANEL_NOTIFICATION_SCHEDULER_ENABLED
+      labelEn: NOTIFICATION_SCHEDULER_ENABLED
+      labelZh: 内置通知调度器。普通 Docker/VPS 托管应保持启用。true/false
+      required: false
+      type: text
+    - default: "* * * * *"
+      edit: true
+      envKey: PANEL_NOTIFICATION_SCHEDULER_CRON
+      labelEn: NOTIFICATION_SCHEDULER_CRON
+      labelZh: 通知计划程序 CRON
+      required: false
+      type: text
+    - default: "2"
+      edit: true
+      envKey: PANEL_NOTIFICATION_CRON_WINDOW_MINUTES
+      labelEn: NOTIFICATION_CRON_WINDOW_MINUTES
+      labelZh: CRON 运行窗口分钟
+      required: false
+      type: text
+    - default: "3"
+      edit: true
+      envKey: PANEL_NOTIFICATION_MAX_RETRIES
+      labelEn: NOTIFICATION_MAX_RETRIES
+      labelZh: 通知最大重试次数
+      required: false
+      type: text
+    - default: "15"
+      edit: true
+      envKey: PANEL_NOTIFICATION_STALE_SENDING_MINUTES
+      labelEn: NOTIFICATION_STALE_SENDING_MINUTES
+      labelZh: 通知过期发送分钟
+      required: false
+      type: text

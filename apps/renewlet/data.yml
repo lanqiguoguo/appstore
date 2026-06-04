@@ -1,0 +1,21 @@
+﻿name: renewlet
+tags:
+  - 实用工具
+title: Renewlet 是一个会在续费前提醒你的自托管订阅账本。
+type: 实用工具
+description: Renewlet 是一个会在续费前提醒你的自托管订阅账本。
+additionalProperties:
+  key: renewlet
+  name: renewlet
+  tags:
+    - Tool
+    - Local
+  shortDescZh: Renewlet 是一个会在续费前提醒你的自托管订阅账本。
+  shortDescEn: Renewlet is a self-hosted subscription ledger that reminds you before renewals
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website:  https://github.com/zhiyingzzhou/renewlet
+  github:  https://github.com/zhiyingzzhou/renewlet
+  document:  https://github.com/zhiyingzzhou/renewlet
