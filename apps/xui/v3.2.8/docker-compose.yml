@@ -5,7 +5,6 @@
     hostname: ${HOSTNAME}
     # hostname: yourhostname <- optional
     # default_port <- 2053
-    # default_sub_port <- 2096
     # default_username <- admin
     # default_password <- admin
     volumes:
@@ -18,7 +17,6 @@
     tty: true
     ports:
       - "${PANEL_APP_PORT_HTTP}:2053"
-      - "${PANEL_APP_SUB_PORT_HTTP}:2096"
     restart: unless-stopped
     labels:
       createdBy: "Apps"
