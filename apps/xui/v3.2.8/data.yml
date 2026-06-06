@@ -8,6 +8,14 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+    - default: "60151"
+      edit: true
+      envKey: PANEL_APP_SUB_PORT_HTTP
+      labelEn: Sub Port
+      labelZh: 订阅端口
+      required: true
+      rule: paramPort
+      type: number
     - default: "xui"
       edit: true
       envKey: HOSTNAME
