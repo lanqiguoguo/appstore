@@ -1,6 +1,6 @@
 ﻿additionalProperties:
   formFields:
-    - default: "6013"
+    - default: "6014"
       edit: true
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
@@ -28,7 +28,7 @@
       edit: true
       envKey: PANEL_PB_ENCRYPTION_KEY
       labelEn: PB_ENCRYPTION_KEY
-      labelZh: PB 加密密钥 必须正好 32 个字符；不要随意轮换。
+      labelZh: PB 加密密钥 必须正好 32 个字符；不要随意轮换。示例：openssl rand -hex 16
       required: true
 #      rule: paramPort
       type: text

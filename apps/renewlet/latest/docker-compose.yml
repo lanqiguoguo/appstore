@@ -10,6 +10,7 @@
       APP_URL: ${PANEL_APP_URL}
       # 首次安装时由 deploy/docker-deploy.sh 生成。
       # PB_ENCRYPTION_KEY 必须正好 32 个字符；不要随意轮换。
+      # 示例：openssl rand -hex 16
       PB_ENCRYPTION_KEY: ${PANEL_PB_ENCRYPTION_KEY}
       # 可选：启用 PocketBase 密码重置邮件。
       # 主机名：smtp.example.com

@@ -1,0 +1,28 @@
+additionalProperties:
+  formFields:
+    - default: "6015"
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "3xui"
+      edit: true
+      envKey: HOSTNAME
+      labelEn: hostname
+      labelZh: 主机名
+      label:
+        en: hostname
+        zh: 主机名
+      type: text
+    - default: "Asia/Shanghai"
+      edit: true
+      envKey: TIME_ZONE
+      labelEn: TZ
+      labelZh: 时区
+      label:
+        en: TZ
+        zh: 时区
+      type: text
