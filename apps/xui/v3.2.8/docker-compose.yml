@@ -19,48 +19,10 @@
     network_mode: host
     command:
       - |
-        # 启动临时 x-ui 生成数据库
-        /app/x-ui &
-        XUI_PID=$$!
-
-        # 轮询等待数据库生成（最多 10 秒）
-        for i in $$(seq 1 10); do
-          if [ -f /etc/x-ui/x-ui.db ] && /app/x-ui setting -show true > /dev/null 2>&1; then
-            break
-          fi
-          sleep 1
-        done
-
-        # 杀掉临时进程，确保完全退出
-        kill "$$XUI_PID" 2>/dev/null
-        wait "$$XUI_PID" 2>/dev/null
-        sleep 1
-
-        # 确保没有残留 x-ui 进程
-        pkill -9 x-ui 2>/dev/null || true
-        sleep 1
-
-        # 写入设置（数据库已存在，不会被锁）
         /app/x-ui setting -port ${PANEL_APP_PORT_HTTP}
         /app/x-ui setting -webBasePath ${PANEL_WEB_BASE_PATH}
         /app/x-ui setting -username ${PANEL_USERNAME}
         /app/x-ui setting -password ${PANEL_PASSWORD}
-
-        # 打印确认
-        echo "=== Applied settings ==="
-        /app/x-ui setting -show true
-
-        # 正式启动
         exec /app/DockerEntrypoint.sh
-#    command:
-#      - |
-#        if [ ! -f /etc/x-ui/x-ui.db ]; then
-#          /app/x-ui & sleep 5 && kill $!
-#        fi
-#        /app/x-ui setting -port ${PANEL_APP_PORT_HTTP}
-#        /app/x-ui setting -webBasePath ${PANEL_WEB_BASE_PATH}
-#        /app/x-ui setting -username ${PANEL_USERNAME}
-#        /app/x-ui setting -password ${PANEL_PASSWORD}
-#        exec /app/DockerEntrypoint.sh
     labels:
       createdBy: "Apps"
