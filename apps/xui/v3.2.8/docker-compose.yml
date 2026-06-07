@@ -21,10 +21,10 @@
       - |
         # 启动临时 x-ui 生成数据库
         /app/x-ui &
-        XUI_PID=$!
+        XUI_PID=$$!
 
         # 轮询等待数据库生成（最多 10 秒）
-        for i in $(seq 1 10); do
+        for i in $$(seq 1 10); do
           if [ -f /etc/x-ui/x-ui.db ] && /app/x-ui setting -show true > /dev/null 2>&1; then
             break
           fi
@@ -32,8 +32,8 @@
         done
 
         # 杀掉临时进程，确保完全退出
-        kill "$XUI_PID" 2>/dev/null
-        wait "$XUI_PID" 2>/dev/null
+        kill "$$XUI_PID" 2>/dev/null
+        wait "$$XUI_PID" 2>/dev/null
         sleep 1
 
         # 确保没有残留 x-ui 进程
