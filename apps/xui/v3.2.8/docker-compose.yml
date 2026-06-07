@@ -17,13 +17,8 @@
     tty: true
     restart: unless-stopped
     network_mode: host
-    entrypoint: ["/bin/sh", "-c"]
-    command:
-      - |
-        /app/x-ui setting -port ${PANEL_APP_PORT_HTTP}
-        /app/x-ui setting -webBasePath ${PANEL_WEB_BASE_PATH}
-        /app/x-ui setting -username ${PANEL_USERNAME}
-        /app/x-ui setting -password ${PANEL_PASSWORD}
-        exec /app/DockerEntrypoint.sh
+    entrypoint: [ "/bin/sh", "-c" ]
+    command: "/app/x-ui setting -port ${PANEL_APP_PORT_HTTP}; /app/x-ui setting -webBasePath ${PANEL_WEB_BASE_PATH}; /app/x-ui setting -username 
+    ${PANEL_USERNAME}; /app/x-ui setting -password ${PANEL_PASSWORD}; exec /app/DockerEntrypoint.sh"
     labels:
       createdBy: "Apps"

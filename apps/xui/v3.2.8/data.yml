@@ -14,7 +14,7 @@ additionalProperties:
       labelEn: hostname
       labelZh: 主机名
       type: text
-    - default: ""
+    - default: "/xui/"
       edit: true
       envKey: PANEL_WEB_BASE_PATH
       labelEn: webBasePath
