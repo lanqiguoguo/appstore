@@ -20,9 +20,6 @@
     entrypoint: [ "/bin/sh", "-c" ]
     command:
       - |
-        if [ ! -f /etc/x-ui/x-ui.db ]; then
-          /app/x-ui & sleep 3 && kill $!
-        fi
         /app/x-ui setting -port ${PANEL_APP_PORT_HTTP}
         /app/x-ui setting -webBasePath ${PANEL_WEB_BASE_PATH}
         /app/x-ui setting -username ${PANEL_USERNAME}
