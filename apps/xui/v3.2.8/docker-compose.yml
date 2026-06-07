@@ -17,6 +17,7 @@
     tty: true
     restart: unless-stopped
     network_mode: host
+    entrypoint: ["/bin/sh", "-c"]
     command:
       - |
         /app/x-ui setting -port ${PANEL_APP_PORT_HTTP}
