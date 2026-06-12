@@ -8,8 +8,11 @@ services:
       - "${PANEL_APP_PORT_HTTP}:12889"
     volumes:
       - ./data:/app/data
+      - ./subscribes:/app/subscribes
+      - ./rule_templates:/app/rule_templates
     environment:
       - PORT=12889
+      - LOG_LEVEL=info
       - JWT_SECRET=${PANEL_JWT_SECRET}
     labels:
       createdBy: Apps
