@@ -1,0 +1,21 @@
+name: miaomiaowux
+tags:
+    - 实用工具
+title: 妙妙屋X（MMWX）是基于妙妙屋的增强版本，在保留原有订阅管理功能的基础上，新增了远程服务器管理、Xray 服务完整管理、证书管理、套餐管理等高级功能。
+type: 实用工具
+description: 妙妙屋X（MMWX）是基于妙妙屋的增强版本，在保留原有订阅管理功能的基础上，新增了远程服务器管理、Xray 服务完整管理、证书管理、套餐管理等高级功能。
+additionalProperties:
+  key: miaomiaowux
+  name: miaomiaowux
+  tags:
+    - Tool
+    - Local
+  shortDescZh: 妙妙屋X（MMWX）是基于妙妙屋的增强版本，在保留原有订阅管理功能的基础上，新增了远程服务器管理、Xray 服务完整管理、证书管理、套餐管理等高级功能。
+  shortDescEn: MMWX is an enhanced version of MMW. While retaining the original subscription management features, it adds advanced functionalities such as remote server management, comprehensive Xray service management, certificate management, and plan management.
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website:  https://github.com/iluobei/miaomiaowux
+  github:  https://github.com/iluobei/miaomiaowux
+  document:  https://github.com/iluobei/miaomiaowux

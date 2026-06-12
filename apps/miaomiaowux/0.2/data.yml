@@ -1,0 +1,17 @@
+additionalProperties:
+  formFields:
+    - default: "6007"
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      edit: true
+      envKey: PANEL_JWT_SECRET
+      labelEn: your-secret-key
+      labelZh: 您的私钥
+      required: true
+      type: text
