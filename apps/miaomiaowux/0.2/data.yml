@@ -1,6 +1,6 @@
 additionalProperties:
   formFields:
-    - default: "6007"
+    - default: "6016"
       edit: true
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
