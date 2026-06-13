@@ -1,6 +1,6 @@
 ﻿services:
   frontend:
-    image: ghcr.io/maathimself/mailflow-frontend:1.2
+    image: ghcr.io/maathimself/mailflow-frontend:1.5.2
     container_name: ${CONTAINER_NAME}-frontend
     restart: unless-stopped
     ports:
@@ -20,7 +20,7 @@
       - 1panel-network
 
   backend:
-    image: ghcr.io/maathimself/mailflow-backend:1.2
+    image: ghcr.io/maathimself/mailflow-backend:1.5.2
     container_name: ${CONTAINER_NAME}-backend
     restart: unless-stopped
     environment:
