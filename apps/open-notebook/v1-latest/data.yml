@@ -30,3 +30,9 @@ additionalProperties:
       labelEn: Encryption Key
       labelZh: 加密密钥
       type: text
+    - default: ""
+      edit: true
+      envKey: PANEL_APP_API_URL
+      labelEn: API_URL
+      labelZh: API 地址
+      type: text

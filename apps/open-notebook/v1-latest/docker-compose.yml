@@ -26,7 +26,7 @@
       # REQUIRED: Change this to your own secret string
       # This encrypts your API keys in the database
       - OPEN_NOTEBOOK_ENCRYPTION_KEY=${PANEL_APP_ENCRYPTION_KEY}
-      - API_URL=http://localhost:${PANEL_APP_PORT_API}
+      - API_URL=${PANEL_APP_API_URL}
       # Database connection (default values - no need to change)
       - SURREAL_URL=ws://surrealdb:8000/rpc
       - SURREAL_USER=root
