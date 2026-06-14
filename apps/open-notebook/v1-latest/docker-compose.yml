@@ -1,7 +1,6 @@
 ﻿services:
   surrealdb:
     image: surrealdb/surrealdb:v2
-    container_name: ${CONTAINER_NAME}-surrealdb
     command: start --log info --user root --pass root rocksdb:/mydata/mydatabase.db
     user: root  # Required for bind mounts on Linux
     ports:
@@ -29,7 +28,7 @@
       - OPEN_NOTEBOOK_ENCRYPTION_KEY=${PANEL_APP_ENCRYPTION_KEY}
       - API_URL=http://localhost:${PANEL_APP_PORT_API}
       # Database connection (default values - no need to change)
-      - SURREAL_URL=ws://${CONTAINER_NAME}-surrealdb:${PANEL_APP_PORT_DB}/rpc
+      - SURREAL_URL="ws://surrealdb:${PANEL_APP_PORT_DB}/rpc"
       - SURREAL_USER=root
       - SURREAL_PASSWORD=root
       - SURREAL_NAMESPACE=open_notebook
