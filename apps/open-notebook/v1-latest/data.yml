@@ -1,0 +1,32 @@
+additionalProperties:
+  formFields:
+    - default: "6016"
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web UI Port
+      labelZh: Web UI 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "60160"
+      edit: true
+      envKey: PANEL_APP_PORT_API
+      labelEn: REST API Port
+      labelZh: REST API 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "60161"
+      edit: true
+      envKey: PANEL_APP_PORT_DB
+      labelEn: surrealdb Port
+      labelZh: surrealdb 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      edit: true
+      envKey: PANEL_APP_ENCRYPTION_KEY
+      labelEn: Encryption Key
+      labelZh: 加密密钥
+      type: text

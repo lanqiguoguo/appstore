@@ -1,0 +1,49 @@
+﻿services:
+  surrealdb:
+    image: surrealdb/surrealdb:v2
+    container_name: ${CONTAINER_NAME}-surrealdb
+    command: start --log info --user root --pass root rocksdb:/mydata/mydatabase.db
+    user: root  # Required for bind mounts on Linux
+    ports:
+      - "${PANEL_APP_PORT_DB}:8000"
+    volumes:
+      - ./surreal_data:/mydata
+    environment:
+      - SURREAL_EXPERIMENTAL_GRAPHQL=true
+    restart: always
+    pull_policy: always
+    labels:
+      createdBy: Apps
+    networks:
+      - 1panel-network
+
+  open_notebook:
+    image: lfnovo/open_notebook:v1-latest
+    container_name: ${CONTAINER_NAME}
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:8502"  # Web UI
+      - "${PANEL_APP_PORT_API}:5055"  # REST API
+    environment:
+      # REQUIRED: Change this to your own secret string
+      # This encrypts your API keys in the database
+      - OPEN_NOTEBOOK_ENCRYPTION_KEY=${PANEL_APP_ENCRYPTION_KEY}
+
+      # Database connection (default values - no need to change)
+      - SURREAL_URL=ws://surrealdb:${PANEL_APP_PORT_DB}/rpc
+      - SURREAL_USER=root
+      - SURREAL_PASSWORD=root
+      - SURREAL_NAMESPACE=open_notebook
+      - SURREAL_DATABASE=open_notebook
+    volumes:
+      - ./notebook_data:/app/data
+    depends_on:
+      - surrealdb
+    restart: always
+    pull_policy: always
+    labels:
+      createdBy: Apps
+    networks:
+      - 1panel-network
+networks:
+  1panel-network:
+    external: true
