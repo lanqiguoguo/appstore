@@ -21,17 +21,15 @@
       labelEn: Application External URL
       labelZh: 应用对外 URL，用于通知和密码重置邮件链接。
       rule: paramExtUrl
-#      random: true
       required: true
-      type: password
+      type: text
     - default: ""
       edit: true
       envKey: PANEL_PB_ENCRYPTION_KEY
       labelEn: PB_ENCRYPTION_KEY
       labelZh: PB 加密密钥 必须正好 32 个字符；不要随意轮换。示例：openssl rand -hex 16
       required: true
-#      rule: paramPort
-      type: text
+      type: password
     - default: ""
       edit: true
       envKey: PANEL_SMTP_HOST
@@ -59,7 +57,7 @@
       labelEn: SMTP_PASSWORD
       labelZh: 密码/应用密码
       required: false
-      type: text
+      type: password
     - default: ""
       edit: true
       envKey: PANEL_SMTP_FROM
@@ -67,13 +65,18 @@
       labelZh: 发件人：noreply@example.com
       required: false
       type: text
-    - default: ""
+    - default: "true"
       edit: true
       envKey: PANEL_SMTP_TLS
       labelEn: SMTP_TLS
-      labelZh: 是否启用 tls。true/fasle
+      labelZh: 是否启用 tls。true/false
       required: false
-      type: text
+      type: select
+      values:
+        - label: 启用
+          value: "true"
+        - label: 不启用
+          value: "false"
     - default: "0 3 * * *"
       edit: true
       envKey: PANEL_BACKUPS_CRON
@@ -101,7 +104,12 @@
       labelEn: NOTIFICATION_SCHEDULER_ENABLED
       labelZh: 内置通知调度器。普通 Docker/VPS 托管应保持启用。true/false
       required: false
-      type: text
+      type: select
+      values:
+        - label: 启用
+          value: "true"
+        - label: 不启用
+          value: "false"
     - default: "* * * * *"
       edit: true
       envKey: PANEL_NOTIFICATION_SCHEDULER_CRON

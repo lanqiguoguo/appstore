@@ -1,0 +1,79 @@
+additionalProperties:
+  formFields:
+    - default: 4000
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: APP Port
+      labelZh: 应用端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      edit: true
+      envKey: PANEL_DB_HOST
+      key: postgresql
+      labelEn: Database Service
+      labelZh: 数据库服务
+      required: true
+      type: service
+    - default: litellm
+      edit: true
+      envKey: PANEL_DB_NAME
+      labelEn: Database Name
+      labelZh: 数据库名
+      required: true
+      rule: paramCommon
+      type: text
+    - default: llmproxy
+      edit: true
+      envKey: PANEL_DB_USER
+      labelEn: Database User Name
+      labelZh: 数据库用户名
+      required: true
+      rule: paramCommon
+      type: text
+    - default: ""
+      edit: true
+      envKey: PANEL_DB_PASSWORD
+      labelEn: Database User Password
+      labelZh: 数据库密码
+      required: true
+      type: password
+    - default: ""
+      edit: true
+      envKey: PANEL_REDIS_HOST
+      key: redis
+      labelEn: Redis Service
+      labelZh: 缓存服务
+      required: true
+      type: service
+    - default: ""
+      edit: false
+      envKey: PANEL_REDIS_PASSWORD
+      labelEn: Redis Service Password
+      labelZh: 缓存服务密码
+      required: false
+      type: password
+    - default: ""
+      edit: true
+      envKey: PANEL_MASTER_KEY
+      labelEn: Master Key (sk-..., used to access the proxy API)
+      labelZh: 主密钥（sk-...，用于访问代理 API）
+      required: true
+      random: true
+      type: password
+    - default: ""
+      edit: true
+      envKey: PANEL_SALT_KEY
+      labelEn: Salt Key (used to encrypt/decrypt API keys in DB)
+      labelZh: 盐密钥（用于加解密数据库中的 API 密钥）
+      required: true
+      random: true
+      type: password
+    - default: "True"
+      edit: true
+      envKey: PANEL_STORE_MODEL_IN_DB
+      labelEn: Store Model In DB (allows adding models via UI)
+      labelZh: 模型存入数据库（允许通过 UI 添加模型）
+      required: true
+      type: text

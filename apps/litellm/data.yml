@@ -1,0 +1,21 @@
+name: litellm
+tags:
+    - 实用工具
+title: 一款 Python SDK 与代理服务器（AI 网关），以 OpenAI 或原生格式调用 100+ LLM API，提供成本追踪、护栏、负载均衡与日志记录，支持 Bedrock、Azure、OpenAI、VertexAI、Cohere、Anthropic、Sagemaker、HuggingFace、VLLM、NVIDIA NIM 等。
+type: 实用工具
+description: 一款 Python SDK 与代理服务器（AI 网关），以 OpenAI 或原生格式调用 100+ LLM API，提供成本追踪、护栏、负载均衡与日志记录，支持 Bedrock、Azure、OpenAI、VertexAI、Cohere、Anthropic、Sagemaker、HuggingFace、VLLM、NVIDIA NIM 等。
+additionalProperties:
+  key: litellm
+  name: litellm
+  tags:
+    - Tool
+    - Local
+  shortDescZh: 一款 Python SDK 与代理服务器（AI 网关），以 OpenAI 或原生格式调用 100+ LLM API，提供成本追踪、护栏、负载均衡与日志记录。
+  shortDescEn: Python SDK and Proxy Server (AI Gateway) to call 100+ LLM APIs in OpenAI or native format, with cost tracking, guardrails, loadbalancing and logging.
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website:  https://github.com/BerriAI/litellm
+  github:  https://github.com/BerriAI/litellm
+  document:  https://github.com/BerriAI/litellm

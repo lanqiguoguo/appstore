@@ -1,4 +1,4 @@
-﻿services:
+services:
   frontend:
     image: ghcr.io/maathimself/mailflow-frontend:1.6.0
     container_name: ${CONTAINER_NAME}-frontend
@@ -16,6 +16,8 @@
       timeout: 5s
       retries: 3
       start_period: 20s
+    labels:
+      createdBy: "Apps"
     networks:
       - 1panel-network
 
@@ -46,6 +48,8 @@
       timeout: 5s
       retries: 3
       start_period: 30s
+    labels:
+      createdBy: "Apps"
     networks:
       - 1panel-network
 
