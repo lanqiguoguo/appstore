@@ -77,3 +77,10 @@ additionalProperties:
       labelZh: 模型存入数据库（允许通过 UI 添加模型）
       required: true
       type: text
+    - default: Asia/Shanghai
+      edit: true
+      envKey: TIME_ZONE
+      labelEn: Time Zone
+      labelZh: 时区
+      required: true
+      type: text
