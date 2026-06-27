@@ -12,7 +12,7 @@ services:
       - "--num_workers"
       - "1"
     environment:
-      DATABASE_URL: "postgresql://${PANEL_DB_USER}:${PANEL_DB_PASSWORD}@${PANEL_DB_HOST}:5432/${PANEL_DB_NAME}"
+      DATABASE_URL: "postgresql://${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@${PANEL_DB_HOST}:5432/${PANEL_DB_NAME}"
       STORE_MODEL_IN_DB: ${PANEL_STORE_MODEL_IN_DB}
       LITELLM_MASTER_KEY: ${PANEL_MASTER_KEY}
       LITELLM_SALT_KEY: ${PANEL_SALT_KEY}

@@ -8,39 +8,44 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: ""
-      edit: true
-      envKey: PANEL_DB_HOST
-      key: postgresql
+    - child:
+        default: ""
+        envKey: PANEL_DB_HOST
+        required: true
+        type: service
+      default: postgresql
+      envKey: PANEL_DB_TYPE
       labelEn: Database Service
       labelZh: 数据库服务
       required: true
-      type: service
+      type: apps
+      values:
+        - label: PostgreSQL
+          value: postgresql
     - default: litellm
-      edit: true
       envKey: PANEL_DB_NAME
       labelEn: Database Name
       labelZh: 数据库名
+      random: true
       required: true
       rule: paramCommon
       type: text
-    - default: llmproxy
-      edit: true
+    - default: litellm
       envKey: PANEL_DB_USER
       labelEn: Database User Name
       labelZh: 数据库用户名
+      random: true
       required: true
       rule: paramCommon
       type: text
     - default: ""
-      edit: true
-      envKey: PANEL_DB_PASSWORD
+      envKey: PANEL_DB_USER_PASSWORD
       labelEn: Database User Password
       labelZh: 数据库密码
+      random: true
       required: true
       type: password
     - default: ""
-      edit: true
       envKey: PANEL_REDIS_HOST
       key: redis
       labelEn: Redis Service
@@ -48,7 +53,6 @@ additionalProperties:
       required: true
       type: service
     - default: ""
-      edit: false
       envKey: PANEL_REDIS_PASSWORD
       labelEn: Redis Service Password
       labelZh: 缓存服务密码
