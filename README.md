@@ -9,6 +9,7 @@
 | 3xui | 3X-UI — Xray-core 服务器管理面板 |
 | als | ALS — 网络诊断 Looking-glass 服务 |
 | ccx | AI API 代理与协议转换网关，支持 Claude、OpenAI、Gemini 等 |
+| fast_note_sync | Fast Note Sync Service — Obsidian 高性能笔记同步、管理与 REST API 服务 |
 | ghproxy | GitHub 资源代理，支持 Docker 镜像加速 |
 | hubproxy | 多功能代理服务，支持 Docker 镜像 / GitHub 文件加速 |
 | komari | 轻量级自托管服务器监控工具 |
@@ -27,6 +28,7 @@
 ## 更新记录
 
 - 2026年6月28日
+  - 新增 fast_note_sync
   - 新增 litellm
   - 更新 mailflow 1.7.0
   - 更新 renewlet
