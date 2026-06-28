@@ -29,6 +29,9 @@
 
 - 2026年6月28日
   - 新增 fast_note_sync
+  - 更新 xui v3.4.1
+  - 更新 mailflow 1.7.3
+  - 更新 miaomiaowu 0.8.2
   - 新增 litellm
   - 更新 mailflow 1.7.0
   - 更新 renewlet
