@@ -1,0 +1,40 @@
+additionalProperties:
+  formFields:
+    - default: "6015"
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "xui"
+      edit: true
+      envKey: HOSTNAME
+      labelEn: hostname
+      labelZh: 主机名
+      type: text
+    - default: "/xui/"
+      edit: true
+      envKey: PANEL_WEB_BASE_PATH
+      labelEn: webBasePath
+      labelZh: URI 路径:必须以 '/' 开头，以 '/' 结尾
+      type: text
+    - default: "admin"
+      edit: true
+      envKey: PANEL_USERNAME
+      labelEn: username
+      labelZh: 用户名
+      type: text
+    - default: "admin"
+      edit: true
+      envKey: PANEL_PASSWORD
+      labelEn: password
+      labelZh: 密码
+      type: text
+    - default: "Asia/Shanghai"
+      edit: true
+      envKey: TIME_ZONE
+      labelEn: TZ
+      labelZh: 时区
+      type: text
