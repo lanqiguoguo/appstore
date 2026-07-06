@@ -19,7 +19,6 @@
 | miaomiaowux | 妙妙屋X — 增强版，支持远程服务器管理、Xray 服务管理、证书管理 |
 | microbin | 微型自托管 Paste Bin 服务 |
 | obsidian_livesync | Obsidian LiveSync — 自托管 CouchDB 双向同步 |
-| portkey | Portkey AI Gateway — 路由至 1600+ LLM 的快速统一 API 网关 |
 | open-notebook | 私有本地 AI Notebook，支持 18+ AI 提供商、多模态内容 |
 | outlookemail | 多邮箱管理工具，支持 Outlook/Gmail/QQ/163 等 |
 | renewlet | 订阅记账工具，到期前自动提醒 |
@@ -32,8 +31,9 @@
   - 更新 xui v3.4.2
   - 更新 fast_note_sync 3.5.1
   - 更新 mailflow 2.0.2
+  - ~~portkey~~
 - 2026年6月29日
-  - 新增 portkey
+  - ~~新增 portkey~~
 - 2026年6月28日
   - 新增 fast_note_sync
   - 更新 xui v3.4.1
