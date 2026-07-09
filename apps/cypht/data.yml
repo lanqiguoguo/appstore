@@ -1,0 +1,29 @@
+name: Cypht
+tags:
+    - 邮件
+title: 轻量级多账户 Web 邮件聚合客户端
+description: 统一管理多邮箱账户的轻量 Web 邮件客户端
+additionalProperties:
+  key: cypht
+  name: Cypht
+  tags:
+    - Tool
+    - Local
+  shortDescZh: 统一管理多邮箱账户的轻量 Web 邮件客户端
+  shortDescEn: Lightweight webmail aggregator for all your accounts
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://www.cypht.org
+  github: https://github.com/cypht-org/cypht
+  document: https://www.cypht.org/documentation
+  description:
+    en: Lightweight open-source webmail aggregator supporting IMAP, SMTP, JMAP and EWS
+    zh: 统一管理多邮箱账户的轻量 Web 邮件客户端
+    zh-Hant: 統一管理多郵箱帳戶的輕量 Web 郵件客戶端
+    ja: 複数メールアカウントを統合管理する軽量 Web メールクライアント
+    ko: 다중 이메일 계정을 통합 관리하는 경량 웹메일 클라이언트
+  architectures:
+    - amd64
+    - arm64

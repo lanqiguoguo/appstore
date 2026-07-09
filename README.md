@@ -9,6 +9,7 @@
 | 3xui | 3X-UI — Xray-core 服务器管理面板 |
 | als | ALS — 网络诊断 Looking-glass 服务 |
 | ccx | AI API 代理与协议转换网关，支持 Claude、OpenAI、Gemini 等 |
+| cypht | 轻量级多账户 Web 邮件聚合客户端 |
 | fast_note_sync | Fast Note Sync Service — Obsidian 高性能笔记同步、管理与 REST API 服务 |
 | ghproxy | GitHub 资源代理，支持 Docker 镜像加速 |
 | hubproxy | 多功能代理服务，支持 Docker 镜像 / GitHub 文件加速 |
@@ -27,6 +28,8 @@
 
 ## 更新记录
 
+- 2026年7月10日
+  - 新增 cypht
 - 2026年7月8日
   - 更新 mailflow 2.3.0
 - 2026年7月5日

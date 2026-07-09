@@ -1,0 +1,46 @@
+additionalProperties:
+  formFields:
+    - default: Asia/Shanghai
+      edit: true
+      envKey: PANEL_APP_TIME_ZONE
+      labelEn: TZ
+      labelZh: 时区
+      label:
+        en: TZ
+        zh: 时区
+      required: true
+      type: text
+    - default: admin
+      edit: true
+      envKey: PANEL_AUTH_USERNAME
+      labelEn: Admin Username
+      labelZh: 管理员用户名
+      label:
+        en: Admin Username
+        zh: 管理员用户名
+      required: true
+      rule: paramCommon
+      type: text
+    - default: admin
+      edit: true
+      envKey: PANEL_AUTH_PASSWORD
+      labelEn: Admin Password
+      labelZh: 管理员密码
+      label:
+        en: Admin Password
+        zh: 管理员密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: 6020
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      label:
+        en: Port
+        zh: 端口
+      required: true
+      rule: paramPort
+      type: number
