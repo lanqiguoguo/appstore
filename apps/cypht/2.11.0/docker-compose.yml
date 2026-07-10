@@ -22,7 +22,7 @@ services:
       - REDIS_PASS=${PANEL_REDIS_PASSWORD}
       - REDIS_INDEX=1
       - DEFAULT_LANGUAGE=zh-Hans
-      - DEFAULT_TIMEZONE=${PANEL_APP_TIME_ZONE}
+      - DEFAULT_SETTING_TIMEZONE=${PANEL_APP_TIME_ZONE}
     ports:
       - ${PANEL_APP_PORT_HTTP}:80
     volumes:
