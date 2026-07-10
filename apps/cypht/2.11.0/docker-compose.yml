@@ -23,6 +23,12 @@ services:
       - REDIS_INDEX=1
       - DEFAULT_LANGUAGE=zh-Hans
       - DEFAULT_SETTING_TIMEZONE=${PANEL_APP_TIME_ZONE}
+      - OUTLOOK_CLIENT_ID=${PANEL_OUTLOOK_CLIENT_ID}
+      - OUTLOOK_CLIENT_SECRET=${PANEL_OUTLOOK_CLIENT_SECRET}
+      - OUTLOOK_CLIENT_URI=${PANEL_OUTLOOK_CLIENT_URI}
+      - OUTLOOK_AUTH_URI=https://login.live.com/oauth20_authorize.srf
+      - OUTLOOK_TOKEN_URI=https://login.live.com/oauth20_token.srf
+      - OUTLOOK_REFRESH_URI=https://login.live.com/oauth20_token.srf
     ports:
       - ${PANEL_APP_PORT_HTTP}:80
     volumes:

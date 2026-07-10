@@ -98,6 +98,36 @@ additionalProperties:
         zh: 缓存服务密码
       required: true
       type: password
+    - default: ""
+      edit: true
+      envKey: PANEL_OUTLOOK_CLIENT_ID
+      labelEn: Outlook Client ID
+      labelZh: Outlook OAuth Client ID（可选，Azure 应用注册获取）
+      label:
+        en: Outlook Client ID (optional)
+        zh: Outlook OAuth Client ID（可选）
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: PANEL_OUTLOOK_CLIENT_SECRET
+      labelEn: Outlook Client Secret
+      labelZh: Outlook OAuth Client Secret（可选）
+      label:
+        en: Outlook Client Secret (optional)
+        zh: Outlook OAuth Client Secret（可选）
+      required: false
+      type: password
+    - default: ""
+      edit: true
+      envKey: PANEL_OUTLOOK_CLIENT_URI
+      labelEn: Outlook Redirect URI
+      labelZh: Outlook 回调地址（如 http://your-domain:port/?page=home）
+      label:
+        en: Outlook Redirect URI (e.g. http://your-domain:port/?page=home)
+        zh: Outlook 回调地址（如 http://your-domain:port/?page=home）
+      required: false
+      type: text
     - default: 6020
       edit: true
       envKey: PANEL_APP_PORT_HTTP
