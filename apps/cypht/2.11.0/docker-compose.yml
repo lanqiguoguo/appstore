@@ -9,10 +9,17 @@ services:
       - AUTH_PASSWORD=${PANEL_AUTH_PASSWORD}
       - DB_DRIVER=sqlite
       - DB_CONNECTION_TYPE=host
-      - DB_NAME=cypht
-      - SESSION_TYPE=DB
+      - DB_NAME=/var/lib/hm3/sqlite/cypht.db
+      - DB_USER=cypht
+      - DB_PASS=cypht
+      - SESSION_TYPE=Redis
       - USER_CONFIG_TYPE=DB
       - AUTH_TYPE=DB
+      - ENABLE_REDIS=true
+      - REDIS_SERVER=${PANEL_REDIS_HOST}
+      - REDIS_PORT=6379
+      - REDIS_PASS=${PANEL_REDIS_PASSWORD}
+      - REDIS_INDEX=1
       - DEFAULT_LANGUAGE=zh
       - DEFAULT_TIMEZONE=${PANEL_APP_TIME_ZONE}
     ports:
