@@ -122,10 +122,10 @@ additionalProperties:
       edit: true
       envKey: PANEL_OUTLOOK_CLIENT_URI
       labelEn: Outlook Redirect URI
-      labelZh: Outlook 回调地址（如 http://your-domain:port/?page=home）
+      labelZh: Outlook 回调地址（不带查询字符串，如 http://your-domain:port）
       label:
-        en: Outlook Redirect URI (e.g. http://your-domain:port/?page=home)
-        zh: Outlook 回调地址（如 http://your-domain:port/?page=home）
+        en: Outlook Redirect URI (no query string, e.g. http://your-domain:port)
+        zh: Outlook 回调地址（不带查询字符串，如 http://your-domain:port）
       required: false
       type: text
     - default: ""
