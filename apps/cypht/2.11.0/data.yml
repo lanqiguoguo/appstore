@@ -128,6 +128,36 @@ additionalProperties:
         zh: Outlook 回调地址（如 http://your-domain:port/?page=home）
       required: false
       type: text
+    - default: ""
+      edit: true
+      envKey: PANEL_GMAIL_CLIENT_ID
+      labelEn: Gmail Client ID
+      labelZh: Gmail OAuth Client ID（可选，Google Cloud 控制台获取）
+      label:
+        en: Gmail Client ID (optional)
+        zh: Gmail OAuth Client ID（可选）
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: PANEL_GMAIL_CLIENT_SECRET
+      labelEn: Gmail Client Secret
+      labelZh: Gmail OAuth Client Secret（可选）
+      label:
+        en: Gmail Client Secret (optional)
+        zh: Gmail OAuth Client Secret（可选）
+      required: false
+      type: password
+    - default: ""
+      edit: true
+      envKey: PANEL_GMAIL_CLIENT_URI
+      labelEn: Gmail Redirect URI
+      labelZh: Gmail 回调地址（如 http://your-domain:port/?page=home）
+      label:
+        en: Gmail Redirect URI (e.g. http://your-domain:port/?page=home)
+        zh: Gmail 回调地址（如 http://your-domain:port/?page=home）
+      required: false
+      type: text
     - default: 6020
       edit: true
       envKey: PANEL_APP_PORT_HTTP
