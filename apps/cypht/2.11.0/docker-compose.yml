@@ -7,11 +7,12 @@ services:
       - TZ=${PANEL_APP_TIME_ZONE}
       - AUTH_USERNAME=${PANEL_AUTH_USERNAME}
       - AUTH_PASSWORD=${PANEL_AUTH_PASSWORD}
-      - DB_DRIVER=sqlite
+      - DB_DRIVER=pgsql
       - DB_CONNECTION_TYPE=host
-      - DB_NAME=/var/lib/hm3/sqlite/cypht.db
-      - DB_USER=cypht
-      - DB_PASS=cypht
+      - DB_HOST=${PANEL_DB_HOST}
+      - DB_NAME=${PANEL_DB_NAME}
+      - DB_USER=${PANEL_DB_USER}
+      - DB_PASS=${PANEL_DB_PASSWORD}
       - SESSION_TYPE=Redis
       - USER_CONFIG_TYPE=DB
       - AUTH_TYPE=DB
