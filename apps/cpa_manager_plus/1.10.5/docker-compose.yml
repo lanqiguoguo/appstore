@@ -4,10 +4,10 @@ services:
     container_name: ${CONTAINER_NAME}-cpa
     restart: unless-stopped
     volumes:
-      - ./config/config.yaml:/app/config.yaml
-      - ./cpa-data:/app/data
-      - ./cpa-auths:/app/auths
-      - ./cpa-logs:/app/logs
+      - ./config/config.yaml:/CLIProxyAPI/config.yaml
+      - ./cpa-data:/CLIProxyAPI/data
+      - ./cpa-auths:/CLIProxyAPI/auths
+      - ./cpa-logs:/CLIProxyAPI/logs
     ports:
       - ${PANEL_APP_PORT_API}:8317
     networks:
