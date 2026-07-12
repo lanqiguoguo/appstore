@@ -150,8 +150,8 @@ server {
 | 目录 | 说明 |
 |------|------|
 | `./data/` | CPAMP SQLite 数据库和加密密钥（`usage.sqlite`、`data.key`） |
-| `./config/` | CPA 配置文件 |
-| `./cpa-data/` | CPA 运行数据 |
+| `./config/` | CPA 配置模板（首次启动时注入 Management Key 生成实际配置） |
+| `./cpa-data/` | CPA 运行数据和实际配置文件（`config.yaml` 首次启动后生成于此） |
 | `./cpa-auths/` | CPA 认证文件 |
 | `./cpa-logs/` | CPA 日志 |
 
