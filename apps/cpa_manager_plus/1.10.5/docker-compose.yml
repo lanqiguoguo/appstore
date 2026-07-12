@@ -3,15 +3,8 @@ services:
     image: eceasy/cli-proxy-api:v7.2.67
     container_name: ${CONTAINER_NAME}-cpa
     restart: unless-stopped
-    entrypoint: ["/bin/sh", "-c"]
-    command:
-      - |
-        if [ ! -f /CLIProxyAPI/data/config.yaml ]; then
-          sed "s|__CPA_MANAGEMENT_KEY__|${PANEL_CPA_MANAGEMENT_KEY}|g" /CLIProxyAPI/config-template.yaml > /CLIProxyAPI/data/config.yaml
-        fi
-        exec ./CLIProxyAPI -config /CLIProxyAPI/data/config.yaml
     volumes:
-      - ./config/config.yaml:/CLIProxyAPI/config-template.yaml:ro
+      - ./config/config.yaml:/CLIProxyAPI/config.yaml
       - ./cpa-data:/CLIProxyAPI/data
       - ./cpa-auths:/CLIProxyAPI/auths
       - ./cpa-logs:/CLIProxyAPI/logs
