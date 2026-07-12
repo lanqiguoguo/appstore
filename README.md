@@ -9,6 +9,7 @@
 | 3xui | 3X-UI — Xray-core 服务器管理面板 |
 | als | ALS — 网络诊断 Looking-glass 服务 |
 | ccx | AI API 代理与协议转换网关，支持 Claude、OpenAI、Gemini 等 |
+| cpa_manager_plus | CPA Manager Plus — AI 网关监控面板，追踪请求、成本、配额与账号健康 |
 | cypht | 轻量级多账户 Web 邮件聚合客户端 |
 | fast_note_sync | Fast Note Sync Service — Obsidian 高性能笔记同步、管理与 REST API 服务 |
 | ghproxy | GitHub 资源代理，支持 Docker 镜像加速 |
@@ -28,6 +29,8 @@
 
 ## 更新记录
 
+- 2026年7月12日
+  - 新增 cpa_manager_plus
 - 2026年7月10日
   - 新增 cypht
 - 2026年7月8日

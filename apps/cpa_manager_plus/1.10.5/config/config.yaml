@@ -1,0 +1,4 @@
+remote-management:
+  secret-key: "__CPA_MANAGEMENT_KEY__"
+  allow-remote: true
+usage-statistics-enabled: true
