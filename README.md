@@ -29,6 +29,8 @@
 
 ## 更新记录
 
+- 2026年7月13日
+  - 更新 cli_proxy_api v7.2.71
 - 2026年7月12日
   - 新增 cli_proxy_api
   - 新增 cpa_manager_plus
