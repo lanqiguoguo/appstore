@@ -29,6 +29,10 @@
 
 ## 更新记录
 
+- 2026年7月14日
+  - 更新 xui v3.5.0
+  - 更新 mailflow 2.5.0
+  - 更新 cli_proxy_api v7.2.74
 - 2026年7月13日
   - 更新 cli_proxy_api v7.2.72
   - 更新 cli_proxy_api v7.2.71
