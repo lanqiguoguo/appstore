@@ -31,7 +31,7 @@
 
 - 2026年7月24日
   - 更新 fast_note_sync 3.6.0
-  - 更新 mailflow v2.7.0
+  - 更新 mailflow 2.7.0
 - 2026年7月15日
   - 更新 cli_proxy_api v7.2.77
 - 2026年7月14日
