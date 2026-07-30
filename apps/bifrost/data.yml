@@ -1,0 +1,21 @@
+name: bifrost
+tags:
+  - 实用工具
+title: Bifrost AI 网关 — 高性能 AI API 网关，支持 23+ 提供商、自动故障转移、负载均衡与语义缓存
+type: 实用工具
+description: Bifrost 是一个高性能 AI 网关，通过统一的 OpenAI 兼容 API 接入 23+ 提供商（OpenAI、Anthropic、AWS Bedrock、Google Vertex 等），支持自动故障转移、负载均衡、语义缓存、MCP 工具与企业级治理功能。
+additionalProperties:
+  key: bifrost
+  name: bifrost
+  tags:
+    - Tool
+    - Local
+  shortDescZh: Bifrost AI 网关 — 高性能 AI API 网关，支持 23+ 提供商、自动故障转移、负载均衡与语义缓存
+  shortDescEn: Bifrost AI Gateway — High-performance AI API gateway with 23+ providers, automatic failover, load balancing, and semantic caching
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website:  https://docs.getbifrost.ai
+  github:  https://github.com/maximhq/bifrost
+  document:  https://docs.getbifrost.ai/quickstart/gateway/setting-up
