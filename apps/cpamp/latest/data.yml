@@ -1,0 +1,55 @@
+additionalProperties:
+  formFields:
+    - default: Asia/Shanghai
+      edit: true
+      envKey: PANEL_APP_TIME_ZONE
+      labelEn: TZ
+      labelZh: 时区
+      label:
+        en: TZ
+        zh: 时区
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: PANEL_CPAMP_ADMIN_KEY
+      labelEn: CPAMP Admin Key
+      labelZh: CPAMP 管理员密钥（留空则自动生成，查看启动日志获取）
+      label:
+        en: CPAMP Admin Key (leave empty to auto-generate, check startup logs)
+        zh: CPAMP 管理员密钥（留空则自动生成，查看启动日志获取）
+      required: false
+      type: password
+    - default: ""
+      edit: true
+      envKey: PANEL_CPA_MANAGEMENT_KEY
+      labelEn: CPA Management Key
+      labelZh: CPA Management Key（用于 CPA 远程管理，安装后也可在面板中配置）
+      label:
+        en: CPA Management Key (for CPA remote management)
+        zh: CPA Management Key（用于 CPA 远程管理，安装后也可在面板中配置）
+      random: true
+      required: true
+      type: password
+    - default: 6023
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Panel Port
+      labelZh: 面板端口
+      label:
+        en: Panel Port
+        zh: 面板端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 60231
+      edit: true
+      envKey: PANEL_APP_PORT_API
+      labelEn: API Port
+      labelZh: API 网关端口
+      label:
+        en: API Port
+        zh: API 网关端口
+      required: true
+      rule: paramPort
+      type: number

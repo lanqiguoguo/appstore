@@ -1,0 +1,159 @@
+# 服务器绑定主机/接口，默认空字符串同时绑定 IPv4/IPv6。
+# 使用 "127.0.0.1" 或 "localhost" 可限制仅本机访问。
+host: ""
+
+# 服务器端口
+port: 8317
+
+# TLS 设置：启用后使用提供的证书与私钥监听 HTTPS。
+# tls:
+#   enable: false
+#   cert: ""
+#   key: ""
+
+# 管理 API 设置
+remote-management:
+  # 是否允许远程（非 localhost）访问管理接口。
+  # 为 false 时仅允许 localhost，仍需管理密钥。
+  allow-remote: true
+
+  # 管理密钥。若填写明文，启动时会自动哈希后生效。
+  # 所有管理请求（包括本地）都需要该密钥。
+  # 留空则完全禁用管理 API（所有 /v0/management 路由返回 404）。
+  secret-key: "__CPA_MANAGEMENT_KEY__"
+
+  # 为 true 时禁用内置管理面板资源下载与路由。
+  disable-control-panel: true
+
+  # 管理面板的 GitHub 仓库，可填写仓库 URL 或 releases API URL。
+  # panel-github-repository: "https://github.com/router-for-me/Cli-Proxy-API-Management-Center"
+
+# 认证目录（支持 ~ 展开为主目录）
+auth-dir: "/CLIProxyAPI/auths"
+
+# 用于请求认证的 API 密钥
+# api-keys:
+#   - "your-api-key-1"
+
+# 是否启用调试日志
+debug: false
+
+# 为 true 时禁用高开销 HTTP 中间件以降低高并发下的内存占用
+commercial-mode: true
+
+# 为 true 时将应用日志写入滚动文件而非 stdout
+logging-to-file: false
+
+# 日志目录的最大总大小（MB）；超过后会删除最旧的日志。0 表示不限制。
+logs-max-total-size-mb: 1
+
+# 为 false 时禁用内存用量统计聚合，队列只有在启用用量发布时才会写入记录
+usage-statistics-enabled: true
+# 数据在内存中的保留时间控制（单位秒，默认 60，最大 3600），如需尽量不丢数据请高频轮询。
+redis-usage-queue-retention-seconds: 60
+
+# 代理地址。支持 socks5/http/https，例如 socks5://user:pass@192.168.1.1:1080/
+# proxy-url: ""
+
+# 为 true 时，无前缀模型请求只会匹配无前缀凭据（除非前缀与模型名相同）。
+force-model-prefix: false
+
+# 请求重试次数；当响应码为 403/408/500/502/503/504 时重试。
+request-retry: 3
+
+# 冷却中的凭据等待的最长时间（秒），超过则触发重试。
+max-retry-interval: 30
+
+# disable-image-generation 支持：false（默认）、true、或 "chat"。
+# - true：完全禁用 image_generation（同时 /v1/images/generations 与 /v1/images/edits 返回 404）。
+# - "chat"：仅禁用非 images 端点的 image_generation 注入，但保留 /v1/images/generations 与 /v1/images/edits 可用。
+disable-image-generation: false
+
+# 配额超限时的处理
+quota-exceeded:
+  switch-project: true # 配额超限时是否自动切换其他项目
+  switch-preview-model: true # 配额超限时是否自动切换预览模型
+  antigravity-credits: false # Claude credits 兜底：当所有 free-tier 凭据耗尽（429/503）时，使用带 Google One AI credits 的凭据进行最后兜底重试
+
+# 多凭据匹配时的路由策略
+routing:
+  strategy: "fill-first" # 轮询（默认）round-robin 或 fill-first
+  # 为所有客户端启用会话粘性路由。
+  # 会话 ID 来源：metadata.user_id（Claude Code 会话格式）、
+  # X-Session-ID、Session_id（Codex）、
+  # X-Client-Request-Id（PI）、conversation_id，或前几条消息的 hash。
+  # 当绑定的凭据不可用时，会自动故障转移。
+  session-affinity: true # 默认：false
+  # 会话绑定的保留时长。默认：1h
+  session-affinity-ttl: "1h"
+
+# 是否为 WebSocket API (/v1/ws) 启用认证
+ws-auth: false
+
+# 当 > 0 时，为非流式响应每隔 N 秒发送空行以防止空闲超时
+nonstream-keepalive-interval: 0
+
+# 当为 true 时，为 Codex API 请求启用官方 Codex 指令注入
+# 当为 false（默认）时，CodexInstructionsForModel 立即返回而不修改
+codex-instructions-enabled: false
+
+# 流式传输行为（SSE keep-alive 与安全启动重试）
+streaming:
+  keepalive-seconds: 60   # 默认：0（禁用）；≤0 关闭 keep-alive。
+  bootstrap-retries: 3    # 默认：0（禁用）；首字节前的重试次数。
+
+# Codex API 密钥
+# codex-api-key:
+#   - api-key: "sk-atSM..."
+#     prefix: "test" # 可选：需以 "test/gpt-5-codex" 访问
+#     base-url: "https://www.example.com" # 自定义 Codex 端点
+#     headers:
+#       X-Custom-Header: "custom-value"
+#     proxy-url: "socks5://proxy.example.com:1080" # 可选：单独代理
+#     models:
+#       - name: "gpt-5-codex"   # 上游模型名
+#         alias: "codex-latest" # 客户端别名
+#     excluded-models:
+#       - "gpt-5.1"         # 精确排除
+#       - "gpt-5-*"         # 前缀通配
+#       - "*-mini"          # 后缀通配
+#       - "*codex*"         # 子串通配
+
+# OpenAI 兼容提供商
+# openai-compatibility:
+#   - name: "openrouter" # 提供商名称，用于 UA 等
+#     disabled: false # 可选：设为 true 则禁用该提供商而无需删除
+#     prefix: "test" # 可选：需以 "test/kimi-k2" 访问
+#     base-url: "https://openrouter.ai/api/v1" # 提供商基础 URL
+#     headers:
+#       X-Custom-Header: "custom-value"
+#     api-key-entries:
+#       - api-key: "sk-or-v1-...b780"
+#         proxy-url: "socks5://proxy.example.com:1080" # 可选：单独代理
+#       - api-key: "sk-or-v1-...b781" # 无代理
+#     models: # 提供商支持的模型
+#       - name: "moonshotai/kimi-k2:free" # 上游模型名
+#         alias: "kimi-k2" # 客户端别名
+
+# OAuth 提供商的模型排除列表
+# oauth-excluded-models:
+#   vertex:
+#     - "gemini-3-pro-preview"
+#   aistudio:
+#     - "gemini-3-pro-preview"
+#   antigravity:
+#     - "gemini-3-pro-preview"
+#   claude:
+#     - "claude-3-5-haiku-20241022"
+#   codex:
+#     - "gpt-5-codex-mini"
+
+# 隐藏配置，可以记录每一个请求和响应，并保存到logs目录下
+# 每条日志体积可能会高达10MB+，硬盘不够大请不要开启
+request-log: false
+
+# 隐藏配置，可以关闭重试时的间隔时间，根据需要进行设置
+# 例如某模型触发429后，程序会暂时停用它，且每次再触发都会增加停用时间，最多延长到30分钟
+# 默认情况下，停用期内会跳过该模型
+# 设置true后，无论该模型是否处于停用期，仍会每次都向该模型发起请求，不再跳过
+disable-cooling: false
