@@ -22,7 +22,7 @@ remote-management:
   # When false, only localhost can access management endpoints (a key is still required).
   # 是否允许远程（非本地主机）管理访问。
   # 若为 false，则仅本地主机可访问管理端点（仍需提供密钥）。
-  allow-remote: false
+  allow-remote: true
 
   # Management key. If a plaintext value is provided here, it will be hashed on startup.
   # All management requests (even from localhost) require this key.
