@@ -1,0 +1,34 @@
+additionalProperties:
+  formFields:
+    - default: Asia/Shanghai
+      edit: true
+      envKey: PANEL_APP_TIME_ZONE
+      labelEn: TZ
+      labelZh: 时区
+      label:
+        en: TZ
+        zh: 时区
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: PANEL_CPA_MANAGEMENT_KEY
+      labelEn: Management Key
+      labelZh: 管理密钥（用于 Web UI 登录和 Management API）
+      label:
+        en: Management Key (for Web UI login and Management API)
+        zh: 管理密钥（用于 Web UI 登录和 Management API）
+      random: true
+      required: true
+      type: password
+    - default: 6025
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      label:
+        en: Port
+        zh: 端口
+      required: true
+      rule: paramPort
+      type: number
