@@ -1,8 +1,0 @@
-host: ""
-port: 8317
-remote-management:
-  secret-key: "__CPA_MANAGEMENT_KEY__"
-  allow-remote: true
-auth-dir: "/CLIProxyAPI/auths"
-usage-statistics-enabled: true
-redis-usage-queue-retention-seconds: 60
