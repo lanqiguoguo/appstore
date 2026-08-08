@@ -10,8 +10,8 @@
 | als | ALS — 网络诊断 Looking-glass 服务 |
 | bifrost | Bifrost AI 网关 — 高性能 AI API 网关，支持自动故障转移、负载均衡与语义缓存 |
 | ccx | AI API 代理与协议转换网关，支持 Claude、OpenAI、Gemini 等 |
-| cli_proxy_api | CLIProxyAPI — AI 网关代理，为 CLI 提供多模型兼容 API 与内置 Web UI |
-| cpa_manager_plus | CPA Manager Plus — AI 网关监控面板，追踪请求、成本、配额与账号健康 |
+| cpa | CLIProxyAPI — AI 网关代理，为 CLI 提供多模型兼容 API 与内置 Web UI |
+| cpamp | CPA Manager Plus — AI 网关监控面板，追踪请求、成本、配额与账号健康 |
 | fast_note_sync | Fast Note Sync Service — Obsidian 高性能笔记同步、管理与 REST API 服务 |
 | ghproxy | GitHub 资源代理，支持 Docker 镜像加速 |
 | hubproxy | 多功能代理服务，支持 Docker 镜像 / GitHub 文件加速 |
@@ -29,6 +29,9 @@
 | xui | 3X-UI — Xray-core 高级管理面板 |
 
 ## 更新记录
+
+- 2026年8月8日
+  - 新增 cpa（CLIProxyAPI，latest）
 
 - 2026年7月31日
   - 新增 bifrost

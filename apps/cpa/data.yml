@@ -1,0 +1,28 @@
+name: CPA
+tags:
+    - AI
+title: AI 网关代理 — 为 CLI 提供 OpenAI/Gemini/Claude/Codex/Grok 兼容 API
+description: AI 网关代理，为 CLI 提供多模型兼容 API 与内置 Web UI
+additionalProperties:
+  key: cpa
+  name: CPA
+  tags:
+    - Tool
+  shortDescZh: AI 网关代理，为 CLI 提供多模型兼容 API 与内置 Web UI
+  shortDescEn: AI gateway proxy providing OpenAI/Gemini/Claude/Codex/Grok compatible API with built-in Web UI
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://help.router-for.me/cn/introduction/what-is-cliproxyapi.html
+  github: https://github.com/router-for-me/CLIProxyAPI
+  document: https://help.router-for.me/cn/configuration/basic.html
+  description:
+    en: AI gateway proxy providing OpenAI/Gemini/Claude/Codex/Grok compatible API with built-in Web UI
+    zh: AI 网关代理，为 CLI 提供多模型兼容 API 与内置 Web UI
+    zh-Hant: AI 閘道代理，為 CLI 提供多模型相容 API 與內建 Web UI
+    ja: AI ゲートウェイプロキシ — CLI 向けに OpenAI/Gemini/Claude/Codex/Grok 互換 API と内蔵 Web UI を提供
+    ko: AI 게이트웨이 프록시 — CLI용 OpenAI/Gemini/Claude/Codex/Grok 호환 API 및 내장 Web UI 제공
+  architectures:
+    - amd64
+    - arm64
