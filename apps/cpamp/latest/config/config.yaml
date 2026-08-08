@@ -52,8 +52,8 @@ auth-dir: "/CLIProxyAPI/auths"
 
 # API keys for authentication
 # 用于身份验证的 API 密钥
-# api-keys:
-#  - "your-api-key-1"
+api-keys:
+  - "__CPA_MANAGEMENT_KEY__"
 #  - "your-api-key-2"
 #  - "your-api-key-3"
 
