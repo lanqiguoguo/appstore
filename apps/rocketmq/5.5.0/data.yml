@@ -1,0 +1,142 @@
+additionalProperties:
+  formFields:
+    - default: 9876
+      edit: true
+      envKey: PANEL_APP_PORT_NAMESERVER
+      labelEn: NameServer Port
+      labelZh: NameServer 端口
+      label:
+        en: NameServer Port
+        es-es: NombreServer Puerto
+        fa: 'پورت NameServer'
+        ja: NameServer ポート
+        ms: Port NameServer
+        pt-br: Porta NameServer
+        ru: Порт NameServer
+        ko: NameServer 포트
+        zh: NameServer 端口
+        zh-Hant: NameServer 埠
+        tr: AdıSunucu Bağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number
+    - default: 10911
+      edit: true
+      envKey: PANEL_APP_PORT_LISTEN
+      labelEn: Broker ListenPort
+      labelZh: Broker 监听端口
+      label:
+        en: Broker ListenPort
+        es-es: Broker ListenPuerto
+        fa: 'پورت Listen بروکر'
+        ja: Broker リッスンポート
+        ms: Port Dengar Broker
+        pt-br: Porta de Escuta do Broker
+        ru: Порт прослушивания брокера
+        ko: 브로커 수신 포트
+        zh: Broker 监听端口
+        zh-Hant: Broker 監聽埠
+        tr: Broker ListenBağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number
+    - default: 10909
+      edit: true
+      envKey: PANEL_APP_PORT_FASTLISTEN
+      labelEn: Broker FastListenPort
+      labelZh: Broker 快速监听端口
+      label:
+        en: Broker FastListenPort
+        es-es: Broker FastListenPuerto
+        fa: 'پورت FastListen بروکر'
+        ja: Broker 高速リッスンポート
+        ms: Port Dengar Cepat Broker
+        pt-br: Porta de Escuta Rápida do Broker
+        ru: Порт быстрого прослушивания брокера
+        ko: 브로커 빠른 수신 포트
+        zh: Broker 快速监听端口
+        zh-Hant: Broker 快速監聽埠
+        tr: Broker FastListenBağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number
+    - default: 10912
+      edit: true
+      envKey: PANEL_APP_PORT_HALISTEN
+      labelEn: Broker HaListenPort
+      labelZh: Broker HA 监听端口
+      label:
+        en: Broker HaListenPort
+        es-es: Broker HaListenPuerto
+        fa: 'پورت HaListen بروکر'
+        ja: Broker HA リッスンポート
+        ms: Port Dengar HA Broker
+        pt-br: Porta de Escuta HA do Broker
+        ru: Порт HA прослушивания брокера
+        ko: 브로커 HA 수신 포트
+        zh: Broker HA 监听端口
+        zh-Hant: Broker HA 監聽埠
+        tr: Broker HaListenBağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8080
+      edit: true
+      envKey: PANEL_APP_PORT_REMOTINGLISTEN
+      labelEn: Proxy RemotingListenPort
+      labelZh: Proxy 远程监听端口
+      label:
+        en: Proxy RemotingListenPort
+        es-es: Proxy RemotingListenPuerto
+        fa: 'پورت RemotingListen پروکسی'
+        ja: Proxy リモートリッスンポート
+        ms: Port Dengar Jauh Proxy
+        pt-br: Porta de Escuta Remota do Proxy
+        ru: Порт удаленного прослушивания прокси
+        ko: 프록시 원격 수신 포트
+        zh: Proxy 远程监听端口
+        zh-Hant: Proxy 遠程監聽埠
+        tr: Proxy RemotingListenBağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8081
+      edit: true
+      envKey: PANEL_APP_PORT_GRPCSERVER
+      labelEn: Proxy GrpcServerPort
+      labelZh: Proxy grpc 端口
+      label:
+        en: Proxy GrpcServerPort
+        es-es: Proxy GrpcServerPuerto
+        fa: 'پورت GrpcServer پروکسی'
+        ja: Proxy grpc サーバーポート
+        ms: Port Pelayan Grpc Proxy
+        pt-br: Porta do Servidor Grpc do Proxy
+        ru: Порт сервера Grpc прокси
+        ko: 프록시 grpc 서버 포트
+        zh: Proxy grpc 端口
+        zh-Hant: Proxy grpc 埠
+        tr: Proxy GrpcSunucuBağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number
+    - default: 8088
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Dashboard Port
+      labelZh: Dashboard 端口
+      label:
+        en: Dashboard Port
+        es-es: Dashboard Puerto
+        fa: 'پورت داشبورد'
+        ja: ダッシュボードポート
+        ms: Port Papan Pemuka
+        pt-br: Porta do Painel
+        ru: Порт панели управления
+        ko: 대시보드 포트
+        zh: Dashboard 端口
+        zh-Hant: Dashboard 埠
+        tr: Kontrol Paneli Bağlantı Noktası
+      required: true
+      rule: paramPort
+      type: number
