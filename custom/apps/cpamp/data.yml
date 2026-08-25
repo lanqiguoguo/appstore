@@ -1,15 +1,16 @@
 name: CPAMP
 tags:
-    - AI
+- AI
 title: AI 网关监控面板 — 追踪请求、成本、配额与账号健康
 description: AI 网关监控面板，追踪 CPA 请求、成本、配额与账号健康
 additionalProperties:
   key: cpamp
   name: CPAMP
   tags:
-    - Tool
+  - AI
   shortDescZh: AI 网关监控面板，追踪请求、成本、配额与账号健康
-  shortDescEn: AI gateway monitoring panel for CPA request tracking, cost, quota and account health
+  shortDescEn: AI gateway monitoring panel for CPA request tracking, cost, quota and
+    account health
   type: website
   crossVersionUpdate: true
   limit: 0
@@ -18,11 +19,12 @@ additionalProperties:
   github: https://github.com/seakee/CPA-Manager-Plus
   document: https://seakee.github.io/CPA-Manager-Plus/docs/guide/getting-started.html
   description:
-    en: AI gateway monitoring panel for CPA request tracking, cost, quota and account health
+    en: AI gateway monitoring panel for CPA request tracking, cost, quota and account
+      health
     zh: AI 网关监控面板，追踪请求、成本、配额与账号健康
     zh-Hant: AI 閘道監控面板，追蹤請求、成本、配額與帳號健康
     ja: AI ゲートウェイ監視パネル — リクエスト、コスト、クォータ、アカウント健全性を追跡
     ko: AI 게이트웨이 모니터링 패널 — 요청, 비용, 할당량 및 계정 상태 추적
   architectures:
-    - amd64
-    - arm64
+  - amd64
+  - arm64

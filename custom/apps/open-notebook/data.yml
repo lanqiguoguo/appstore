@@ -1,24 +1,25 @@
 name: open-notebook
 tags:
-  - 实用工具
-  - 本地
+- 实用工具
+- 本地
 title: open-notebook — 一个私密、多模型、100%本地化、功能齐全的 Notebook LM 替代方案
 description: open-notebook — 一个私密、多模型、100%本地化、功能齐全的 Notebook LM 替代方案
 additionalProperties:
   key: open-notebook
   name: open-notebook
   tags:
-    - Tool
-    - Local
+  - AI
   shortDescZh: open-notebook — 一个私密、多模型、100%本地化、功能齐全的 Notebook LM 替代方案
-  shortDescEn: open-notebook  — A private, multi-model, 100% local, full-featured alternative to Notebook LM
+  shortDescEn: open-notebook  — A private, multi-model, 100% local, full-featured
+    alternative to Notebook LM
   type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
-  website:  https://github.com/lfnovo/open-notebook
-  github:  https://github.com/lfnovo/open-notebook
-  document:  https://github.com/lfnovo/open-notebook
+  website: https://github.com/lfnovo/open-notebook
+  github: https://github.com/lfnovo/open-notebook
+  document: https://github.com/lfnovo/open-notebook
   description:
-    en: open-notebook  — A private, multi-model, 100% local, full-featured alternative to Notebook LM
+    en: open-notebook  — A private, multi-model, 100% local, full-featured alternative
+      to Notebook LM
     zh: open-notebook — 一个私密、多模型、100%本地化、功能齐全的 Notebook LM 替代方案

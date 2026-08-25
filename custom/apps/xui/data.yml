@@ -1,24 +1,26 @@
 name: xui
 tags:
-  - 实用工具
-  - 本地
+- 实用工具
+- 本地
 title: 3xui — 一个基于网页的高级开源控制面板
-description: 3X-UI — 一个基于网页的高级开源控制面板，专为管理 Xray-core 服务器而设计。它提供了用户友好的界面，用于配置和监控各种 VPN 和代理协议。
+description: 3X-UI — 一个基于网页的高级开源控制面板，专为管理 Xray-core 服务器而设计。它提供了用户友好的界面，用于配置和监控各种 VPN
+  和代理协议。
 additionalProperties:
   key: xui
   name: xui
   tags:
-    - Tool
-    - Local
+  - Security
   shortDescZh: 3X-UI — 一个基于网页的高级开源控制面板
-  shortDescEn: 3X-UI — advanced, open-source web-based control panel designed for managing Xray-core server.
+  shortDescEn: 3X-UI — advanced, open-source web-based control panel designed for
+    managing Xray-core server.
   type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
-  website:  https://github.com/MHSanaei/3x-ui
-  github:  https://github.com/MHSanaei/3x-ui
-  document:  https://github.com/MHSanaei/3x-ui
+  website: https://github.com/MHSanaei/3x-ui
+  github: https://github.com/MHSanaei/3x-ui
+  document: https://github.com/MHSanaei/3x-ui
   description:
-    en: 3X-UI — advanced, open-source web-based control panel designed for managing Xray-core server.
+    en: 3X-UI — advanced, open-source web-based control panel designed for managing
+      Xray-core server.
     zh: 3X-UI — 一个基于网页的高级开源控制面板

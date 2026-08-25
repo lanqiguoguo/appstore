@@ -1,6 +1,6 @@
-﻿name: searxng
+name: searxng
 tags:
-  - 实用工具
+- 实用工具
 title: SearXNG 是一个元搜索引擎。用户既不会被追踪，也不会被分析。
 type: 实用工具
 description: SearXNG 是一个元搜索引擎。用户既不会被追踪，也不会被分析。
@@ -8,14 +8,13 @@ additionalProperties:
   key: searxng
   name: searxng
   tags:
-    - Tool
-    - Local
+  - Tool
   shortDescZh: SearXNG 是一个元搜索引擎。用户既不会被追踪，也不会被分析。
   shortDescEn: SearXNG is a metasearch engine. Users are neither tracked nor profiled.
   type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
-  website:  https://github.com/searxng/searxng
-  github:  https://github.com/searxng/searxng
-  document:  https://github.com/searxng/searxng
+  website: https://github.com/searxng/searxng
+  github: https://github.com/searxng/searxng
+  document: https://github.com/searxng/searxng

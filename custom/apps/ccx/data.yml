@@ -1,21 +1,24 @@
 name: ccx
 tags:
-    - 实用工具
-title: CCX 是一个高性能的 AI API 代理与协议转换网关，支持 Claude、OpenAI Chat、OpenAI Images、Codex Responses 与 Gemini。
+- 实用工具
+title: CCX 是一个高性能的 AI API 代理与协议转换网关，支持 Claude、OpenAI Chat、OpenAI Images、Codex Responses
+  与 Gemini。
 type: 实用工具
-description: CCX 是一个高性能的 AI API 代理与协议转换网关，支持 Claude、OpenAI Chat、OpenAI Images、Codex Responses 与 Gemini。
+description: CCX 是一个高性能的 AI API 代理与协议转换网关，支持 Claude、OpenAI Chat、OpenAI Images、Codex
+  Responses 与 Gemini。
 additionalProperties:
   key: ccx
   name: ccx
   tags:
-    - Tool
-    - Local
-  shortDescZh: CCX 是一个高性能的 AI API 代理与协议转换网关，支持 Claude、OpenAI Chat、OpenAI Images、Codex Responses 与 Gemini。
-  shortDescEn: CCX is a high-performance AI API proxy and protocol translation gateway for Claude, OpenAI Chat, OpenAI Images, Codex Responses, and Gemini
+  - AI
+  shortDescZh: CCX 是一个高性能的 AI API 代理与协议转换网关，支持 Claude、OpenAI Chat、OpenAI Images、Codex
+    Responses 与 Gemini。
+  shortDescEn: CCX is a high-performance AI API proxy and protocol translation gateway
+    for Claude, OpenAI Chat, OpenAI Images, Codex Responses, and Gemini
   type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
-  website:  https://github.com/BenedictKing/ccx
-  github:  https://github.com/BenedictKing/ccx
-  document:  https://github.com/BenedictKing/ccx
+  website: https://github.com/BenedictKing/ccx
+  github: https://github.com/BenedictKing/ccx
+  document: https://github.com/BenedictKing/ccx

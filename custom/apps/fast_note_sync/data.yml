@@ -1,14 +1,13 @@
 name: Fast Note Sync Service
 tags:
-    - 笔记
+- 笔记
 title: Obsidian 高性能笔记同步服务
 description: Obsidian 高性能、低延迟笔记同步、在线管理与远程 REST API 服务
 additionalProperties:
   key: fast_note_sync
   name: Fast Note Sync Service
   tags:
-    - Tool
-    - Local
+  - Tool
   shortDescZh: Obsidian 高性能笔记同步与管理服务
   shortDescEn: High-performance Obsidian note sync and management service
   type: website
@@ -25,5 +24,5 @@ additionalProperties:
     ja: Obsidian 高性能ノート同期・管理サービス
     ko: Obsidian 고성능 노트 동기화 및 관리 서비스
   architectures:
-    - amd64
-    - arm64
+  - amd64
+  - arm64
