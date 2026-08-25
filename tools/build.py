@@ -227,10 +227,15 @@ def build() -> bool:
     }
     index_bytes = json.dumps(index, ensure_ascii=False, indent=2).encode()
     (stage / "1panel.json").write_bytes(index_bytes)
-    with zipfile.ZipFile(stage / "1panel.json.zip", "w", zipfile.ZIP_DEFLATED) as zf:
-        zf.writestr("1panel.json", index_bytes)
+    # 固定 zip 内部时间戳：否则每次构建字节不同，幂等检测在 CI 上永远失效
+    zinfo = zipfile.ZipInfo("1panel.json", date_time=(1980, 1, 1, 0, 0, 0))
+    zinfo.compress_type = zipfile.ZIP_DEFLATED
+    zinfo.external_attr = 0o644 << 16
+    with zipfile.ZipFile(stage / "1panel.json.zip", "w") as zf:
+        zf.writestr(zinfo, index_bytes)
 
     old_snap = tree_snapshot(DEV_DIR)
+    old_snap.pop("1panel.json.version.txt", None)
     new_snap = tree_snapshot(stage)
     new_snap.pop("1panel.json.version.txt", None)
     if DEV_DIR.exists() and old_snap == new_snap:
