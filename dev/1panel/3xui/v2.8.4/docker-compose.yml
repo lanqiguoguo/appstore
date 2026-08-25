@@ -1,0 +1,21 @@
+﻿services:
+  3xui:
+    image: ghcr.io/mhsanaei/3x-ui:v2.8.4
+    container_name: ${CONTAINER_NAME}
+    hostname: ${HOSTNAME}
+    # hostname: yourhostname <- optional
+    # default_port <- 2053
+    # default_username <- admin
+    # default_password <- admin
+    volumes:
+      - ./db/:/etc/x-ui/
+      - ./cert/:/root/cert/
+    environment:
+      - XRAY_VMESS_AEAD_FORCED=false
+      - XUI_ENABLE_FAIL2BAN=true
+      - TZ=${TIME_ZONE}
+    tty: true
+    network_mode: host
+    restart: unless-stopped
+    labels:
+      createdBy: "Apps"

@@ -1,0 +1,23 @@
+version: '3'
+services:
+  miaomiaowux:
+    image: ghcr.io/iluobei/miaomiaowux:0.2
+    container_name: ${CONTAINER_NAME}
+    restart: unless-stopped
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:12889"
+    volumes:
+      - ./data:/app/data
+      - ./subscribes:/app/subscribes
+      - ./rule_templates:/app/rule_templates
+    environment:
+      - PORT=12889
+      - LOG_LEVEL=info
+      - JWT_SECRET=${PANEL_JWT_SECRET}
+    labels:
+      createdBy: Apps
+    networks:
+      - 1panel-network
+networks:
+  1panel-network:
+    external: true

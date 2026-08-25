@@ -1,0 +1,64 @@
+name: Build & Publish AppStore
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/**'
+      - 'tools/**'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install pyyaml
+
+      - name: Build protocol artifacts
+        run: python3 tools/build.py
+
+      # dev/ 必须进仓库才能被面板以多级路径 raw 直出；
+      # 回推提交不匹配上面的 paths 过滤，且带 [skip ci]，不会触发循环构建
+      - name: Commit dev/ back to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dev/
+          git diff --cached --quiet || (git commit -m "build: regenerate dev/ [skip ci]" && git push origin main)
+
+      - name: Upload packages to Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release view packages >/dev/null 2>&1 || \
+            gh release create packages --repo lanqiguoguo/appstore \
+              --title "App Packages" --notes "自动生成的应用版本包"
+          gh release upload packages dist/*.tar.gz --repo lanqiguoguo/appstore --clobber
+
+      # 清理索引中已不存在（下架）的旧资产，防止 Release 无限膨胀
+      - name: Delete stale assets
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          EXPECTED=$(mktemp)
+          jq -r '.apps[].versions[].downloadUrl | split("/") | last' dev/1panel.json > "$EXPECTED"
+          gh api "repos/lanqiguoguo/appstore/releases/tags/packages" --jq '.assets[] | [.id, .name] | @tsv' |
+          while IFS=$'\t' read -r id name; do
+            if ! grep -qx -- "$name" "$EXPECTED"; then
+              echo "删除废弃资产 $name"
+              gh api -X DELETE "repos/lanqiguoguo/appstore/releases/assets/$id"
+            fi
+          done

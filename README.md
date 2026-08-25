@@ -2,6 +2,34 @@
 
 1panel 私有应用商店 — 自托管应用集合，涵盖代理、监控、邮件、笔记、AI 等工具。
 
+## 构建 / 发布
+
+面板（1Panel v1 协议）不直接读取 `apps/` 目录，而是拉取 `dev/` 下的协议产物与 Release 里的版本包：
+
+```
+apps/<key>/…   ──python3 tools/build.py──▶   dev/                     dist/
+（人维护的源）      （CI 自动执行）             ├─ 1panel.json.version.txt    ├─ <key>-<ver>.tar.gz
+                                              ├─ 1panel.json.zip            （上传到 packages Release）
+                                              └─ 1panel/<key>/<ver>/…
+```
+
+- **日常发布**：改 `apps/` 后 push 到 main 即可，Actions 自动构建、回推 `dev/`、上传 Release（`.github/workflows/publish.yml`）
+- **本地构建**：`pip install pyyaml && python3 tools/build.py`，产物在 `dev/` 与 `dist/`
+- **手动发布**（CI 故障兜底）：
+  ```bash
+  python3 tools/build.py
+  git add dev/ && git commit -m "build: regenerate dev/ [skip ci]" && git push
+  gh release create packages --title "App Packages" --notes "auto" || true
+  gh release upload packages dist/*.tar.gz --clobber
+  ```
+
+约定与注意事项：
+
+- 版本目录名即面板显示版本号；**纯数字分段**（如 `3.6.1`）才能正常提示升级，`latest` 可以安装但永不提示更新
+- 每个版本目录必须有 `docker-compose.yml`；应用根目录必须有 `logo.png` 与 `data.yml`
+- 配置模板用 `__占位符__` + `scripts/init.sh` 注入，勿提交真实密钥
+- 面板侧指向本仓库：`app_repo: https://raw.githubusercontent.com/lanqiguoguo/appstore`（mode 保持 dev）
+
 ## 应用列表
 
 | 应用 | 说明 |

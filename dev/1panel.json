@@ -1,0 +1,2866 @@
+{
+  "valid": true,
+  "violations": [],
+  "lastModified": 4156597210,
+  "additionalProperties": {
+    "tags": [
+      {
+        "key": "Local",
+        "name": "Local",
+        "sort": 0,
+        "locales": {}
+      },
+      {
+        "key": "Server",
+        "name": "Server",
+        "sort": 1,
+        "locales": {}
+      },
+      {
+        "key": "Tool",
+        "name": "Tool",
+        "sort": 2,
+        "locales": {}
+      }
+    ],
+    "version": ""
+  },
+  "apps": [
+    {
+      "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/3xui/logo.png",
+      "name": "3xui",
+      "readMe": "[English](/README.md) | [فارسی](/README.fa_IR.md) | [العربية](/README.ar_EG.md) |  [中文](/README.zh_CN.md) | [Español](/README.es_ES.md) | [Русский](/README.ru_RU.md)\n\n    # default_port <- 2053\n    # default_username <- admin\n    # default_password <- admin\n\n[![](https://img.shields.io/github/v/release/mhsanaei/3x-ui.svg?style=for-the-badge)](https://github.com/MHSanaei/3x-ui/releases)\n[![](https://img.shields.io/github/actions/workflow/status/mhsanaei/3x-ui/release.yml.svg?style=for-the-badge)](https://github.com/MHSanaei/3x-ui/actions)\n[![GO Version](https://img.shields.io/github/go-mod/go-version/mhsanaei/3x-ui.svg?style=for-the-badge)](#)\n[![Downloads](https://img.shields.io/github/downloads/mhsanaei/3x-ui/total.svg?style=for-the-badge)](https://github.com/MHSanaei/3x-ui/releases/latest)\n[![License](https://img.shields.io/badge/license-GPL%20V3-blue.svg?longCache=true&style=for-the-badge)](https://www.gnu.org/licenses/gpl-3.0.en.html)\n\n**3X-UI** — 一个基于网页的高级开源控制面板，专为管理 Xray-core 服务器而设计。它提供了用户友好的界面，用于配置和监控各种 VPN 和代理协议。\n\n> [!IMPORTANT]\n> 本项目仅用于个人使用和通信，请勿将其用于非法目的，请勿在生产环境中使用。\n\n作为原始 X-UI 项目的增强版本，3X-UI 提供了更好的稳定性、更广泛的协议支持和额外的功能。\n\n## 快速开始\n\n```\nbash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)\n```\n\n完整文档请参阅 [项目Wiki](https://github.com/MHSanaei/3x-ui/wiki)。\n\n## 特别感谢\n\n- [alireza0](https://github.com/alireza0/)\n\n## 致谢\n\n- [Iran v2ray rules](https://github.com/chocolate4u/Iran-v2ray-rules) (许可证: **GPL-3.0**): _增强的 v2ray/xray 和 v2ray/xray-clients 路由规则，内置伊朗域名，专注于安全性和广告拦截。_\n- [Russia v2ray rules](https://github.com/runetfreedom/russia-v2ray-rules-dat) (许可证: **GPL-3.0**): _此仓库包含基于俄罗斯被阻止域名和地址数据自动更新的 V2Ray 路由规则。_\n\n## 支持项目\n\n**如果这个项目对您有帮助，您可以给它一个**:star2:\n\n<p align=\"left\">\n  <a href=\"https://buymeacoffee.com/mhsanaei\" target=\"_blank\">\n    <img src=\"./media/buymeacoffe.png\" alt=\"Image\">\n  </a>\n</p>\n\n- USDT (TRC20): `TXncxkvhkDWGts487Pjqq1qT9JmwRUz8CC`\n- POL (polygon): `0x41C9548675D044c6Bfb425786C765bc37427256A`\n- LTC (Litecoin): `ltc1q2ach7x6d2zq0n4l0t4zl7d7xe2s6fs7a3vspwv`\n\n## 随时间变化的星标数\n\n[![Stargazers over time](https://starchart.cc/MHSanaei/3x-ui.svg?variant=adaptive)](https://starchart.cc/MHSanaei/3x-ui) \n",
+      "lastModified": 2388724902,
+      "additionalProperties": {
+        "name": "3xui",
+        "type": "website",
+        "tags": [
+          "Tool",
+          "Local"
+        ],
+        "shortDescZh": "3X-UI — 一个基于网页的高级开源控制面板",
+        "shortDescEn": "3X-UI — advanced, open-source web-based control panel designed for managing Xray-core server.",
+        "description": {
+          "en": "3X-UI — advanced, open-source web-based control panel designed for managing Xray-core server.",
+          "zh": "3X-UI — 一个基于网页的高级开源控制面板"
+        },
+        "key": "3xui",
+        "Required": [],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 0,
+        "website": "https://github.com/MHSanaei/3x-ui",
+        "github": "https://github.com/MHSanaei/3x-ui",
+        "document": "https://github.com/MHSanaei/3x-ui",
+        "version": 0,
+        "gpuSupport": false
+      },
+      "versions": [
+        {
+          "name": "v2.8.4",
+          "lastModified": 804085614,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/3xui-v2.8.4.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": "3xui",
+                "edit": true,
+                "envKey": "HOSTNAME",
+                "labelEn": "hostname",
+                "labelZh": "主机名",
+                "label": {
+                  "en": "hostname",
+                  "zh": "主机名"
+                },
+                "type": "text"
+              },
+              {
+                "default": "Asia/Shanghai",
+                "edit": true,
+                "envKey": "TIME_ZONE",
+                "labelEn": "TZ",
+                "labelZh": "时区",
+                "label": {
+                  "en": "TZ",
+                  "zh": "时区"
+                },
+                "type": "text"
+              },
+              {
+                "default": 6003,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "自定义端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              }
+            ],
+            "supportVersion": 0
+          }
+        },
+        {
+          "name": "v3.1.0",
+          "lastModified": 503239949,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/3xui-v3.1.0.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": "3xui",
+                "edit": true,
+                "envKey": "HOSTNAME",
+                "labelEn": "hostname",
+                "labelZh": "主机名",
+                "label": {
+                  "en": "hostname",
+                  "zh": "主机名"
+                },
+                "type": "text"
+              },
+              {
+                "default": "Asia/Shanghai",
+                "edit": true,
+                "envKey": "TIME_ZONE",
+                "labelEn": "TZ",
+                "labelZh": "时区",
+                "label": {
+                  "en": "TZ",
+                  "zh": "时区"
+                },
+                "type": "text"
+              },
+              {
+                "default": 6003,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "自定义端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              }
+            ],
+            "supportVersion": 0
+          }
+        },
+        {
+          "name": "v3.2.6",
+          "lastModified": 2301232629,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/3xui-v3.2.6.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": "3xui",
+                "edit": true,
+                "envKey": "HOSTNAME",
+                "labelEn": "hostname",
+                "labelZh": "主机名",
+                "label": {
+                  "en": "hostname",
+                  "zh": "主机名"
+                },
+                "type": "text"
+              },
+              {
+                "default": "Asia/Shanghai",
+                "edit": true,
+                "envKey": "TIME_ZONE",
+                "labelEn": "TZ",
+                "labelZh": "时区",
+                "label": {
+                  "en": "TZ",
+                  "zh": "时区"
+                },
+                "type": "text"
+              },
+              {
+                "default": 6003,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "自定义端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              }
+            ],
+            "supportVersion": 0
+          }
+        }
+      ]
+    },
+    {
+      "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/als/logo.png",
+      "name": "ALS",
+      "readMe": "# ALS - 另一个 Looking-glass 服务器\n\n## 快速开始 (Docker 环境)\n```\ndocker run -d --name looking-glass --restart always --network host wikihostinc/looking-glass-server\n```\n\n[DEMO](http://lg.hk1-bgp.hkg.50network.com/)\n\n如果不想使用 Docker , 您可以使用编译好的[服务器端](https://github.com/wikihost-opensource/als/releases)\n\n## 配置要求\n- 内存: 32MB 或更好\n\n## 如何修改配置\n```\n# 你需要在 docker 命令中传递环境变量设置参数: -e KEY=VALUE\n# 你可以在 环境变量表 中找到 KEY\n# 例如，将监听端口改为 8080\ndocker run -d \\\n    --name looking-glass \\\n    -e HTTP_PORT=8080 \\\n    --restart always \\\n    --network host \\\n    wikihostinc/looking-glass-server\n``` \n\n## 环境变量表\n| Key                       | 示例                                                                | 默认                                                    | 描述                                                                             |\n| ------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------- | --------------------------------------------------------------------------------------- |\n| LISTEN_IP                 | 127.0.0.1                                                              | (全部  IP)                                                   | 监听在哪一个 IP 上                                                     |\n| HTTP_PORT                 | 80                                                                     | 80                                                         | 监听在哪一个端口上                                                              |\n| SPEEDTEST_FILE_LIST       | 100MB 1GB                                                              | 1MB 10MB 100MB 1GB                                         | 静态文件大小列表, 使用空格隔开                                          |\n| LOCATION                  | \"this is location\"                                                     | (请求 ipapi.co 获取) | 服务器位置的文本                                                                         |\n| PUBLIC_IPV4               | 1.1.1.1                                                                | (从在线获取)                            | 服务器的 IPv4 地址                                                          |\n| PUBLIC_IPV6               | fe80::1                                                                | (从在线获取)                            | 服务器的 IPv6 地址                                                          |\n| DISPLAY_TRAFFIC           | true                                                                   | true                                                       | 实时流量开关                                                      |\n| ENABLE_SPEEDTEST          | true                                                                   | true                                                       | 测速功能开关                                                            |\n| UTILITIES_PING            | true                                                                   | true                                                       | Ping 功能开关                                                                 |\n| UTILITIES_SPEEDTESTDOTNET | true                                                                   | true                                                       | Speedtest.net 功能开关                                                        |\n| UTILITIES_FAKESHELL       | true                                                                   | true                                                       | Shell 功能开关                                                           |\n| UTILITIES_IPERF3          | true                                                                   | true                                                       | iPerf3 服务器功能开关                                                               |\n| UTILITIES_IPERF3_PORT_MIN | 30000                                                                  | 30000                                                      | iPerf3 服务器端口范围 - 开始                                                         |\n| UTILITIES_IPERF3_PORT_MAX | 31000                                                                  | 31000                                                      | iPerf3 服务器端口范围 - 结束                                                           |\n| SPONSOR_MESSAGE           | \"Test message\" or \"/tmp/als_readme.md\" or \"http://some_host/114514.md\" | ''                                                         | 显示节点赞助商信息 (支持 Markdown, 支持 URL/文字/文件 (文件需要映射到容器中, 使用映射后的路径) |\n\n\n## 功能\n- [x] HTML 5 速度测试\n- [x] Ping - IPv4 / IPv6\n- [x] iPerf3 服务器控制\n- [x] 实时网卡流量显示\n- [x] Speedtest.net 客户端\n- [x] 在线 shell 盒子 (限制命令)\n- [x] [NextTrace](https://github.com/nxtrace/NTrace-core) 支持\n Chart](https://api.star-history.com/svg?repos=wikihost-opensource/als&type=Date)](https://star-history.com/#wikihost-opensource/als&Date)",
+      "lastModified": 4156597210,
+      "additionalProperties": {
+        "name": "ALS",
+        "type": "website",
+        "tags": [
+          "Tool",
+          "Local"
+        ],
+        "shortDescZh": "一个 Looking-glass 服务器",
+        "shortDescEn": "Another Looking-glass Server",
+        "description": {
+          "en": "Another Looking-glass Server",
+          "zh": "一个 Looking-glass 服务器"
+        },
+        "key": "als",
+        "Required": [],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 0,
+        "website": "https://github.com/wikihost-opensource/als",
+        "github": "https://github.com/wikihost-opensource/als",
+        "document": "https://github.com/wikihost-opensource/als",
+        "version": 0,
+        "gpuSupport": false
+      },
+      "versions": [
+        {
+          "name": "latest",
+          "lastModified": 4062573228,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/als-latest.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": 6004,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "自定义端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              },
+              {
+                "default": "1MB 10MB 100MB 1GB",
+                "edit": true,
+                "envKey": "SPEEDTEST_FILE_LIST",
+                "labelEn": "size of static test files, separate with space",
+                "labelZh": "静态测试文件的大小，用空格分隔",
+                "required": true,
+                "type": "text"
+              }
+            ],
+            "supportVersion": 0
+          }
+        }
+      ]
+    },
+    {
+      "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/bifrost/logo.png",
+      "name": "bifrost",
+      "readMe": "Bifrost AI 网关 — 高性能 AI API 网关\n\nBifrost 是一个高性能 AI 网关，通过统一的 OpenAI 兼容 API 接入 23+ 提供商（OpenAI、Anthropic、AWS Bedrock、Google Vertex、Azure、Cerebras、Cohere、Mistral、Ollama、Groq 等），支持自动故障转移、负载均衡、语义缓存、MCP 工具与企业级治理功能。\n\n### 特性\n- **统一接口** — 单一 OpenAI 兼容 API 接入所有提供商\n- **自动故障转移** — 提供商与模型间无缝切换，零停机\n- **负载均衡** — 跨多个 API Key 和提供商的智能请求分发\n- **语义缓存** — 基于语义相似度的智能响应缓存，降低成本和延迟\n- **Web UI** — 内置可视化配置界面与实时监控\n- **MCP 支持** — 让 AI 模型使用外部工具（文件系统、Web 搜索、数据库）\n- **多模态** — 支持文本、图像、音频与流式传输\n- **治理与安全** — 用量跟踪、速率限制、虚拟密钥与访问控制\n- **可观测性** — 原生 Prometheus 指标、分布式追踪与日志\n\n### 快速开始\n\n```bash\n# Docker\ndocker run -p 8080:8080 maximhq/bifrost\n\n# 或使用 npx\nnpx -y @maximhq/bifrost\n\n# 打开 Web UI\nopen http://localhost:8080\n```\n",
+      "lastModified": 301993470,
+      "additionalProperties": {
+        "name": "bifrost",
+        "type": "website",
+        "tags": [
+          "Tool",
+          "Local"
+        ],
+        "shortDescZh": "Bifrost AI 网关 — 高性能 AI API 网关，支持 23+ 提供商、自动故障转移、负载均衡与语义缓存",
+        "shortDescEn": "Bifrost AI Gateway — High-performance AI API gateway with 23+ providers, automatic failover, load balancing, and semantic caching",
+        "description": {},
+        "key": "bifrost",
+        "Required": [],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 0,
+        "website": "https://docs.getbifrost.ai",
+        "github": "https://github.com/maximhq/bifrost",
+        "document": "https://docs.getbifrost.ai/quickstart/gateway/setting-up",
+        "version": 0,
+        "gpuSupport": false
+      },
+      "versions": [
+        {
+          "name": "latest",
+          "lastModified": 3639634466,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/bifrost-latest.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": 8080,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              },
+              {
+                "default": "info",
+                "envKey": "LOG_LEVEL",
+                "labelEn": "Log Level",
+                "labelZh": "日志级别",
+                "required": false,
+                "type": "text"
+              }
+            ],
+            "supportVersion": 0
+          }
+        }
+      ]
+    },
+    {
+      "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/ccx/logo.png",
+      "name": "ccx",
+      "readMe": "CX 是一个高性能的 AI API 代理与协议转换网关，支持 Claude、OpenAI Chat、OpenAI Images、Codex Responses 与 Gemini。它提供统一入口、内置 Web 管理界面、渠道编排、故障转移、多密钥管理和模型路由能力。",
+      "lastModified": 3230675101,
+      "additionalProperties": {
+        "name": "ccx",
+        "type": "website",
+        "tags": [
+          "Tool",
+          "Local"
+        ],
+        "shortDescZh": "CCX 是一个高性能的 AI API 代理与协议转换网关，支持 Claude、OpenAI Chat、OpenAI Images、Codex Responses 与 Gemini。",
+        "shortDescEn": "CCX is a high-performance AI API proxy and protocol translation gateway for Claude, OpenAI Chat, OpenAI Images, Codex Responses, and Gemini",
+        "description": {},
+        "key": "ccx",
+        "Required": [],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 0,
+        "website": "https://github.com/BenedictKing/ccx",
+        "github": "https://github.com/BenedictKing/ccx",
+        "document": "https://github.com/BenedictKing/ccx",
+        "version": 0,
+        "gpuSupport": false
+      },
+      "versions": [
+        {
+          "name": "latest",
+          "lastModified": 3130517452,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/ccx-latest.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": "",
+                "envKey": "PANEL_PROXY_ACCESS_KEY",
+                "labelEn": "Password",
+                "labelZh": "代理访问密钥",
+                "random": true,
+                "required": true,
+                "type": "password"
+              },
+              {
+                "default": 6012,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              }
+            ],
+            "supportVersion": 0
+          }
+        }
+      ]
+    },
+    {
+      "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/cpa/logo.png",
+      "name": "CPA",
+      "readMe": "## 使用说明\n\n> 镜像使用 `latest` 标签，随上游 [CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI) 频繁更新自动跟进最新版本。\n\n部署成功后，浏览器访问 `http://<服务器IP>:<端口>/management.html`，使用安装时设置的管理密钥登录 Web UI。\n\n在 Web UI 中可以配置 AI 提供商、认证文件、API 密钥、路由策略等。\n\n## OAuth 登录\n\n如需使用 OAuth 方式接入提供商（Codex、Claude、Antigravity），在容器中执行登录命令：\n\n**OpenAI Codex**：\n```bash\ndocker exec -it <容器名> /CLIProxyAPI/CLIProxyAPI -no-browser --codex-login\n```\n\n**Claude Code**：\n```bash\ndocker exec -it <容器名> /CLIProxyAPI/CLIProxyAPI -no-browser --claude-login\n```\n\n**Antigravity**：\n```bash\ndocker exec -it <容器名> /CLIProxyAPI/CLIProxyAPI -no-browser --antigravity-login\n```\n\n命令会输出一个 URL，在浏览器中打开完成授权。\n\n## 客户端接入\n\n配置好提供商和 API 密钥后，客户端通过以下地址接入：\n\n```\nhttp://<服务器IP>:<端口>/v1/...\n```\n\n使用在 Web UI 中生成的 API 密钥进行认证。\n\n## 产品介绍\n\n**CLIProxyAPI** 是一个为 CLI 工具提供 OpenAI/Gemini/Claude/Codex/Grok 兼容 API 的代理服务器。支持多账户轮询、负载均衡、OAuth 登录，内置 Web UI 管理面板。\n\n## 主要功能\n\n- OpenAI/Gemini/Claude/Codex/Grok 兼容 API 端点\n- 多账户支持与轮询负载均衡\n- 内置 Web UI 管理面板（`/management.html`）\n- OAuth 登录（Codex、Claude、Antigravity）\n- OpenAI 兼容提供商接入（如 OpenRouter）\n- 流式与非流式响应、函数调用、多模态输入\n- 配额管理与自动切换\n- 插件系统\n- 日志写入文件（默认 10MB 滚动）\n\n## 与 cpamp（CPA Manager Plus）的区别\n\n| | CPA | CPAMP |\n|---|---|---|\n| 部署形态 | 单容器（仅 CLIProxyAPI） | 双容器（CLIProxyAPI + CPAMP 监控面板） |\n| 管理界面 | CLIProxyAPI 内置 Web UI | CPAMP 独立管理面板（请求监控、用量分析、账号巡检） |\n| 适合场景 | 轻量部署，基础管理即可 | 需要完整的请求监控与用量分析 |\n\n## 数据持久化\n\n| 目录 | 说明 |\n|------|------|\n| `./config/` | 配置文件（安装时由 init.sh 注入管理密钥） |\n| `./auths/` | 认证文件（OAuth 凭证、API 密钥） |\n| `./logs/` | 日志文件 |\n| `./plugins/` | 插件目录 |\n\n> 更多细节请参见 [官方文档](https://help.router-for.me/cn/configuration/basic.html)。\n",
+      "lastModified": 2584279775,
+      "additionalProperties": {
+        "name": "CPA",
+        "type": "website",
+        "tags": [
+          "Tool"
+        ],
+        "shortDescZh": "AI 网关代理，为 CLI 提供多模型兼容 API 与内置 Web UI",
+        "shortDescEn": "AI gateway proxy providing OpenAI/Gemini/Claude/Codex/Grok compatible API with built-in Web UI",
+        "description": {
+          "en": "AI gateway proxy providing OpenAI/Gemini/Claude/Codex/Grok compatible API with built-in Web UI",
+          "zh": "AI 网关代理，为 CLI 提供多模型兼容 API 与内置 Web UI",
+          "zh-Hant": "AI 閘道代理，為 CLI 提供多模型相容 API 與內建 Web UI",
+          "ja": "AI ゲートウェイプロキシ — CLI 向けに OpenAI/Gemini/Claude/Codex/Grok 互換 API と内蔵 Web UI を提供",
+          "ko": "AI 게이트웨이 프록시 — CLI용 OpenAI/Gemini/Claude/Codex/Grok 호환 API 및 내장 Web UI 제공"
+        },
+        "key": "cpa",
+        "Required": [],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 0,
+        "website": "https://help.router-for.me/cn/introduction/what-is-cliproxyapi.html",
+        "github": "https://github.com/router-for-me/CLIProxyAPI",
+        "document": "https://help.router-for.me/cn/configuration/basic.html",
+        "version": 0,
+        "gpuSupport": false,
+        "architectures": [
+          "amd64",
+          "arm64"
+        ]
+      },
+      "versions": [
+        {
+          "name": "latest",
+          "lastModified": 3117201229,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/cpa-latest.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": "Asia/Shanghai",
+                "edit": true,
+                "envKey": "PANEL_APP_TIME_ZONE",
+                "labelEn": "TZ",
+                "labelZh": "时区",
+                "label": {
+                  "en": "TZ",
+                  "zh": "时区"
+                },
+                "required": true,
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_CPA_MANAGEMENT_KEY",
+                "labelEn": "Management Key",
+                "labelZh": "管理密钥（用于 Web UI 登录和 Management API）",
+                "label": {
+                  "en": "Management Key (for Web UI login and Management API)",
+                  "zh": "管理密钥（用于 Web UI 登录和 Management API）"
+                },
+                "random": true,
+                "required": true,
+                "type": "password"
+              },
+              {
+                "default": 6022,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "端口",
+                "label": {
+                  "en": "Port",
+                  "zh": "端口"
+                },
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              }
+            ],
+            "supportVersion": 0
+          }
+        }
+      ]
+    },
+    {
+      "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/cpamp/logo.png",
+      "name": "CPAMP",
+      "readMe": "## 使用说明\n\n部署包含两个服务：**CPA 网关运行时**（API 端口）和 **CPAMP 管理面板**（面板端口）。\n\n### 1. 获取管理员密钥\n\n如果安装时填写了 CPAMP 管理员密钥，直接使用该密钥。如果留空，CPAMP 会自动生成，通过以下命令查看启动日志获取：\n\n```bash\ndocker compose logs cpa-manager-plus\n```\n\n日志中会输出一次 `cpamp_...` 格式的管理员密钥。\n\n### 2. 首次配置\n\n浏览器访问 `http://<服务器IP>:<面板端口>/management.html`，按顺序填写：\n\n1. **CPAMP 管理员密钥**：上一步获取的密钥\n2. **CPA 地址**：`http://cli-proxy-api:8317`（Docker 内网服务名）\n3. **CPA Management Key**：安装时填写的 CPA Management Key\n4. **请求监控采集方式**：保持默认 `auto` 即可\n\n### 3. 三种密钥说明\n\n| 密钥 | 用途 | 来源 |\n|------|------|------|\n| CPAMP 管理员密钥 | 登录 CPAMP 管理面板 | 安装时填写或自动生成 |\n| CPA Management Key | CPAMP 连接 CPA 的远程管理密钥 | 安装时填写，已注入 CPA config.yaml |\n| CPA API 密钥 | 客户端请求模型 API 时使用 | 部署后在 CPAMP 面板中配置 |\n\n### 4. 配置 CPA 提供商和 API 密钥\n\n完成首次 setup 后，在 CPAMP 面板中配置：\n- **AI 提供商**：设置 > AI 提供商，添加 OpenAI、Anthropic、Gemini 等\n- **认证文件**：设置 > 认证文件，上传 OAuth 凭证\n- **API 密钥**：设置 > 配置中心，生成供客户端使用的 API 密钥\n- **配额管理**：设置 > 配额管理，设置账号配额限制\n\n客户端使用 API 密钥通过 `http://<服务器IP>:<API端口>/v1/...` 调用模型。\n\n## 产品介绍\n\n**CPA Manager Plus (CPAMP)** 是自托管 AI 网关监控面板，配合 CPA (CLI Proxy API) 使用。CPA 处理模型请求转发，CPAMP 负责监控、分析和管理。\n\n## 主要功能\n\n- 仪表盘：Manager Server / CPA 连接状态总览\n- 请求监控：实时请求记录与详情\n- 用量分析：按模型、账号、项目、时间范围拆解成本与 Token\n- Codex 账号巡检：配额、重置时间、凭证状态和账号健康\n- 配额管理：账号配额限制与告警\n- 模型价格：成本估算与价格同步\n- 插件管理：支持从 GitHub Release 安装插件\n- OAuth 登录：支持多提供商 OAuth 认证\n- 认证文件管理：上传与管理凭证文件\n\n## 1Panel OpenResty 反向代理配置\n\n如需通过同一域名访问面板和 API，在 1Panel 中为该应用创建 OpenResty 反向代理，使用以下路径分流规则：\n\n```\n浏览器\n  -> https://your-domain.com\n      -> /management.html           -> CPAMP :18317（面板端口）\n      -> /usage-service/*           -> CPAMP :18317\n      -> /v0/management/*           -> CPAMP :18317\n      -> /v0/resource/plugins/*     -> CPAMP :18317\n      -> /v1/*, /v1beta/*           -> CPA :8317（API 端口）\n      -> /backend-api/codex/*       -> CPA :8317\n      -> /anthropic/callback        -> CPA :8317\n      -> /codex/callback            -> CPA :8317\n      -> / (兜底)                   -> CPA :8317\n```\n\n在 1Panel 的网站设置中，编辑 Nginx 配置，添加以下内容：\n\n```nginx\nmap $http_upgrade $connection_upgrade {\n    default upgrade;\n    ''      close;\n}\n\nupstream cpa_api {\n    server 127.0.0.1:60211;\n}\n\nupstream cpamp {\n    server 127.0.0.1:6021;\n}\n\nserver {\n    listen 80;\n    server_name your-domain.com;\n\n    client_max_body_size 64m;\n\n    proxy_http_version 1.1;\n    proxy_read_timeout 3600s;\n    proxy_send_timeout 3600s;\n    proxy_buffering off;\n\n    proxy_set_header Host              $host;\n    proxy_set_header X-Real-IP         $remote_addr;\n    proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;\n    proxy_set_header X-Forwarded-Proto $scheme;\n    proxy_set_header Upgrade           $http_upgrade;\n    proxy_set_header Connection        $connection_upgrade;\n\n    location = / {\n        return 302 /management.html;\n    }\n\n    # ===== CPAMP 面板 =====\n    location = /management.html { proxy_pass http://cpamp; }\n    location = /health          { proxy_pass http://cpamp; }\n    location = /status          { proxy_pass http://cpamp; }\n    location = /setup           { proxy_pass http://cpamp; }\n    location ^~ /usage-service/ { proxy_pass http://cpamp; }\n    location ^~ /v0/management/ { proxy_pass http://cpamp; }\n    location ^~ /v0/resource/plugins/ { proxy_pass http://cpamp; }\n    location = /models          { proxy_pass http://cpamp; }\n\n    # ===== CPA API =====\n    location ^~ /v1/                 { proxy_pass http://cpa_api; }\n    location ^~ /v1beta/             { proxy_pass http://cpa_api; }\n    location ^~ /backend-api/codex/  { proxy_pass http://cpa_api; }\n    location ^~ /api/                { proxy_pass http://cpa_api; }\n    location = /v1internal:method    { proxy_pass http://cpa_api; }\n    location = /healthz              { proxy_pass http://cpa_api; }\n    location = /anthropic/callback   { proxy_pass http://cpa_api; }\n    location = /codex/callback       { proxy_pass http://cpa_api; }\n    location = /google/callback      { proxy_pass http://cpa_api; }\n    location = /antigravity/callback { proxy_pass http://cpa_api; }\n\n    # 兜底给 CPA\n    location / {\n        proxy_pass http://cpa_api;\n    }\n}\n```\n\n> HTTPS 只需调整 `listen` 和证书配置，location 分流规则不变。\n> 上游端口 `6021` 和 `60211` 需替换为实际安装时使用的端口。\n\n## 数据持久化与备份\n\n必须备份以下目录：\n\n| 目录 | 说明 |\n|------|------|\n| `./data/` | CPAMP SQLite 数据库和加密密钥（`usage.sqlite`、`data.key`） |\n| `./config/` | CPA 配置文件（安装时由 init.sh 注入 Management Key） |\n| `./cpa-data/` | CPA 运行数据 |\n| `./cpa-auths/` | CPA 认证文件 |\n| `./cpa-logs/` | CPA 日志 |\n\n`data.key` 非常重要：丢失后保存到 SQLite 的 CPA Management Key 无法恢复。\n\n> 更多细节请参见 [官方文档](https://seakee.github.io/CPA-Manager-Plus/docs/guide/getting-started.html)。",
+      "lastModified": 1662988436,
+      "additionalProperties": {
+        "name": "CPAMP",
+        "type": "website",
+        "tags": [
+          "Tool"
+        ],
+        "shortDescZh": "AI 网关监控面板，追踪请求、成本、配额与账号健康",
+        "shortDescEn": "AI gateway monitoring panel for CPA request tracking, cost, quota and account health",
+        "description": {
+          "en": "AI gateway monitoring panel for CPA request tracking, cost, quota and account health",
+          "zh": "AI 网关监控面板，追踪请求、成本、配额与账号健康",
+          "zh-Hant": "AI 閘道監控面板，追蹤請求、成本、配額與帳號健康",
+          "ja": "AI ゲートウェイ監視パネル — リクエスト、コスト、クォータ、アカウント健全性を追跡",
+          "ko": "AI 게이트웨이 모니터링 패널 — 요청, 비용, 할당량 및 계정 상태 추적"
+        },
+        "key": "cpamp",
+        "Required": [],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 0,
+        "website": "https://seakee.github.io/CPA-Manager-Plus/",
+        "github": "https://github.com/seakee/CPA-Manager-Plus",
+        "document": "https://seakee.github.io/CPA-Manager-Plus/docs/guide/getting-started.html",
+        "version": 0,
+        "gpuSupport": false,
+        "architectures": [
+          "amd64",
+          "arm64"
+        ]
+      },
+      "versions": [
+        {
+          "name": "latest",
+          "lastModified": 14981309,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/cpamp-latest.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": "Asia/Shanghai",
+                "edit": true,
+                "envKey": "PANEL_APP_TIME_ZONE",
+                "labelEn": "TZ",
+                "labelZh": "时区",
+                "label": {
+                  "en": "TZ",
+                  "zh": "时区"
+                },
+                "required": true,
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_CPAMP_ADMIN_KEY",
+                "labelEn": "CPAMP Admin Key",
+                "labelZh": "CPAMP 管理员密钥（留空则自动生成，查看启动日志获取）",
+                "label": {
+                  "en": "CPAMP Admin Key (leave empty to auto-generate, check startup logs)",
+                  "zh": "CPAMP 管理员密钥（留空则自动生成，查看启动日志获取）"
+                },
+                "required": false,
+                "type": "password"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_CPA_MANAGEMENT_KEY",
+                "labelEn": "CPA Management Key",
+                "labelZh": "CPA Management Key（用于 CPA 远程管理，安装后也可在面板中配置）",
+                "label": {
+                  "en": "CPA Management Key (for CPA remote management)",
+                  "zh": "CPA Management Key（用于 CPA 远程管理，安装后也可在面板中配置）"
+                },
+                "random": true,
+                "required": true,
+                "type": "password"
+              },
+              {
+                "default": 6023,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Panel Port",
+                "labelZh": "面板端口",
+                "label": {
+                  "en": "Panel Port",
+                  "zh": "面板端口"
+                },
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              },
+              {
+                "default": 60231,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_API",
+                "labelEn": "API Port",
+                "labelZh": "API 网关端口",
+                "label": {
+                  "en": "API Port",
+                  "zh": "API 网关端口"
+                },
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              }
+            ],
+            "supportVersion": 0
+          }
+        }
+      ]
+    },
+    {
+      "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/fast_note_sync/logo.png",
+      "name": "Fast Note Sync Service",
+      "readMe": "## 使用说明\n\n部署成功后，浏览器访问 `http://<服务器IP>:<端口>` 进入管理面板。\n\n1. **初始化账号**：首次访问需注册一个账号（如需关闭公开注册，可在管理面板内停用或自定义 [config.yaml](https://github.com/haierkeys/fast-note-sync-service/blob/master/config/config.yaml) 后挂入容器）。\n2. **获取配置**：登录后点击右上角 **\"复制 API 配置\"**。\n3. **连接 Obsidian**：打开 [Obsidian Fast Note Sync 插件](https://github.com/haierkeys/obsidian-fast-note-sync) 的设置页，粘贴刚才复制的配置即可开始同步。\n\n> 数据持久化目录：`storage/`（数据库、附件、日志）和 `config/`（首次启动自动生成默认 `config.yaml`，可按需编辑覆盖）。请在 1Panel 中注意备份这两个目录。\n\n## 产品介绍\n\n**Fast Note Sync Service (FNS)** 是基于 Golang + WebSocket + React 实现的高性能、低延迟 Obsidian 笔记同步服务，多设备毫秒级实时同步，自带 Web 管理面板与 REST API。\n\n## 主要功能\n\n- 多设备实时双向同步（毫秒级）与附件/图片同步（支持分块上下传）\n- 内置 Web 管理面板：创建用户、生成插件配置、管理 Vault 与笔记\n- 标准 REST API，支持脚本化与 AI 助手集成\n- 原生 MCP（Model Context Protocol）支持，可接入 Cherry Studio / Cursor / Claude Code\n- 笔记历史版本、回收站、离线编辑自动合并、文件夹同步\n- 笔记分享（带密码、短链、访问统计）\n- Git 自动化托管与多存储备份（S3 / OSS / R2 / WebDAV / 本地）\n- 多数据库支持：SQLite（默认零依赖）/ MySQL / PostgreSQL\n\n> 更多细节请参见 [官方文档](https://github.com/haierkeys/fast-note-sync-service)。",
+      "lastModified": 776313328,
+      "additionalProperties": {
+        "name": "Fast Note Sync Service",
+        "type": "website",
+        "tags": [
+          "Tool",
+          "Local"
+        ],
+        "shortDescZh": "Obsidian 高性能笔记同步与管理服务",
+        "shortDescEn": "High-performance Obsidian note sync and management service",
+        "description": {
+          "en": "High-performance Obsidian note sync and management service",
+          "zh": "Obsidian 高性能笔记同步与管理服务",
+          "zh-Hant": "Obsidian 高效能筆記同步與管理服務",
+          "ja": "Obsidian 高性能ノート同期・管理サービス",
+          "ko": "Obsidian 고성능 노트 동기화 및 관리 서비스"
+        },
+        "key": "fast_note_sync",
+        "Required": [],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 0,
+        "website": "https://github.com/haierkeys/fast-note-sync-service",
+        "github": "https://github.com/haierkeys/fast-note-sync-service",
+        "document": "https://github.com/haierkeys/fast-note-sync-service/blob/master/README.md",
+        "version": 0,
+        "gpuSupport": false,
+        "architectures": [
+          "amd64",
+          "arm64"
+        ]
+      },
+      "versions": [
+        {
+          "name": "3.4.0",
+          "lastModified": 525644450,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/fast_note_sync-3.4.0.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": "Asia/Shanghai",
+                "edit": true,
+                "envKey": "PANEL_APP_TIME_ZONE",
+                "labelEn": "TZ",
+                "labelZh": "时区",
+                "label": {
+                  "en": "TZ",
+                  "zh": "时区"
+                },
+                "required": true,
+                "type": "text"
+              },
+              {
+                "default": 6018,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "端口",
+                "label": {
+                  "en": "Port",
+                  "zh": "端口"
+                },
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              }
+            ],
+            "supportVersion": 0
+          }
+        },
+        {
+          "name": "3.5.1",
+          "lastModified": 3364552018,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/fast_note_sync-3.5.1.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": "Asia/Shanghai",
+                "edit": true,
+                "envKey": "PANEL_APP_TIME_ZONE",
+                "labelEn": "TZ",
+                "labelZh": "时区",
+                "label": {
+                  "en": "TZ",
+                  "zh": "时区"
+                },
+                "required": true,
+                "type": "text"
+              },
+              {
+                "default": 6018,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "端口",
+                "label": {
+                  "en": "Port",
+                  "zh": "端口"
+                },
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              }
+            ],
+            "supportVersion": 0
+          }
+        },
+        {
+          "name": "3.6.0",
+          "lastModified": 2591062576,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/fast_note_sync-3.6.0.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": "Asia/Shanghai",
+                "edit": true,
+                "envKey": "PANEL_APP_TIME_ZONE",
+                "labelEn": "TZ",
+                "labelZh": "时区",
+                "label": {
+                  "en": "TZ",
+                  "zh": "时区"
+                },
+                "required": true,
+                "type": "text"
+              },
+              {
+                "default": 6018,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "端口",
+                "label": {
+                  "en": "Port",
+                  "zh": "端口"
+                },
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              }
+            ],
+            "supportVersion": 0
+          }
+        },
+        {
+          "name": "3.6.1",
+          "lastModified": 1076762632,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/fast_note_sync-3.6.1.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": "Asia/Shanghai",
+                "edit": true,
+                "envKey": "PANEL_APP_TIME_ZONE",
+                "labelEn": "TZ",
+                "labelZh": "时区",
+                "label": {
+                  "en": "TZ",
+                  "zh": "时区"
+                },
+                "required": true,
+                "type": "text"
+              },
+              {
+                "default": 6018,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "端口",
+                "label": {
+                  "en": "Port",
+                  "zh": "端口"
+                },
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              }
+            ],
+            "supportVersion": 0
+          }
+        }
+      ]
+    },
+    {
+      "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/ghproxy/logo.png",
+      "name": "GHProxy",
+      "readMe": "一个基于Go的高性能Github资源代理程序, 同时支持Docker镜像代理与脚本嵌套加速等多种功能\n项目说明\n项目特点\n\n    ⚡ 基于 Go 语言实现，跨平台的同时提供高并发性能\n    🌐 使用自有Touka框架作为 HTTP服务端框架\n    📡 使用 Touka-HTTPC 作为 HTTP 客户端\n    📥 支持 Git clone、raw、releases 等文件拉取\n    🐳 支持反代Docker, GHCR等镜像仓库\n    🎨 支持多个前端主题\n    🚫 支持自定义黑名单/白名单\n    🗄️ 支持 Git Clone 缓存（配合 Smart-Git）\n    🐳 支持自托管与Docker容器化部署\n    ⚡ 支持速率限制\n    ⚡ 支持带宽速率限制\n    🔒 支持用户鉴权\n    🐚 支持 shell 脚本多层嵌套加速\n\n项目相关\n\n[DEMO](https://ghproxy.1888866.xyz/)",
+      "lastModified": 3916661259,
+      "additionalProperties": {
+        "name": "GHProxy",
+        "type": "website",
+        "tags": [
+          "Tool",
+          "Local"
+        ],
+        "shortDescZh": "一个基于Go的高性能Github资源代理程序, 同时支持Docker镜像代理与脚本嵌套加速等多种功能",
+        "shortDescEn": "A high-performance GitHub resource proxy built on Go, featuring multiple functions such as Docker image proxying and script nesting acceleration.",
+        "description": {},
+        "key": "ghproxy",
+        "Required": [],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 0,
+        "website": "https://github.com/WJQSERVER-STUDIO/ghproxy",
+        "github": "https://github.com/WJQSERVER-STUDIO/ghproxy",
+        "document": "https://github.com/WJQSERVER-STUDIO/ghproxy",
+        "version": 0,
+        "gpuSupport": false
+      },
+      "versions": [
+        {
+          "name": "4.3.4",
+          "lastModified": 431726746,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/ghproxy-4.3.4.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": 6008,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              }
+            ],
+            "supportVersion": 0
+          }
+        }
+      ]
+    },
+    {
+      "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/hubproxy/logo.png",
+      "name": "HubProxy",
+      "readMe": "# HubProxy\n\n🚀 Docker 和 GitHub 加速代理服务器\n\n一个轻量级、高性能的多功能代理服务，提供 Docker 镜像加速、GitHub 文件加速、下载离线镜像、在线搜索 Docker 镜像等功能。",
+      "lastModified": 1972386859,
+      "additionalProperties": {
+        "name": "HubProxy",
+        "type": "website",
+        "tags": [
+          "Tool",
+          "Local"
+        ],
+        "shortDescZh": "一个轻量级、高性能的多功能代理服务，提供 Docker 镜像加速、GitHub 文件加速、下载离线镜像、在线搜索 Docker 镜像等功能。",
+        "shortDescEn": "A lightweight, high-performance multi-functional proxy service that provides Docker image acceleration, GitHub file acceleration, downloading offline images, and searching for Docker images online.",
+        "description": {},
+        "key": "hubproxy",
+        "Required": [],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 0,
+        "website": "https://github.com/sky22333/hubproxy",
+        "github": "https://github.com/sky22333/hubproxy",
+        "document": "https://github.com/sky22333/hubproxy",
+        "version": 0,
+        "gpuSupport": false
+      },
+      "versions": [
+        {
+          "name": "latest",
+          "lastModified": 3691058749,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/hubproxy-latest.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": 6001,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              }
+            ],
+            "supportVersion": 0
+          }
+        }
+      ]
+    },
+    {
+      "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/komari/logo.png",
+      "name": "komari",
+      "readMe": "Komari 是一款轻量级的自托管服务器监控工具，旨在提供简单、高效的服务器性能监控解决方案。它支持通过 Web 界面查看服务器状态，并通过轻量级 Agent 收集数据。\n\n[文档](https://komari-document.pages.dev/) | [Telegram 群组](https://t.me/komari_monitor)\n\n## 特性\n- **轻量高效**：低资源占用，适合各种规模的服务器。\n- **自托管**：完全掌控数据隐私，部署简单。\n- **Web 界面**：直观的监控仪表盘，易于使用。\n\n### 2. Docker 部署\n1. 创建数据目录：\n   ```bash\n   mkdir -p ./data\n   ```\n2. 运行 Docker 容器：\n   ```bash\n   docker run -d \\\n     -p 25774:25774 \\\n     -v $(pwd)/data:/app/data \\\n     --name komari \\\n     ghcr.io/komari-monitor/komari:latest\n   ```\n3. 查看默认账号和密码：\n   ```bash\n   docker logs komari\n   ```\n4. 在浏览器中访问 `http://<your_server_ip>:25774`。\n\n> [!NOTE]\n> 你也可以通过环境变量 `ADMIN_USERNAME` 和 `ADMIN_PASSWORD` 自定义初始用户名和密码。",
+      "lastModified": 2280470196,
+      "additionalProperties": {
+        "name": "komari",
+        "type": "website",
+        "tags": [
+          "Tool",
+          "Local"
+        ],
+        "shortDescZh": "Komari 是一款轻量级的自托管服务器监控工具",
+        "shortDescEn": "Komari is a lightweight, self-hosted server monitoring tool",
+        "description": {
+          "en": "Komari is a lightweight, self-hosted server monitoring tool designed to provide a simple and efficient solution for monitoring server performance.",
+          "zh": "Komari 是一款轻量级的自托管服务器监控工具"
+        },
+        "key": "komari",
+        "Required": [],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 0,
+        "website": "https://github.com/komari-monitor/komari",
+        "github": "https://github.com/komari-monitor/komari",
+        "document": "https://github.com/komari-monitor/komari",
+        "version": 0,
+        "gpuSupport": false
+      },
+      "versions": [
+        {
+          "name": "1.1.1a",
+          "lastModified": 2305901173,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/komari-1.1.1a.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": 6006,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "自定义端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              },
+              {
+                "default": "admin",
+                "envKey": "ADMIN_USERNAME",
+                "labelEn": "Username",
+                "labelZh": "用户名",
+                "label": {
+                  "en": "Username",
+                  "ja": "ユーザー名",
+                  "ms": "Nama Pengguna",
+                  "pt-br": "Nome de Usuário",
+                  "ru": "Имя пользователя",
+                  "ko": "사용자 이름",
+                  "zh": "用户名",
+                  "zh-Hant": "用戶名"
+                },
+                "required": true,
+                "type": "text"
+              },
+              {
+                "default": "admin",
+                "envKey": "ADMIN_PASSWORD",
+                "labelEn": "Password",
+                "labelZh": "密码",
+                "label": {
+                  "en": "Password",
+                  "ja": "パスワード",
+                  "ms": "Kata laluan",
+                  "pt-br": "Senha",
+                  "ru": "Пароль",
+                  "ko": "비밀번호",
+                  "zh": "密码",
+                  "zh-Hant": "密碼"
+                },
+                "random": true,
+                "required": true,
+                "type": "password"
+              }
+            ],
+            "supportVersion": 0
+          }
+        },
+        {
+          "name": "1.1.9",
+          "lastModified": 232398359,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/komari-1.1.9.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": 6006,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "自定义端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              },
+              {
+                "default": "admin",
+                "envKey": "ADMIN_USERNAME",
+                "labelEn": "Username",
+                "labelZh": "用户名",
+                "label": {
+                  "en": "Username",
+                  "ja": "ユーザー名",
+                  "ms": "Nama Pengguna",
+                  "pt-br": "Nome de Usuário",
+                  "ru": "Имя пользователя",
+                  "ko": "사용자 이름",
+                  "zh": "用户名",
+                  "zh-Hant": "用戶名"
+                },
+                "required": true,
+                "type": "text"
+              },
+              {
+                "default": "admin",
+                "envKey": "ADMIN_PASSWORD",
+                "labelEn": "Password",
+                "labelZh": "密码",
+                "label": {
+                  "en": "Password",
+                  "ja": "パスワード",
+                  "ms": "Kata laluan",
+                  "pt-br": "Senha",
+                  "ru": "Пароль",
+                  "ko": "비밀번호",
+                  "zh": "密码",
+                  "zh-Hant": "密碼"
+                },
+                "random": true,
+                "required": true,
+                "type": "password"
+              }
+            ],
+            "supportVersion": 0
+          }
+        },
+        {
+          "name": "1.2.0",
+          "lastModified": 3503076360,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/komari-1.2.0.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": 6006,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "自定义端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              },
+              {
+                "default": "admin",
+                "envKey": "ADMIN_USERNAME",
+                "labelEn": "Username",
+                "labelZh": "用户名",
+                "label": {
+                  "en": "Username",
+                  "ja": "ユーザー名",
+                  "ms": "Nama Pengguna",
+                  "pt-br": "Nome de Usuário",
+                  "ru": "Имя пользователя",
+                  "ko": "사용자 이름",
+                  "zh": "用户名",
+                  "zh-Hant": "用戶名"
+                },
+                "required": true,
+                "type": "text"
+              },
+              {
+                "default": "admin",
+                "envKey": "ADMIN_PASSWORD",
+                "labelEn": "Password",
+                "labelZh": "密码",
+                "label": {
+                  "en": "Password",
+                  "ja": "パスワード",
+                  "ms": "Kata laluan",
+                  "pt-br": "Senha",
+                  "ru": "Пароль",
+                  "ko": "비밀번호",
+                  "zh": "密码",
+                  "zh-Hant": "密碼"
+                },
+                "random": true,
+                "required": true,
+                "type": "password"
+              }
+            ],
+            "supportVersion": 0
+          }
+        }
+      ]
+    },
+    {
+      "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/litellm/logo.png",
+      "name": "litellm",
+      "readMe": "一款 Python SDK 与代理服务器（AI 网关），以 OpenAI 或原生格式调用 100+ LLM API，提供成本追踪、护栏、负载均衡与日志记录，支持 Bedrock、Azure、OpenAI、VertexAI、Cohere、Anthropic、Sagemaker、HuggingFace、VLLM、NVIDIA NIM 等。\n",
+      "lastModified": 2224327850,
+      "additionalProperties": {
+        "name": "litellm",
+        "type": "website",
+        "tags": [
+          "Tool",
+          "Local"
+        ],
+        "shortDescZh": "一款 Python SDK 与代理服务器（AI 网关），以 OpenAI 或原生格式调用 100+ LLM API，提供成本追踪、护栏、负载均衡与日志记录。",
+        "shortDescEn": "Python SDK and Proxy Server (AI Gateway) to call 100+ LLM APIs in OpenAI or native format, with cost tracking, guardrails, loadbalancing and logging.",
+        "description": {},
+        "key": "litellm",
+        "Required": [],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 0,
+        "website": "https://github.com/BerriAI/litellm",
+        "github": "https://github.com/BerriAI/litellm",
+        "document": "https://github.com/BerriAI/litellm",
+        "version": 0,
+        "gpuSupport": false
+      },
+      "versions": [
+        {
+          "name": "latest",
+          "lastModified": 3616131605,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/litellm-latest.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": 6017,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "APP Port",
+                "labelZh": "应用端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              },
+              {
+                "child": {
+                  "default": "",
+                  "envKey": "PANEL_DB_HOST",
+                  "required": true,
+                  "type": "service"
+                },
+                "default": "postgresql",
+                "envKey": "PANEL_DB_TYPE",
+                "labelEn": "Database Service",
+                "labelZh": "数据库服务",
+                "required": true,
+                "type": "apps",
+                "values": [
+                  {
+                    "label": "PostgreSQL",
+                    "value": "postgresql"
+                  }
+                ]
+              },
+              {
+                "default": "litellm",
+                "envKey": "PANEL_DB_NAME",
+                "labelEn": "Database Name",
+                "labelZh": "数据库名",
+                "random": true,
+                "required": true,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "litellm",
+                "envKey": "PANEL_DB_USER",
+                "labelEn": "Database User Name",
+                "labelZh": "数据库用户名",
+                "random": true,
+                "required": true,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "envKey": "PANEL_DB_USER_PASSWORD",
+                "labelEn": "Database User Password",
+                "labelZh": "数据库密码",
+                "random": true,
+                "required": true,
+                "type": "password"
+              },
+              {
+                "default": "",
+                "envKey": "PANEL_REDIS_HOST",
+                "key": "redis",
+                "labelEn": "Redis Service",
+                "labelZh": "缓存服务",
+                "required": true,
+                "type": "service"
+              },
+              {
+                "default": "",
+                "envKey": "PANEL_REDIS_PASSWORD",
+                "labelEn": "Redis Service Password",
+                "labelZh": "缓存服务密码",
+                "required": false,
+                "type": "password"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_MASTER_KEY",
+                "labelEn": "Master Key (sk-..., used to access the proxy API)",
+                "labelZh": "主密钥（sk-...，用于访问代理 API）",
+                "required": true,
+                "random": true,
+                "type": "password"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_SALT_KEY",
+                "labelEn": "Salt Key (used to encrypt/decrypt API keys in DB)",
+                "labelZh": "盐密钥（用于加解密数据库中的 API 密钥）",
+                "required": true,
+                "random": true,
+                "type": "password"
+              },
+              {
+                "default": "True",
+                "edit": true,
+                "envKey": "PANEL_STORE_MODEL_IN_DB",
+                "labelEn": "Store Model In DB (allows adding models via UI)",
+                "labelZh": "模型存入数据库（允许通过 UI 添加模型）",
+                "required": true,
+                "type": "text"
+              },
+              {
+                "default": "Asia/Shanghai",
+                "edit": true,
+                "envKey": "TIME_ZONE",
+                "labelEn": "Time Zone",
+                "labelZh": "时区",
+                "required": true,
+                "type": "text"
+              }
+            ],
+            "supportVersion": 0
+          }
+        }
+      ]
+    },
+    {
+      "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/mailflow/logo.png",
+      "name": "mailflow",
+      "readMe": "一款自托管的统一网页邮件客户端。可连接多个 IMAP/SMTP 账户（Gmail、iCloud、Outlook、自定义），并在一个简洁的界面中统一查看所有邮件。",
+      "lastModified": 2763012883,
+      "additionalProperties": {
+        "name": "mailflow",
+        "type": "website",
+        "tags": [
+          "Tool",
+          "Local"
+        ],
+        "shortDescZh": "一款自托管的统一网页邮件客户端。可连接多个 IMAP/SMTP 账户（Gmail、iCloud、Outlook、自定义），并在一个简洁的界面中统一查看所有邮件。",
+        "shortDescEn": "A self-hosted, unified webmail client. Connect multiple IMAP/SMTP accounts (Gmail, iCloud, Outlook, custom) and read them all in one clean interface.",
+        "description": {},
+        "key": "mailflow",
+        "Required": [],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 0,
+        "website": "https://github.com/maathimself/mailflow",
+        "github": "https://github.com/maathimself/mailflow",
+        "document": "https://github.com/maathimself/mailflow",
+        "version": 0,
+        "gpuSupport": false
+      },
+      "versions": [
+        {
+          "name": "v3.0.0",
+          "lastModified": 2900574432,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/mailflow-v3.0.0.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": 6009,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "APP Port",
+                "labelZh": "应用端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_SESSION_SECRET",
+                "labelEn": "Session Secret(openssl rand -hex 32)",
+                "labelZh": "会话密钥（openssl rand -hex 32）",
+                "required": true,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_APP_URL",
+                "labelEn": "Full URL users see in the browser — used in invite emails and CORS.",
+                "labelZh": "用户在浏览器中看到的完整URL——用于邀请邮件和CORS。",
+                "required": true,
+                "rule": "paramExtUrl",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_DB_HOST",
+                "key": "postgresql",
+                "labelEn": "Database Service",
+                "labelZh": "数据库服务",
+                "required": true,
+                "type": "service"
+              },
+              {
+                "default": "mailflow",
+                "edit": true,
+                "envKey": "PANEL_DB_NAME",
+                "labelEn": "Database Name",
+                "labelZh": "数据库名",
+                "required": true,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_DB_USER",
+                "labelEn": "Database User Name",
+                "labelZh": "数据库用户名",
+                "required": true,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_DB_PASSWORD",
+                "labelEn": "Database User Password",
+                "labelZh": "数据库密码",
+                "required": true,
+                "type": "password"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_REDIS_HOST",
+                "key": "redis",
+                "labelEn": "Redis Service",
+                "labelZh": "缓存服务",
+                "required": true,
+                "type": "service"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_REDIS_ROOT_PASSWORD",
+                "labelEn": "Redis Service Password",
+                "labelZh": "缓存服务密码",
+                "required": true,
+                "type": "password"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_ENCRYPTION_KEY",
+                "labelEn": "Used to encrypt stored email credentials (passwords, OAuth tokens) at rest.(openssl rand -hex 32)",
+                "labelZh": "用于加密静态存储的电子邮件凭据（密码、OAuth令牌）。（openssl rand -hex 32）",
+                "required": true,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_VAPID_PUBLIC_KEY",
+                "labelEn": "Web Push public key. Generate with npx web-push generate-vapid-keys. Required for push notifications.",
+                "labelZh": "Web Push 公钥。使用 npx web-push generate-vapid-keys 生成。推送通知必需。",
+                "required": false,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_VAPID_PRIVATE_KEY",
+                "labelEn": "Web Push private key (keep secret).",
+                "labelZh": "Web Push 私钥（请保密）。",
+                "required": false,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_VAPID_SUBJECT",
+                "labelEn": "Contact for the push service, e.g. mailto:admin@example.com or your APP_URL.",
+                "labelZh": "推送服务的联系人，例如 mailto:admin@example.com 或您的 APP_URL。",
+                "required": false,
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_GOOGLE_CLIENT_ID",
+                "labelEn": "google client id",
+                "labelZh": "谷歌客户端ID",
+                "required": false,
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_GOOGLE_CLIENT_SECRET",
+                "labelEn": "google client secret",
+                "labelZh": "谷歌客户端密钥",
+                "required": false,
+                "type": "text"
+              }
+            ],
+            "supportVersion": 0
+          }
+        },
+        {
+          "name": "v3.1.3",
+          "lastModified": 488725744,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/mailflow-v3.1.3.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": 6009,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "APP Port",
+                "labelZh": "应用端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_SESSION_SECRET",
+                "labelEn": "Session Secret(openssl rand -hex 32)",
+                "labelZh": "会话密钥（openssl rand -hex 32）",
+                "required": true,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_APP_URL",
+                "labelEn": "Full URL users see in the browser — used in invite emails and CORS.",
+                "labelZh": "用户在浏览器中看到的完整URL——用于邀请邮件和CORS。",
+                "required": true,
+                "rule": "paramExtUrl",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_DB_HOST",
+                "key": "postgresql",
+                "labelEn": "Database Service",
+                "labelZh": "数据库服务",
+                "required": true,
+                "type": "service"
+              },
+              {
+                "default": "mailflow",
+                "edit": true,
+                "envKey": "PANEL_DB_NAME",
+                "labelEn": "Database Name",
+                "labelZh": "数据库名",
+                "required": true,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_DB_USER",
+                "labelEn": "Database User Name",
+                "labelZh": "数据库用户名",
+                "required": true,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_DB_PASSWORD",
+                "labelEn": "Database User Password",
+                "labelZh": "数据库密码",
+                "required": true,
+                "type": "password"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_REDIS_HOST",
+                "key": "redis",
+                "labelEn": "Redis Service",
+                "labelZh": "缓存服务",
+                "required": true,
+                "type": "service"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_REDIS_ROOT_PASSWORD",
+                "labelEn": "Redis Service Password",
+                "labelZh": "缓存服务密码",
+                "required": true,
+                "type": "password"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_ENCRYPTION_KEY",
+                "labelEn": "Used to encrypt stored email credentials (passwords, OAuth tokens) at rest.(openssl rand -hex 32)",
+                "labelZh": "用于加密静态存储的电子邮件凭据（密码、OAuth令牌）。（openssl rand -hex 32）",
+                "required": true,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_VAPID_PUBLIC_KEY",
+                "labelEn": "Web Push public key. Generate with npx web-push generate-vapid-keys. Required for push notifications.",
+                "labelZh": "Web Push 公钥。使用 npx web-push generate-vapid-keys 生成。推送通知必需。",
+                "required": false,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_VAPID_PRIVATE_KEY",
+                "labelEn": "Web Push private key (keep secret).",
+                "labelZh": "Web Push 私钥（请保密）。",
+                "required": false,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_VAPID_SUBJECT",
+                "labelEn": "Contact for the push service, e.g. mailto:admin@example.com or your APP_URL.",
+                "labelZh": "推送服务的联系人，例如 mailto:admin@example.com 或您的 APP_URL。",
+                "required": false,
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_GOOGLE_CLIENT_ID",
+                "labelEn": "google client id",
+                "labelZh": "谷歌客户端ID",
+                "required": false,
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_GOOGLE_CLIENT_SECRET",
+                "labelEn": "google client secret",
+                "labelZh": "谷歌客户端密钥",
+                "required": false,
+                "type": "text"
+              }
+            ],
+            "supportVersion": 0
+          }
+        },
+        {
+          "name": "v3.1.4",
+          "lastModified": 1422429486,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/mailflow-v3.1.4.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": 6009,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "APP Port",
+                "labelZh": "应用端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_SESSION_SECRET",
+                "labelEn": "Session Secret(openssl rand -hex 32)",
+                "labelZh": "会话密钥（openssl rand -hex 32）",
+                "required": true,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_APP_URL",
+                "labelEn": "Full URL users see in the browser — used in invite emails and CORS.",
+                "labelZh": "用户在浏览器中看到的完整URL——用于邀请邮件和CORS。",
+                "required": true,
+                "rule": "paramExtUrl",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_DB_HOST",
+                "key": "postgresql",
+                "labelEn": "Database Service",
+                "labelZh": "数据库服务",
+                "required": true,
+                "type": "service"
+              },
+              {
+                "default": "mailflow",
+                "edit": true,
+                "envKey": "PANEL_DB_NAME",
+                "labelEn": "Database Name",
+                "labelZh": "数据库名",
+                "required": true,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_DB_USER",
+                "labelEn": "Database User Name",
+                "labelZh": "数据库用户名",
+                "required": true,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_DB_PASSWORD",
+                "labelEn": "Database User Password",
+                "labelZh": "数据库密码",
+                "required": true,
+                "type": "password"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_REDIS_HOST",
+                "key": "redis",
+                "labelEn": "Redis Service",
+                "labelZh": "缓存服务",
+                "required": true,
+                "type": "service"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_REDIS_ROOT_PASSWORD",
+                "labelEn": "Redis Service Password",
+                "labelZh": "缓存服务密码",
+                "required": true,
+                "type": "password"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_ENCRYPTION_KEY",
+                "labelEn": "Used to encrypt stored email credentials (passwords, OAuth tokens) at rest.(openssl rand -hex 32)",
+                "labelZh": "用于加密静态存储的电子邮件凭据（密码、OAuth令牌）。（openssl rand -hex 32）",
+                "required": true,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_VAPID_PUBLIC_KEY",
+                "labelEn": "Web Push public key. Generate with npx web-push generate-vapid-keys. Required for push notifications.",
+                "labelZh": "Web Push 公钥。使用 npx web-push generate-vapid-keys 生成。推送通知必需。",
+                "required": false,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_VAPID_PRIVATE_KEY",
+                "labelEn": "Web Push private key (keep secret).",
+                "labelZh": "Web Push 私钥（请保密）。",
+                "required": false,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_VAPID_SUBJECT",
+                "labelEn": "Contact for the push service, e.g. mailto:admin@example.com or your APP_URL.",
+                "labelZh": "推送服务的联系人，例如 mailto:admin@example.com 或您的 APP_URL。",
+                "required": false,
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_GOOGLE_CLIENT_ID",
+                "labelEn": "google client id",
+                "labelZh": "谷歌客户端ID",
+                "required": false,
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_GOOGLE_CLIENT_SECRET",
+                "labelEn": "google client secret",
+                "labelZh": "谷歌客户端密钥",
+                "required": false,
+                "type": "text"
+              }
+            ],
+            "supportVersion": 0
+          }
+        }
+      ]
+    },
+    {
+      "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/miaomiaowu/logo.png",
+      "name": "miaomiaowu",
+      "readMe": "# 妙妙屋 - 个人Clash订阅管理系统\n\n一个轻量级、易部署的Clash订阅管理系统，支持 Nezha、DStatus 和 Komari 探针获取流量信息，导入外部机场节点等功能。\n\n## 功能特性\n\n### 核心功能\n- 📊 流量监控 - 支持探针服务器与外部订阅流量聚合统计\n- 📈 历史流量 - 30 天流量使用趋势图表\n- 🔗 订阅链接 - 展示通过订阅管理上传或导入和生成订阅生成的订阅\n- 🔗 订阅管理 - 上传猫咪配置文件或从其他订阅url导入生成订阅\n- 🎯 生成订阅 - 从导入的节点生成订阅，可视化代理组规则编辑器\n- 📦 节点管理 - 导入个人节点或机场节点，支持添加、编辑、删除代理节点\n- 🔧 生成订阅 - 自定义规则或使用模板快速生成订阅\n- 🎨 代理分组 - 拖拽式代理节点分组配置，支持链式代理\n- 👥 用户管理 - 管理员/普通用户角色区分，订阅权限管理\n- 🌓 主题切换 - 支持亮色/暗色模式\n- 📱 响应式设计 - 不完全适配移动端和桌面端\n\n### 探针支持\n- [Nezha](https://github.com/naiba/nezha) 面板\n- [DStatus](https://github.com/DokiDoki1103/dstatus) 监控\n- [Komari](https://github.com/komari-monitor/komari) 面板\n\n### 体验[Demo](https://demo.miaomiaowu.net)\n账户/密码: test / test123\n\n### [使用帮助](https://docs.miaomiaowu.net)\n\n## 安装部署\n\n### 方式 1：Docker 部署（推荐）\n\n使用 Docker 是最简单快捷的部署方式，无需配置任何依赖环境。\n\n#### 基础部署\n\n```bash\ndocker run -d \\\n  --user root \\\n  --name miaomiaowu \\\n  -p 8080:8080 \\\n  -v $(pwd)/mmw-data:/app/data \\\n  -v $(pwd)/subscribes:/app/subscribes \\\n  -v $(pwd)/rule_templates:/app/rule_templates \\\n  ghcr.io/iluobei/miaomiaowu:latest\n```\n\n参数说明：\n- `-p 8080:8080` 将容器端口映射到宿主机，按需调整。\n- `-v ./mmw-data:/app/data` 持久化数据库文件，防止容器重建时数据丢失。\n- `-v ./subscribes:/app/subscribes` 订阅文件存放目录\n- `-v ./rule_templates:/app/rule_templates` 规则模板存放目录\n- `-e JWT_SECRET=your-secret` 可选参数，配置token密钥，建议改成随机字符串\n- 其他环境变量（如 `LOG_LEVEL`）同下文“环境变量”章节，可通过 `-e` 继续添加。\n\n更新镜像后可执行：\n```bash\ndocker pull ghcr.io/iluobei/miaomiaowu:latest\ndocker stop miaomiaowu && docker rm miaomiaowu\n```\n然后按照上方命令重新启动服务。\n\n#### Docker Compose 部署\n\n创建 `docker-compose.yml` 文件：\n\n```yaml\nversion: '3.8'\n\nservices:\n  miaomiaowu:\n    image: ghcr.io/iluobei/miaomiaowu:latest\n    container_name: miaomiaowu\n    restart: unless-stopped\n    user: root\n    environment:\n      - PORT=8080\n      - DATABASE_PATH=/app/data/traffic.db\n      - LOG_LEVEL=info\n\n    ports:\n      - \"8080:8080\"\n\n    volumes:\n      - ./data:/app/data\n      - ./subscribes:/app/subscribes\n      - ./rule_templates:/app/rule_templates\n\n    healthcheck:\n      test: [\"CMD\", \"wget\", \"--no-verbose\", \"--tries=1\", \"--spider\", \"http://localhost:8080/\"]\n      interval: 30s\n      timeout: 3s\n      start_period: 5s\n      retries: 3\n\n```\n\n参数说明：\n- `-p 8080:8080` 将容器端口映射到宿主机，按需调整。\n- `-e JWT_SECRET=your-secret` 可选参数，配置token密钥，建议改成随机字符串\n- 其他环境变量（如 `LOG_LEVEL`）同下文“环境变量”章节，可通过 `-e` 继续添加。\n\n映射目录说明:\n```\nvolumes:     #这是挂载下面这三个目录到宿主机的，如果你不知道这三个目录是干嘛的，不需要添加\n  - ./mmw-data:/app/data #持久化数据库文件，防止容器重建时数据丢失。\n  - ./subscribes:/app/subscribes #订阅文件存放目录\n  - ./rule_templates:/app/rule_templates #规则模板存放目录\n```\n\n启动服务：\n\n```bash\ndocker-compose up -d\n```\n\n查看日志：\n\n```bash\ndocker-compose logs -f\n```\n\n停止服务：\n\n```bash\ndocker-compose down\n```\n\n#### 数据持久化说明\n\n容器使用两个数据卷进行数据持久化：\n\n- `/app/data` - 存储 SQLite 数据库文件\n- `/app/subscribes` - 存储订阅配置文件\n- `/app/rule_templates` - 存储规则文件模板\n\n**重要提示**：请确保定期备份这两个目录的数据。\n\n### 方式 2：一键安装（Linux）\n#### ⚠⚠⚠ 注意：0.1.1版本修改了服务名称，无法通过脚本更新，只能重新安装\n#### 先执行以下命令卸载及转移数据\n旧服务卸载及备份转移\n```\nsudo systemctl stop traffic-info\nsudo systemctl disable traffic-info\nsudo rm -rf /etc/systemd/system/traffic-info.service\nsudo rm -f /usr/local/bin/traffic-info\nsudo cp -rf /var/lib/traffic-info/* /etc/mmw/\n```\n**自动安装为 systemd 服务（Debian/Ubuntu）：**\n```bash\n# 下载并运行安装脚本\ncurl -sL https://raw.githubusercontent.com/iluobei/miaomiaowu/main/install.sh | bash\n```\n\n安装完成后，服务将自动启动，访问 `http://服务器IP:8080` 即可。\n\n**更新到最新版本：**\n```bash\n# systemd 服务更新\ncurl -sL https://raw.githubusercontent.com/iluobei/miaomiaowu/main/install.sh | sudo bash -s update\n```\n\n**卸载服务：**\n```bash\n# 卸载 systemd 服务（保留数据）\ncurl -sL https://raw.githubusercontent.com/iluobei/miaomiaowu/main/install.sh | sudo bash -s uninstall\n\n# 卸载后如需完全清除数据，手动删除数据目录\nsudo rm -rf /etc/mmw\n```\n\n**简易安装（手动运行）：**\n```bash\n# 一键下载安装\ncurl -sL https://raw.githubusercontent.com/iluobei/miaomiaowu/main/quick-install.sh | bash\n\n# 运行服务\n./mmw\n```\n\n**卸载服务：**\n```bash\n# 卸载 systemd 服务（保留数据）\ncurl -sL https://raw.githubusercontent.com/iluobei/miaomiaowu/main/quick-install.sh | sudo bash -s uninstall\n\n# 卸载后如需完全清除数据，手动删除数据目录\nsudo rm -rf ./data ./subscribes ./rule_templates\n```\n\n**更新简易安装版本：**\n```bash\n# 更新到最新版本\ncurl -sL https://raw.githubusercontent.com/iluobei/miaomiaowu/main/quick-install.sh | bash -s update\n```\n\n**Windows：**\n```powershell\n# 从 Releases 页面下载 mmw-windows-amd64.exe\n# https://github.com/iluobei/miaomiaowu/releases\n\n# 双击运行或在命令行中执行\n.\\mmw-windows-amd64.exe\n```\n<details>\n<summary>页面截图</summary>\n\n![image](https://github.com/iluobei/miaomiaowu/blob/main/screenshots/traffic_info.png)  \n![image](https://github.com/iluobei/miaomiaowu/blob/main/screenshots/subscribe_url.png)  \n![image](https://github.com/iluobei/miaomiaowu/blob/main/screenshots/probe_datasource.png)  \n![image](https://github.com/iluobei/miaomiaowu/blob/main/screenshots/subscribe_manage.png)  \n![image](https://github.com/iluobei/miaomiaowu/blob/main/screenshots/generate_subscribe.png)  \n![image](https://github.com/iluobei/miaomiaowu/blob/main/screenshots/custom_proxy_group.png)  \n![image](https://github.com/iluobei/miaomiaowu/blob/main/screenshots/node_manage.png)  \n![image](https://github.com/iluobei/miaomiaowu/blob/main/screenshots/user_manage.png)\n![image](https://github.com/iluobei/miaomiaowu/blob/main/screenshots/system_settings.png)\n</details>\n\n### 技术特点\n- 🚀 单二进制文件部署，无需外部依赖\n- 💾 使用 SQLite 数据库，免维护\n- 🔒 JWT 认证，安全可靠\n- 📱 响应式设计，支持移动端\n\n## ⚠️ 免责声明\n\n- 本程序仅供学习交流使用，请勿用于非法用途\n- 使用本程序需遵守当地法律法规\n- 作者不对使用者的任何行为承担责任\n\n## Star History\n\n[![Star History Chart](https://api.star-history.com/svg?repos=iluobei/miaomiaowu&type=date&legend=top-left)](https://www.star-history.com/#iluobei/miaomiaowu&type=date&legend=top-left)\n\n\n## 许可证\n\nMIT License\n\n## 贡献\n\n欢迎提交 Issue 和 Pull Request！\n\n## 联系方式\n\n- 问题反馈：[GitHub Issues](https://github.com/iluobei/miaomiaowu/issues)\n- 功能建议：[GitHub Discussions](https://github.com/iluobei/miaomiaowu/discussions)",
+      "lastModified": 3725456533,
+      "additionalProperties": {
+        "name": "miaomiaowu",
+        "type": "website",
+        "tags": [
+          "Tool",
+          "Local"
+        ],
+        "shortDescZh": "一个轻量级、易部署的Clash订阅管理系统，支持 Nezha、DStatus 和 Komari 探针获取流量信息，导入外部机场节点等功能。",
+        "shortDescEn": "A lightweight, easy-to-deploy Clash subscription management system that supports obtaining traffic information from probes such as Nezha, DStatus, and Komari, as well as importing external airport nodes.",
+        "description": {},
+        "key": "miaomiaowu",
+        "Required": [],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 0,
+        "website": "https://github.com/iluobei/miaomiaowu",
+        "github": "https://github.com/iluobei/miaomiaowu",
+        "document": "https://github.com/iluobei/miaomiaowu",
+        "version": 0,
+        "gpuSupport": false
+      },
+      "versions": [
+        {
+          "name": "0.7.8",
+          "lastModified": 2685046674,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/miaomiaowu-0.7.8.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": 6007,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              }
+            ],
+            "supportVersion": 0
+          }
+        },
+        {
+          "name": "0.8.2",
+          "lastModified": 3045904698,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/miaomiaowu-0.8.2.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": 6007,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              }
+            ],
+            "supportVersion": 0
+          }
+        },
+        {
+          "name": "0.8.3",
+          "lastModified": 3796816660,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/miaomiaowu-0.8.3.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": 6007,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              }
+            ],
+            "supportVersion": 0
+          }
+        }
+      ]
+    },
+    {
+      "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/miaomiaowux/logo.png",
+      "name": "miaomiaowux",
+      "readMe": "关于妙妙屋X\n\n妙妙屋X 是妙妙屋的增强版，专注于远程服务器管理和 Xray 配置\n什么是妙妙屋X\n\n妙妙屋X（MMWX）是基于妙妙屋的增强版本，在保留原有订阅管理功能的基础上，新增了远程服务器管理、Xray 服务完整管理、证书管理、套餐管理等高级功能。\n\n采用 Master-Agent 架构，主控端（Master）通过 WebSocket/HTTP 与远程服务器上的 Agent 通信，实现对多台服务器的统一管理。\n架构概览\n\n```\n┌─────────────────────────────────────────┐\n│           妙妙屋X (Master)              │\n│                                         │\n│  ┌──────────┐  ┌──────────┐  ┌───────┐ │\n│  │ 节点管理  │  │ 用户管理  │  │ 证书  │ │\n│  └──────────┘  └──────────┘  └───────┘ │\n│  ┌──────────┐  ┌──────────┐  ┌───────┐ │\n│  │ 订阅生成  │  │ 套餐管理  │  │ 模板  │ │\n│  └──────────┘  └──────────┘  └───────┘ │\n│                                         │\n│         WebSocket / HTTP / Pull         │\n└────────┬──────────┬──────────┬──────────┘\n         │          │          │\n    ┌────▼───┐ ┌───▼────┐ ┌──▼─────┐\n    │ Agent  │ │ Agent  │ │ Agent  │\n    │ Server1│ │ Server2│ │ Server3│\n    │ (Xray) │ │ (Xray) │ │ (Xray) │\n    └────────┘ └────────┘ └────────┘\n```\n\n与妙妙屋的区别\n功能\t妙妙屋\t妙妙屋X\n节点管理\t手动添加/导入\t手动 + 远程同步\n远程服务器管理\t-\tMaster-Agent\nXray 入站/出站\t-\t可视化管理\n证书管理\t-\tACME 自动化\n套餐管理\t-\t流量套餐\n订阅生成\t12种客户端\t12种客户端\n用户管理\t基础\t增强（套餐绑定）\n模板系统\tV3 模板\tV3 模板",
+      "lastModified": 319939628,
+      "additionalProperties": {
+        "name": "miaomiaowux",
+        "type": "website",
+        "tags": [
+          "Tool",
+          "Local"
+        ],
+        "shortDescZh": "妙妙屋X（MMWX）是基于妙妙屋的增强版本，在保留原有订阅管理功能的基础上，新增了远程服务器管理、Xray 服务完整管理、证书管理、套餐管理等高级功能。",
+        "shortDescEn": "MMWX is an enhanced version of MMW. While retaining the original subscription management features, it adds advanced functionalities such as remote server management, comprehensive Xray service management, certificate management, and plan management.",
+        "description": {},
+        "key": "miaomiaowux",
+        "Required": [],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 0,
+        "website": "https://github.com/iluobei/miaomiaowux",
+        "github": "https://github.com/iluobei/miaomiaowux",
+        "document": "https://github.com/iluobei/miaomiaowux",
+        "version": 0,
+        "gpuSupport": false
+      },
+      "versions": [
+        {
+          "name": "0.2",
+          "lastModified": 446184289,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/miaomiaowux-0.2.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": "6016",
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_JWT_SECRET",
+                "labelEn": "your-secret-key",
+                "labelZh": "您的私钥",
+                "required": true,
+                "type": "text"
+              }
+            ],
+            "supportVersion": 0
+          }
+        }
+      ]
+    },
+    {
+      "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/microbin/logo.png",
+      "name": "microbin",
+      "readMe": "MicroBin 是一个超级小、功能丰富、可配置、自包含和自托管的粘贴箱 Web 应用程序。它非常易于设置和使用，只需要几兆字节的内存和磁盘存储。",
+      "lastModified": 2970483480,
+      "additionalProperties": {
+        "name": "microbin",
+        "type": "website",
+        "tags": [
+          "Tool",
+          "Local"
+        ],
+        "shortDescZh": "一个超级小、功能丰富、可配置、自包含和自托管的粘贴箱 Web 应用程序",
+        "shortDescEn": "a super tiny, feature rich, configurable, self-contained and self-hosted paste bin web application",
+        "description": {},
+        "key": "microbin",
+        "Required": [],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 0,
+        "website": "https://hub.docker.com/r/lanqiguoguo/microbin",
+        "github": "https://hub.docker.com/r/lanqiguoguo/microbin",
+        "document": "https://hub.docker.com/r/lanqiguoguo/microbin",
+        "version": 0,
+        "gpuSupport": false
+      },
+      "versions": [
+        {
+          "name": "latest",
+          "lastModified": 3194474290,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/microbin-latest.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": "admin",
+                "envKey": "MICROBIN_AUTH_USERNAME",
+                "labelEn": "Username",
+                "labelZh": "用户名",
+                "required": true,
+                "type": "text"
+              },
+              {
+                "default": "admin",
+                "envKey": "MICROBIN_AUTH_PASSWORD",
+                "labelEn": "Password",
+                "labelZh": "密码",
+                "random": true,
+                "required": true,
+                "type": "password"
+              },
+              {
+                "default": 3003,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              },
+              {
+                "default": "http://localhost:8080",
+                "edit": true,
+                "envKey": "MICROBIN_PUBLIC_PATH",
+                "labelEn": "External URL",
+                "labelZh": "公开的访问地址",
+                "required": true,
+                "rule": "paramExtUrl",
+                "type": "text"
+              }
+            ],
+            "supportVersion": 0
+          }
+        }
+      ]
+    },
+    {
+      "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/obsidian_livesync/logo.png",
+      "name": "Obsidian LiveSync",
+      "readMe": "## 使用说明\n\nCouchDB 部署成功后, 需要手动创建一个数据库, 方便插件连接并同步.\n\n访问 `http://localhost:5984/_utils`, 输入帐号密码后进入管理页面，点击 `Create Database` 根据个人喜好创建数据库\n\n> 如果你想要从移动设备访问 Self-hosted LiveSync，你需要一个合法的 SSL 证书。\n\n## 产品介绍\n\n**Self-hosted LiveSync** (自搭建在线同步) 是一个社区实现的在线同步插件。使用一个自搭建的或者购买的 CouchDB 作为中转服务器，兼容所有支持 Obsidian 的平台。\n\n> 本插件与官方的 `Obsidian Sync` 服务不兼容。\n\n## 主要功能\n\n-   可视化的冲突解决器\n-   接近实时的多设备双向同步\n-   可使用 CouchDB 以及兼容的服务，如 IBM Cloudant\n-   支持端到端加密\n-   插件同步 (Beta)\n-   从 [obsidian-livesync-webclip](https://chrome.google.com/webstore/detail/obsidian-livesync-webclip/jfpaflmpckblieefkegjncjoceapakdf) 接收 WebClip (本功能不适用端到端加密)\n\n适用于出于安全原因需要将笔记完全自托管的研究人员、工程师或开发人员，以及任何喜欢笔记完全私密所带来的安全感的人。\n\n> 具体使用问题，仍需参考官方文档\n",
+      "lastModified": 696916504,
+      "additionalProperties": {
+        "name": "Obsidian LiveSync",
+        "type": "website",
+        "tags": [
+          "Tool",
+          "Local"
+        ],
+        "shortDescZh": "Obsidian 在线同步插件",
+        "shortDescEn": "Obsidian Self-hosted LiveSync",
+        "description": {
+          "en": "Obsidian Self-hosted LiveSync",
+          "zh": "Obsidian 自托管实时同步",
+          "zh-Hant": "Obsidian 自託管實時同步",
+          "ja": "Obsidian 自己ホスト型ライブ同期",
+          "ms": "Obsidian LiveSync yang dihoskan sendiri",
+          "pt-br": "Obsidian LiveSync auto-hospedado",
+          "ru": "Обсидиан Самостоятельно размещаемая синхронизация в реальном времени",
+          "ko": "Obsidian 자체 호스팅 실시간 동기화"
+        },
+        "key": "obsidian_livesync",
+        "Required": [],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 0,
+        "website": "https://github.com/vrtmrz/obsidian-livesync",
+        "github": "https://github.com/vrtmrz/obsidian-livesync",
+        "document": "https://github.com/vrtmrz/obsidian-livesync/blob/main/docs/setup_own_server_cn.md",
+        "version": 0,
+        "gpuSupport": false,
+        "architectures": [
+          "amd64",
+          "arm64",
+          "ppc64le",
+          "s390x"
+        ]
+      },
+      "versions": [
+        {
+          "name": "3.5.0",
+          "lastModified": 3708701478,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/obsidian_livesync-3.5.0.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": "admin",
+                "envKey": "OBSIDIAN_LIVESYNC_USER",
+                "labelEn": "Username",
+                "labelZh": "用户名",
+                "label": {
+                  "en": "Username",
+                  "ja": "ユーザー名",
+                  "ms": "Nama Pengguna",
+                  "pt-br": "Nome de Usuário",
+                  "ru": "Имя пользователя",
+                  "ko": "사용자 이름",
+                  "zh": "用户名",
+                  "zh-Hant": "用戶名"
+                },
+                "required": true,
+                "type": "text"
+              },
+              {
+                "default": "obsidian",
+                "envKey": "OBSIDIAN_LIVESYNC_USER_PASSWORD",
+                "labelEn": "Password",
+                "labelZh": "密码",
+                "label": {
+                  "en": "Password",
+                  "ja": "パスワード",
+                  "ms": "Kata laluan",
+                  "pt-br": "Senha",
+                  "ru": "Пароль",
+                  "ko": "비밀번호",
+                  "zh": "密码",
+                  "zh-Hant": "密碼"
+                },
+                "random": true,
+                "required": true,
+                "type": "password"
+              },
+              {
+                "default": 3020,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "端口",
+                "label": {
+                  "en": "Port",
+                  "ja": "ポート",
+                  "ms": "Port",
+                  "pt-br": "Porta",
+                  "ru": "Порт",
+                  "ko": "포트",
+                  "zh": "端口",
+                  "zh-Hant": "埠"
+                },
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              }
+            ],
+            "supportVersion": 0
+          }
+        }
+      ]
+    },
+    {
+      "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/open-notebook/logo.png",
+      "name": "open-notebook",
+      "readMe": "一个私密、多模型、100%本地化、功能齐全的 Notebook LM 替代方案\n\n在人工智能主导的世界里，拥有思考 🧠 和获取新知识 💡 的能力，不应是少数人的特权，也不应局限于单一供应商。\n\nOpen Notebook 使您能够：\n\n🔒 掌控你的数据 - 保持研究内容的私密与安全\n🤖 选择你的AI模型 - 支持包括 OpenAI、Anthropic、Ollama、LM Studio 等在内的 18+ 家提供商\n📚 组织多模态内容 - PDF、视频、音频、网页等\n🎙️ 生成专业播客 - 先进的多说话人播客生成\n🔍 智能搜索 - 对所有内容进行全文和向量搜索\n💬 基于上下文聊天 - 由你的研究驱动的AI对话\n🌐 多语言用户界面 - 支持英语、葡萄牙语、中文（简体与繁体）、日语、俄语和孟加拉语\n了解更多项目信息请访问 https://www.open-notebook.ai",
+      "lastModified": 321256655,
+      "additionalProperties": {
+        "name": "open-notebook",
+        "type": "website",
+        "tags": [
+          "Tool",
+          "Local"
+        ],
+        "shortDescZh": "open-notebook — 一个私密、多模型、100%本地化、功能齐全的 Notebook LM 替代方案",
+        "shortDescEn": "open-notebook  — A private, multi-model, 100% local, full-featured alternative to Notebook LM",
+        "description": {
+          "en": "open-notebook  — A private, multi-model, 100% local, full-featured alternative to Notebook LM",
+          "zh": "open-notebook — 一个私密、多模型、100%本地化、功能齐全的 Notebook LM 替代方案"
+        },
+        "key": "open-notebook",
+        "Required": [],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 0,
+        "website": "https://github.com/lfnovo/open-notebook",
+        "github": "https://github.com/lfnovo/open-notebook",
+        "document": "https://github.com/lfnovo/open-notebook",
+        "version": 0,
+        "gpuSupport": false
+      },
+      "versions": [
+        {
+          "name": "v1-latest",
+          "lastModified": 3390389900,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/open-notebook-v1-latest.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": "6016",
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Web UI Port",
+                "labelZh": "Web UI 端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              },
+              {
+                "default": "60160",
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_API",
+                "labelEn": "REST API Port",
+                "labelZh": "REST API 端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              },
+              {
+                "default": "60161",
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_DB",
+                "labelEn": "surrealdb Port",
+                "labelZh": "surrealdb 端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_APP_ENCRYPTION_KEY",
+                "labelEn": "Encryption Key",
+                "labelZh": "加密密钥",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_APP_API_URL",
+                "labelEn": "API_URL",
+                "labelZh": "API 地址",
+                "type": "text"
+              }
+            ],
+            "supportVersion": 0
+          }
+        }
+      ]
+    },
+    {
+      "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/openresty/logo.png",
+      "name": "OpenResty",
+      "readMe": "# OpenResty\n\nOpenResty（基于 NGINX 与 LuaJIT）是一个高性能 Web 平台，可以轻松搭建动态 Web 应用、Web 服务和动态网关，支持 Lua 脚本扩展。\n\n- 官方文档: https://openresty.org/en/getting-started.html\n- 项目主页: https://github.com/openresty/openresty\n\n## 使用说明\n\n本应用结构参考 1Panel 官方商店 OpenResty（去除定制 WAF 部分），使用官方镜像 `openresty/openresty`，采用 host 网络模式，HTTP/HTTPS 端口在安装时指定（默认 80/443）。\n\n安装后应用目录结构如下：\n\n```\n├── conf/\n│   ├── nginx.conf        # 主配置（可编辑）\n│   ├── fastcgi_params    # FastCGI 参数\n│   ├── fastcgi-php.conf  # PHP FastCGI 配置\n│   ├── mime.types        # MIME 类型\n│   └── conf.d/           # 站点配置目录（*.conf 自动加载）\n├── root/                 # 默认站点根目录（/usr/share/nginx/html）\n├── www/                  # 站点目录（/www）\n└── log/                  # 访问日志与错误日志（/var/log/nginx）\n```\n\n- 安装时填写的 HTTP/HTTPS 端口会通过 init.sh 自动写入 `conf/conf.d/` 下的配置\n- 修改配置后重启应用生效\n- 站点文件放入 `root/` 或 `www/` 目录\n\n## Configuration\n\n- Host network mode; ports set at install time (default 80/443)\n- Main config: `./conf/nginx.conf`\n- Site configs: `./conf/conf.d/*.conf` (auto-included)\n- Web root: `./root` → `/usr/share/nginx/html`, `./www` → `/www`\n- Logs: `./log` → `/var/log/nginx`\n",
+      "lastModified": 3588396153,
+      "additionalProperties": {
+        "name": "OpenResty",
+        "type": "runtime",
+        "tags": [
+          "Server"
+        ],
+        "shortDescZh": "基于 NGINX 和 LuaJIT 的高性能 Web 平台",
+        "shortDescEn": "High performance web platform based on Nginx and LuaJIT",
+        "description": {},
+        "key": "openresty",
+        "Required": [],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 1,
+        "website": "https://openresty.org",
+        "github": "https://github.com/openresty/openresty",
+        "document": "https://openresty.org/en/getting-started.html",
+        "version": 0,
+        "gpuSupport": false,
+        "architectures": [
+          "amd64",
+          "arm64"
+        ]
+      },
+      "versions": [
+        {
+          "name": "1.31-alpine-slim",
+          "lastModified": 3229894708,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/openresty-1.31-alpine-slim.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": 80,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "HTTP Port",
+                "labelZh": "HTTP 端口",
+                "required": true,
+                "type": "number",
+                "label": {
+                  "en": "HTTP Port",
+                  "es-es": "Puerto HTTP",
+                  "fa": "پورت HTTP",
+                  "ja": "HTTP ポート",
+                  "ms": "Port HTTP",
+                  "pt-br": "Porta HTTP",
+                  "ru": "HTTP Порт",
+                  "ko": "HTTP 포트",
+                  "tr": "HTTP Portu",
+                  "zh-Hant": "HTTP 埠",
+                  "zh": "HTTP 端口"
+                }
+              },
+              {
+                "default": 443,
+                "envKey": "PANEL_APP_PORT_HTTPS",
+                "labelEn": "HTTPS Port",
+                "labelZh": "HTTPS 端口",
+                "required": true,
+                "type": "number",
+                "label": {
+                  "en": "HTTPS Port",
+                  "es-es": "Puerto HTTPS",
+                  "fa": "پورت HTTPS",
+                  "ja": "HTTPS ポート",
+                  "ms": "Port HTTPS",
+                  "pt-br": "Porta HTTPS",
+                  "ru": "HTTPS Порт",
+                  "ko": "HTTPS 포트",
+                  "tr": "HTTPS Portu",
+                  "zh-Hant": "HTTPS 埠",
+                  "zh": "HTTPS 端口"
+                }
+              }
+            ],
+            "supportVersion": 0
+          }
+        }
+      ]
+    },
+    {
+      "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/outlookemail/logo.png",
+      "name": "outlookemail",
+      "readMe": "多邮箱邮件管理工具\n\n一个面向多邮箱账号场景的邮件管理工具，支持通过 Outlook/Hotmail OAuth、Microsoft Graph API 和标准 IMAP 统一读取、管理和转发邮件，并提供 Web 界面用于分组管理、账号管理、邮件查看和对外 API 调用。当前支持 Outlook/Hotmail、Gmail、QQ、163、126、Yahoo、阿里邮箱以及自定义 IMAP 邮箱，同时集成 GPTMail、DuckMail、Cloudflare Temp Email 多提供商临时邮箱能力。",
+      "lastModified": 2667461378,
+      "additionalProperties": {
+        "name": "outlookemail",
+        "type": "website",
+        "tags": [
+          "Tool",
+          "Local"
+        ],
+        "shortDescZh": "一个面向多邮箱账号场景的邮件管理工具",
+        "shortDescEn": "An email management tool for multiple email accounts.",
+        "description": {},
+        "key": "outlookemail",
+        "Required": [],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 0,
+        "website": "https://github.com/assast/outlookEmail",
+        "github": "https://github.com/assast/outlookEmail",
+        "document": "https://github.com/assast/outlookEmail",
+        "version": 0,
+        "gpuSupport": false
+      },
+      "versions": [
+        {
+          "name": "v2.0.53",
+          "lastModified": 2928787248,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/outlookemail-v2.0.53.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": 6008,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              },
+              {
+                "default": "admin",
+                "envKey": "OUTLOOKEMAIL_LOGIN_PASSWORD",
+                "labelEn": "Password",
+                "labelZh": "登录密码",
+                "random": true,
+                "required": true,
+                "type": "password"
+              },
+              {
+                "default": "admin",
+                "envKey": "OUTLOOKEMAIL_SECRET_KEY",
+                "labelEn": "Password",
+                "labelZh": "密钥",
+                "required": true,
+                "type": "text"
+              }
+            ],
+            "supportVersion": 0
+          }
+        },
+        {
+          "name": "v2.0.54",
+          "lastModified": 184408047,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/outlookemail-v2.0.54.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": 6008,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              },
+              {
+                "default": "admin",
+                "envKey": "OUTLOOKEMAIL_LOGIN_PASSWORD",
+                "labelEn": "Password",
+                "labelZh": "登录密码",
+                "random": true,
+                "required": true,
+                "type": "password"
+              },
+              {
+                "default": "admin",
+                "envKey": "OUTLOOKEMAIL_SECRET_KEY",
+                "labelEn": "Password",
+                "labelZh": "密钥",
+                "required": true,
+                "type": "text"
+              }
+            ],
+            "supportVersion": 0
+          }
+        }
+      ]
+    },
+    {
+      "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/renewlet/logo.png",
+      "name": "renewlet",
+      "readMe": "﻿Renewlet 是一个会在续费前提醒你的自托管订阅账本。添加订阅或其他周期性扣费，填好续费日和提前提醒天数，它就会通过你配置的渠道通知你。价格、币种、预算、Logo、分类和付款方式也可以一起记录。",
+      "lastModified": 1982207361,
+      "additionalProperties": {
+        "name": "renewlet",
+        "type": "website",
+        "tags": [
+          "Tool",
+          "Local"
+        ],
+        "shortDescZh": "Renewlet 是一个会在续费前提醒你的自托管订阅账本。",
+        "shortDescEn": "Renewlet is a self-hosted subscription ledger that reminds you before renewals",
+        "description": {},
+        "key": "renewlet",
+        "Required": [],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 0,
+        "website": "https://github.com/zhiyingzzhou/renewlet",
+        "github": "https://github.com/zhiyingzzhou/renewlet",
+        "document": "https://github.com/zhiyingzzhou/renewlet",
+        "version": 0,
+        "gpuSupport": false
+      },
+      "versions": [
+        {
+          "name": "latest",
+          "lastModified": 1130506844,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/renewlet-latest.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": "6014",
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              },
+              {
+                "default": "Asia/Shanghai",
+                "edit": true,
+                "envKey": "PANEL_TZ",
+                "labelEn": "Container time zone",
+                "labelZh": "容器时区",
+                "required": false,
+                "type": "text"
+              },
+              {
+                "default": "",
+                "envKey": "PANEL_APP_URL",
+                "labelEn": "Application External URL",
+                "labelZh": "应用对外 URL，用于通知和密码重置邮件链接。",
+                "rule": "paramExtUrl",
+                "required": true,
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_PB_ENCRYPTION_KEY",
+                "labelEn": "PB_ENCRYPTION_KEY",
+                "labelZh": "PB 加密密钥 必须正好 32 个字符；不要随意轮换。示例：openssl rand -hex 16",
+                "required": true,
+                "type": "password"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_SMTP_HOST",
+                "labelEn": "SMTP_HOST",
+                "labelZh": "主机名：smtp.example.com,可选：启用 PocketBase 密码重置邮件。",
+                "required": false,
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_SMTP_PORT",
+                "labelEn": "SMTP_PORT",
+                "labelZh": "端口：587",
+                "required": false,
+                "type": "number"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_SMTP_USER",
+                "labelEn": "SMTP_USER",
+                "labelZh": "用户名：user@example.com",
+                "required": false,
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_SMTP_PASSWORD",
+                "labelEn": "SMTP_PASSWORD",
+                "labelZh": "密码/应用密码",
+                "required": false,
+                "type": "password"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_SMTP_FROM",
+                "labelEn": "SMTP_FROM",
+                "labelZh": "发件人：noreply@example.com",
+                "required": false,
+                "type": "text"
+              },
+              {
+                "default": "true",
+                "edit": true,
+                "envKey": "PANEL_SMTP_TLS",
+                "labelEn": "SMTP_TLS",
+                "labelZh": "是否启用 tls。true/false",
+                "required": false,
+                "type": "select",
+                "values": [
+                  {
+                    "label": "启用",
+                    "value": "true"
+                  },
+                  {
+                    "label": "不启用",
+                    "value": "false"
+                  }
+                ]
+              },
+              {
+                "default": "0 3 * * *",
+                "edit": true,
+                "envKey": "PANEL_BACKUPS_CRON",
+                "labelEn": "BACKUPS_CRON",
+                "labelZh": "可选：启用 PocketBase 自动备份，例如每天 03:00 执行并保留 7 份。",
+                "required": false,
+                "type": "text"
+              },
+              {
+                "default": "7",
+                "edit": true,
+                "envKey": "PANEL_BACKUPS_CRON_MAX_KEEP",
+                "labelEn": "BACKUPS_CRON_MAX_KEEP",
+                "labelZh": "可选：启用 PocketBase 自动备份，例如每天 03:00 执行并保留 7 份。",
+                "required": false,
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_CRON_SECRET",
+                "labelEn": "CRON_SECRET",
+                "labelZh": "CRON_SECRET 是外部通知 cron 调用使用的 Bearer token。",
+                "required": false,
+                "type": "text"
+              },
+              {
+                "default": "true",
+                "edit": true,
+                "envKey": "PANEL_NOTIFICATION_SCHEDULER_ENABLED",
+                "labelEn": "NOTIFICATION_SCHEDULER_ENABLED",
+                "labelZh": "内置通知调度器。普通 Docker/VPS 托管应保持启用。true/false",
+                "required": false,
+                "type": "select",
+                "values": [
+                  {
+                    "label": "启用",
+                    "value": "true"
+                  },
+                  {
+                    "label": "不启用",
+                    "value": "false"
+                  }
+                ]
+              },
+              {
+                "default": "* * * * *",
+                "edit": true,
+                "envKey": "PANEL_NOTIFICATION_SCHEDULER_CRON",
+                "labelEn": "NOTIFICATION_SCHEDULER_CRON",
+                "labelZh": "通知计划程序 CRON",
+                "required": false,
+                "type": "text"
+              },
+              {
+                "default": "2",
+                "edit": true,
+                "envKey": "PANEL_NOTIFICATION_CRON_WINDOW_MINUTES",
+                "labelEn": "NOTIFICATION_CRON_WINDOW_MINUTES",
+                "labelZh": "CRON 运行窗口分钟",
+                "required": false,
+                "type": "text"
+              },
+              {
+                "default": "3",
+                "edit": true,
+                "envKey": "PANEL_NOTIFICATION_MAX_RETRIES",
+                "labelEn": "NOTIFICATION_MAX_RETRIES",
+                "labelZh": "通知最大重试次数",
+                "required": false,
+                "type": "text"
+              },
+              {
+                "default": "15",
+                "edit": true,
+                "envKey": "PANEL_NOTIFICATION_STALE_SENDING_MINUTES",
+                "labelEn": "NOTIFICATION_STALE_SENDING_MINUTES",
+                "labelZh": "通知过期发送分钟",
+                "required": false,
+                "type": "text"
+              }
+            ],
+            "supportVersion": 0
+          }
+        }
+      ]
+    },
+    {
+      "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/searxng/logo.png",
+      "name": "searxng",
+      "readMe": "﻿SearXNG 是一个元搜索引擎。用户既不会被追踪，也不会被分析。",
+      "lastModified": 3896963045,
+      "additionalProperties": {
+        "name": "searxng",
+        "type": "website",
+        "tags": [
+          "Tool",
+          "Local"
+        ],
+        "shortDescZh": "SearXNG 是一个元搜索引擎。用户既不会被追踪，也不会被分析。",
+        "shortDescEn": "SearXNG is a metasearch engine. Users are neither tracked nor profiled.",
+        "description": {},
+        "key": "searxng",
+        "Required": [],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 0,
+        "website": "https://github.com/searxng/searxng",
+        "github": "https://github.com/searxng/searxng",
+        "document": "https://github.com/searxng/searxng",
+        "version": 0,
+        "gpuSupport": false
+      },
+      "versions": [
+        {
+          "name": "latest",
+          "lastModified": 1835212146,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/searxng-latest.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": 6013,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              },
+              {
+                "default": "",
+                "envKey": "PANEL_SEARXNG_BASE_URL",
+                "labelEn": "The base URL",
+                "labelZh": "部署的基础 URL。用于生成正确的入站链接。",
+                "required": true,
+                "rule": "paramExtUrl",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "envKey": "PANEL_SEARXNG_SECRET_KEY",
+                "labelEn": "secret_key",
+                "labelZh": "密钥",
+                "random": true,
+                "required": true,
+                "type": "password"
+              },
+              {
+                "default": 6389,
+                "edit": true,
+                "envKey": "PANEL_VALKEY_PORT",
+                "labelEn": "Valkey Port",
+                "labelZh": "缓存服务端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              }
+            ],
+            "supportVersion": 0
+          }
+        }
+      ]
+    },
+    {
+      "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/xui/logo.png",
+      "name": "xui",
+      "readMe": "**3X-UI** 是一个先进的开源 Web 控制面板，用于管理 [Xray-core](https://github.com/XTLS/Xray-core) 服务器。它提供简洁、多语言的界面，用于部署、配置和监控各种代理与 VPN 协议——从单台 VPS 到多节点部署。\n\n3X-UI 作为原始 X-UI 项目的增强分支（fork），增加了更广泛的协议支持、更好的稳定性、按客户端的流量统计以及许多提升使用体验的功能。\n\n> [!IMPORTANT]\n> 本项目仅供个人使用。请勿将其用于非法目的，也请勿在生产环境中使用。\n\n## 功能特性\n\n- **多协议入站** — VLESS、VMess、Trojan、Shadowsocks、WireGuard、Hysteria2、HTTP、SOCKS (Mixed)、Dokodemo-door / Tunnel 和 TUN。\n- **现代传输与安全** — TCP (Raw)、mKCP、WebSocket、gRPC、HTTPUpgrade 和 XHTTP，并通过 TLS、XTLS 和 REALITY 加密。\n- **回落 (Fallback)** — 通过 Xray 的 fallback 功能在单个端口上提供多种协议（例如在 443 端口上同时使用 VLESS 和 Trojan）。\n- **按客户端管理** — 流量配额、到期日期、IP 限制、实时在线状态，以及一键分享链接、二维码和订阅。\n- **流量统计** — 按入站、按客户端、按出站统计，并支持重置控制。\n- **多节点支持** — 从单一面板管理并扩展到多台服务器。\n- **出站与路由** — WARP、NordVPN、自定义路由规则、负载均衡器和出站代理链。\n- **内置订阅服务器**，支持多种输出格式。\n- **Telegram 机器人**，用于远程监控和管理。\n- **RESTful API**，带有面板内置的 Swagger 文档。\n- **灵活的存储** — SQLite（默认）或 PostgreSQL。\n- **13 种界面语言**，支持深色和浅色主题。\n- **Fail2ban 集成**，用于强制执行按客户端的 IP 限制。\n\n## 快速开始\n\n```bash\nbash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)\n```\n\n安装过程中会生成随机的用户名、密码和访问路径。安装完成后，运行 `x-ui` 打开管理菜单，您可以在其中启动/停止服务、查看或重置登录凭据、管理 SSL 证书等。\n\n完整文档请参阅 [项目Wiki](https://github.com/MHSanaei/3x-ui/wiki)。\n\n## 支持的平台\n\n**操作系统：** Ubuntu、Debian、Armbian、Fedora、CentOS、RHEL、AlmaLinux、Rocky Linux、Oracle Linux、Amazon Linux、Virtuozzo、Arch、Manjaro、Parch、openSUSE (Tumbleweed / Leap)、Alpine 和 Windows。\n\n**架构：** `amd64` · `386` · `arm64` (aarch64) · `armv7` · `armv6` · `armv5` · `s390x`。\n\n## 数据库选项\n\n3X-UI 支持两种后端，可在安装时选择：\n\n- **SQLite**（默认）— 位于 `/etc/x-ui/x-ui.db` 的单个文件。无需配置，适合中小型部署。\n- **PostgreSQL** — 推荐用于大量客户端或多节点设置。安装程序可以为您在本地安装 PostgreSQL，或接受指向现有服务器的 DSN。\n\n运行时通过环境变量选择后端（安装程序会为您写入 `/etc/default/x-ui`）：\n\n```\nXUI_DB_TYPE=postgres\nXUI_DB_DSN=postgres://xui:password@127.0.0.1:5432/xui?sslmode=disable\n```\n\n### 将现有的 SQLite 安装迁移到 PostgreSQL\n\n```bash\nx-ui migrate-db --dsn \"postgres://xui:password@127.0.0.1:5432/xui?sslmode=disable\"\n# 然后在 /etc/default/x-ui 中设置 XUI_DB_TYPE 和 XUI_DB_DSN 并重启：\nsystemctl restart x-ui\n```\n\n源 SQLite 文件保持不变；在确认新后端正常工作后，请手动删除它。\n\n### Docker\n\n默认的 `docker compose up -d` 仍使用 SQLite。若要使用捆绑的 PostgreSQL 服务运行，请取消注释 `docker-compose.yml` 中的两行 `XUI_DB_*` 环境变量，并使用该 profile 启动：\n\n```bash\ndocker compose --profile postgres up -d\n```\n\n该镜像捆绑了 Fail2ban（默认启用），用于强制执行按客户端的 **IP 限制**。Fail2ban 使用 `iptables` 封禁违规者，这需要 `NET_ADMIN` 权限。`docker-compose.yml` 已通过 `cap_add` 授予该权限；如果您改用 `docker run` 启动容器，请自行添加这些权限，否则封禁只会被记录而永远不会生效：\n\n```bash\ndocker run -d --cap-add=NET_ADMIN --cap-add=NET_RAW ... ghcr.io/mhsanaei/3x-ui\n```\n\n## 环境变量\n\n| 变量 | 说明 | 默认值 |\n| --- | --- | --- |\n| `XUI_DB_TYPE` | 数据库后端：`sqlite` 或 `postgres` | `sqlite` |\n| `XUI_DB_DSN` | PostgreSQL 连接字符串（当 `XUI_DB_TYPE=postgres` 时） | — |\n| `XUI_DB_FOLDER` | SQLite 数据库文件所在目录 | `/etc/x-ui` |\n| `XUI_DB_MAX_OPEN_CONNS` | 最大打开连接数（PostgreSQL 连接池） | — |\n| `XUI_DB_MAX_IDLE_CONNS` | 最大空闲连接数（PostgreSQL 连接池） | — |\n| `XUI_ENABLE_FAIL2BAN` | 启用基于 Fail2ban 的 IP 限制 | `true` |\n| `XUI_LOG_LEVEL` | 日志级别（`debug`、`info`、`warning`、`error`） | `info` |\n| `XUI_DEBUG` | 启用调试模式 | `false` |",
+      "lastModified": 3559040615,
+      "additionalProperties": {
+        "name": "xui",
+        "type": "website",
+        "tags": [
+          "Tool",
+          "Local"
+        ],
+        "shortDescZh": "3X-UI — 一个基于网页的高级开源控制面板",
+        "shortDescEn": "3X-UI — advanced, open-source web-based control panel designed for managing Xray-core server.",
+        "description": {
+          "en": "3X-UI — advanced, open-source web-based control panel designed for managing Xray-core server.",
+          "zh": "3X-UI — 一个基于网页的高级开源控制面板"
+        },
+        "key": "xui",
+        "Required": [],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 0,
+        "website": "https://github.com/MHSanaei/3x-ui",
+        "github": "https://github.com/MHSanaei/3x-ui",
+        "document": "https://github.com/MHSanaei/3x-ui",
+        "version": 0,
+        "gpuSupport": false
+      },
+      "versions": [
+        {
+          "name": "v3.4.1",
+          "lastModified": 3191462751,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/xui-v3.4.1.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": "6015",
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              },
+              {
+                "default": "xui",
+                "edit": true,
+                "envKey": "HOSTNAME",
+                "labelEn": "hostname",
+                "labelZh": "主机名",
+                "type": "text"
+              },
+              {
+                "default": "/xui/",
+                "edit": true,
+                "envKey": "PANEL_WEB_BASE_PATH",
+                "labelEn": "webBasePath",
+                "labelZh": "URI 路径:必须以 '/' 开头，以 '/' 结尾",
+                "type": "text"
+              },
+              {
+                "default": "admin",
+                "edit": true,
+                "envKey": "PANEL_USERNAME",
+                "labelEn": "username",
+                "labelZh": "用户名",
+                "type": "text"
+              },
+              {
+                "default": "admin",
+                "edit": true,
+                "envKey": "PANEL_PASSWORD",
+                "labelEn": "password",
+                "labelZh": "密码",
+                "type": "text"
+              },
+              {
+                "default": "Asia/Shanghai",
+                "edit": true,
+                "envKey": "TIME_ZONE",
+                "labelEn": "TZ",
+                "labelZh": "时区",
+                "type": "text"
+              }
+            ],
+            "supportVersion": 0
+          }
+        },
+        {
+          "name": "v3.4.2",
+          "lastModified": 4229160705,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/xui-v3.4.2.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": "6015",
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              },
+              {
+                "default": "xui",
+                "edit": true,
+                "envKey": "HOSTNAME",
+                "labelEn": "hostname",
+                "labelZh": "主机名",
+                "type": "text"
+              },
+              {
+                "default": "/xui/",
+                "edit": true,
+                "envKey": "PANEL_WEB_BASE_PATH",
+                "labelEn": "webBasePath",
+                "labelZh": "URI 路径:必须以 '/' 开头，以 '/' 结尾",
+                "type": "text"
+              },
+              {
+                "default": "admin",
+                "edit": true,
+                "envKey": "PANEL_USERNAME",
+                "labelEn": "username",
+                "labelZh": "用户名",
+                "type": "text"
+              },
+              {
+                "default": "admin",
+                "edit": true,
+                "envKey": "PANEL_PASSWORD",
+                "labelEn": "password",
+                "labelZh": "密码",
+                "type": "text"
+              },
+              {
+                "default": "Asia/Shanghai",
+                "edit": true,
+                "envKey": "TIME_ZONE",
+                "labelEn": "TZ",
+                "labelZh": "时区",
+                "type": "text"
+              }
+            ],
+            "supportVersion": 0
+          }
+        },
+        {
+          "name": "v3.5.0",
+          "lastModified": 1143928069,
+          "downloadUrl": "https://github.com/lanqiguoguo/appstore/releases/download/packages/xui-v3.5.0.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": "6015",
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              },
+              {
+                "default": "xui",
+                "edit": true,
+                "envKey": "HOSTNAME",
+                "labelEn": "hostname",
+                "labelZh": "主机名",
+                "type": "text"
+              },
+              {
+                "default": "/xui/",
+                "edit": true,
+                "envKey": "PANEL_WEB_BASE_PATH",
+                "labelEn": "webBasePath",
+                "labelZh": "URI 路径:必须以 '/' 开头，以 '/' 结尾",
+                "type": "text"
+              },
+              {
+                "default": "admin",
+                "edit": true,
+                "envKey": "PANEL_USERNAME",
+                "labelEn": "username",
+                "labelZh": "用户名",
+                "type": "text"
+              },
+              {
+                "default": "admin",
+                "edit": true,
+                "envKey": "PANEL_PASSWORD",
+                "labelEn": "password",
+                "labelZh": "密码",
+                "type": "text"
+              },
+              {
+                "default": "Asia/Shanghai",
+                "edit": true,
+                "envKey": "TIME_ZONE",
+                "labelEn": "TZ",
+                "labelZh": "时区",
+                "type": "text"
+              }
+            ],
+            "supportVersion": 0
+          }
+        }
+      ]
+    }
+  ]
+}

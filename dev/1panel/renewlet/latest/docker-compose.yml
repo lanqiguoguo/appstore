@@ -1,0 +1,65 @@
+﻿services:
+  web:
+    image: zhiyingzzhou/renewlet:latest
+    container_name: ${CONTAINER_NAME}
+    environment:
+      # 容器时区。业务提醒时间仍按每个用户在应用内设置的时区计算。Asia/Shanghai
+      TZ: ${PANEL_TZ}
+      # 应用对外 URL，用于通知和密码重置邮件链接。http://localhost:3000
+      # 反向代理部署时，后续应改为你的 HTTPS 域名。
+      APP_URL: ${PANEL_APP_URL}
+      # 首次安装时由 deploy/docker-deploy.sh 生成。
+      # PB_ENCRYPTION_KEY 必须正好 32 个字符；不要随意轮换。
+      # 示例：openssl rand -hex 16
+      PB_ENCRYPTION_KEY: ${PANEL_PB_ENCRYPTION_KEY}
+      # 可选：启用 PocketBase 密码重置邮件。
+      # 主机名：smtp.example.com
+      SMTP_HOST: ${PANEL_SMTP_HOST}
+      # 端口：587
+      SMTP_PORT: ${PANEL_SMTP_PORT}
+      # 用户名：user@example.com
+      SMTP_USER: ${PANEL_SMTP_USER}
+      # 密码/应用密码
+      SMTP_PASSWORD: ${PANEL_SMTP_PASSWORD}
+      # 发件人：noreply@example.com
+      SMTP_FROM: ${PANEL_SMTP_FROM}
+      # 是否启用 tls
+      SMTP_TLS: ${PANEL_SMTP_TLS}
+      # 可选：启用 PocketBase 自动备份，例如每天 03:00 执行并保留 7 份。
+      # BACKUPS_CRON: "0 3 * * *"
+      # BACKUPS_CRON_MAX_KEEP: "7"
+      BACKUPS_CRON: ${PANEL_BACKUPS_CRON}
+      BACKUPS_CRON_MAX_KEEP: ${PANEL_BACKUPS_CRON_MAX_KEEP}
+      # CRON_SECRET 是外部通知 cron 调用使用的 Bearer token。
+      CRON_SECRET: ${PANEL_CRON_SECRET}
+      # 内置通知调度器。普通 Docker/VPS 托管应保持启用。
+      # NOTIFICATION_SCHEDULER_ENABLED: "true"
+      NOTIFICATION_SCHEDULER_ENABLED: ${PANEL_NOTIFICATION_SCHEDULER_ENABLED}
+      # NOTIFICATION_SCHEDULER_CRON: "* * * * *"
+      NOTIFICATION_SCHEDULER_CRON: "${PANEL_NOTIFICATION_SCHEDULER_CRON}"
+      # NOTIFICATION_CRON_WINDOW_MINUTES: "2"
+      NOTIFICATION_CRON_WINDOW_MINUTES: ${PANEL_NOTIFICATION_CRON_WINDOW_MINUTES}
+      # NOTIFICATION_MAX_RETRIES: "3"
+      NOTIFICATION_MAX_RETRIES: ${PANEL_NOTIFICATION_MAX_RETRIES}
+      # NOTIFICATION_STALE_SENDING_MINUTES: "15"
+      NOTIFICATION_STALE_SENDING_MINUTES: ${PANEL_NOTIFICATION_STALE_SENDING_MINUTES}
+    volumes:
+      # 数据存储在 ./data，并挂载到容器内的 /pb_data。
+      - ./data:/pb_data
+    ports:
+      # 对外服务端口。容器内部始终监听 3000。
+      - "${PANEL_APP_PORT_HTTP}:3000"
+    healthcheck:
+      test: [ "CMD", "/renewlet", "healthcheck" ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+    restart: unless-stopped
+    labels:
+      createdBy: Apps
+    networks:
+      - 1panel-network
+networks:
+  1panel-network:
+    external: true
