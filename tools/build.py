@@ -39,6 +39,18 @@ RAW_BASE = "https://raw.githubusercontent.com/lanqiguoguo/appstore/main"
 
 VERSION_NAME_RE = re.compile(r"^\d+(\.\d+)*$")
 
+# 面板渲染标签名只用 locales（不回退到 key），必须为每种语言提供非空文案
+LOCALE_FIELDS = ("en", "ja", "ms", "pt-br", "ru", "zh-hant", "zh", "ko")
+TAG_LOCALES = {
+    "Tool": {"en": "Tool", "ja": "ツール", "ms": "Alat", "pt-br": "Ferramenta",
+             "ru": "Инструмент", "zh-hant": "工具", "zh": "工具", "ko": "도구"},
+    "Local": {"en": "Local", "ja": "ローカル", "ms": "Tempatan", "pt-br": "Local",
+              "ru": "Локальный", "zh-hant": "本地", "zh": "本地", "ko": "로컬"},
+    "Server": {"en": "Server", "ja": "サーバー", "ms": "Pelayan", "pt-br": "Servidor",
+               "ru": "Сервер", "zh-hant": "伺服器", "zh": "服务器", "ko": "서버"},
+    "AI": {k: "AI" for k in LOCALE_FIELDS},
+}
+
 warnings: list[str] = []
 errors: list[str] = []
 
@@ -211,7 +223,7 @@ def build() -> bool:
             pack_tar(ver_dst / (key + "-" + ver + ".tar.gz"), key, ver, ver_dir)
             package_count += 1
 
-    tags = [{"key": t, "name": t, "sort": i, "locales": {}}
+    tags = [{"key": t, "name": t, "sort": i, "locales": TAG_LOCALES.get(t, {k: t for k in LOCALE_FIELDS})}
             for i, t in enumerate(sorted(set(tag_keys)))]
     # 索引级 lastModified 取各应用时间戳最大值：保证同内容构建字节一致（幂等），
     # 面板判断商店是否更新只依赖 1panel.json.version.txt，与此字段无关

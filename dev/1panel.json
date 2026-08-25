@@ -8,19 +8,46 @@
         "key": "Local",
         "name": "Local",
         "sort": 0,
-        "locales": {}
+        "locales": {
+          "en": "Local",
+          "ja": "ローカル",
+          "ms": "Tempatan",
+          "pt-br": "Local",
+          "ru": "Локальный",
+          "zh-hant": "本地",
+          "zh": "本地",
+          "ko": "로컬"
+        }
       },
       {
         "key": "Server",
         "name": "Server",
         "sort": 1,
-        "locales": {}
+        "locales": {
+          "en": "Server",
+          "ja": "サーバー",
+          "ms": "Pelayan",
+          "pt-br": "Servidor",
+          "ru": "Сервер",
+          "zh-hant": "伺服器",
+          "zh": "服务器",
+          "ko": "서버"
+        }
       },
       {
         "key": "Tool",
         "name": "Tool",
         "sort": 2,
-        "locales": {}
+        "locales": {
+          "en": "Tool",
+          "ja": "ツール",
+          "ms": "Alat",
+          "pt-br": "Ferramenta",
+          "ru": "Инструмент",
+          "zh-hant": "工具",
+          "zh": "工具",
+          "ko": "도구"
+        }
       }
     ],
     "version": ""
