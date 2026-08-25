@@ -1,24 +1,26 @@
 #!/usr/bin/env python3
 """从 apps/ 作者目录生成 1Panel v1 协议产物。
 
-面板拉取路径约定（mode=dev）：
+面板拉取路径约定（mode=dev，app_repo 含 /main 分支段）：
   dev/1panel.json.version.txt            整数时间戳，变化触发面板同步
   dev/1panel.json.zip                    根级直含 1panel.json（面板解压后直读）
   dev/1panel/<key>/logo.png              图标（索引以 raw 绝对 URL 引用）
   dev/1panel/<key>/<ver>/docker-compose.yml
-  dist/<key>-<ver>.tar.gz                版本包，包内顶层必须是 <key>/<ver>/，经 Release 发布
+  dev/1panel/<key>/<ver>/<key>-<ver>.tar.gz   版本包随仓库提交，raw 直出
 
-本脚本不调用任何外部命令，只做文件生成与校验；
-提交回推与 Release 上传由 .github/workflows/publish.yml 完成，
-手动发布的命令见 README「发布」一节。
+所有产物只依赖 raw 单域名，不经过 github.com。
+本脚本不调用任何外部命令；提交回推由 .github/workflows/publish.yml 完成。
 
 lastModified 说明：不依赖 git 历史，改用应用目录内容的稳定指纹派生，
 保证跨机器构建结果一致，且内容变化时随之变化。
 """
 
 import argparse
+import gzip
 import hashlib
+import io
 import json
+import os
 import re
 import shutil
 import sys
@@ -32,10 +34,8 @@ import yaml
 REPO = Path(__file__).resolve().parent.parent
 APPS_DIR = REPO / "apps"
 DEV_DIR = REPO / "dev"
-DIST_DIR = REPO / "dist"
 
 RAW_BASE = "https://raw.githubusercontent.com/lanqiguoguo/appstore/main"
-RELEASE_URL_BASE = "https://github.com/lanqiguoguo/appstore/releases/download/packages"
 
 VERSION_NAME_RE = re.compile(r"^\d+(\.\d+)*$")
 
@@ -142,7 +142,7 @@ def build_app(key: str, app_dir: Path):
         versions.append({
             "name": ver,
             "lastModified": fingerprint_ts(ver_dir),
-            "downloadUrl": RELEASE_URL_BASE + "/" + key + "-" + ver + ".tar.gz",
+            "downloadUrl": RAW_BASE + "/dev/1panel/" + key + "/" + ver + "/" + key + "-" + ver + ".tar.gz",
             "downloadCallBackUrl": "",
             "additionalProperties": {"formFields": fields, "supportVersion": 0},
         })
@@ -163,25 +163,21 @@ def build_app(key: str, app_dir: Path):
     return define, packages
 
 
-def pack_tar(key: str, ver: str, ver_dir: Path) -> Path:
-    DIST_DIR.mkdir(exist_ok=True)
-    manifest_path = DIST_DIR / ".sources.json"
-    manifest = json.loads(manifest_path.read_text()) if manifest_path.exists() else {}
-
-    src_state = {str(p.relative_to(ver_dir)): sha256_file(p)
-                 for p in sorted(ver_dir.rglob("*")) if p.is_file()}
-    entry_key = key + "-" + ver
-    out = DIST_DIR / (entry_key + ".tar.gz")
-    if manifest.get(entry_key) == src_state and out.exists():
-        return out
-
-    with tarfile.open(out, "w:gz") as tf:
-        for p in sorted(ver_dir.rglob("*")):
-            if p.is_file():
-                tf.add(p, arcname=str(Path(key) / ver / p.relative_to(ver_dir)))
-    manifest[entry_key] = src_state
-    manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=1))
-    return out
+def pack_tar(out: Path, key: str, ver: str, ver_dir: Path):
+    """确定性打包：gzip 头与 tar 成员 mtime 固定为 0，
+    否则跨机构建字节不同会破坏 dev/ 快照幂等比较。"""
+    buf = io.BytesIO()
+    with tarfile.open(fileobj=buf, mode="w") as tf:
+        for src in sorted(ver_dir.rglob("*")):
+            if not src.is_file():
+                continue
+            info = tarfile.TarInfo(name=str(Path(key) / ver / src.relative_to(ver_dir)))
+            info.size = src.stat().st_size
+            info.mtime = 0
+            info.mode = 0o755 if os.access(src, os.X_OK) else 0o644
+            with open(src, "rb") as f:
+                tf.addfile(info, f)
+    out.write_bytes(gzip.compress(buf.getvalue(), mtime=0))
 
 
 def build() -> bool:
@@ -193,7 +189,8 @@ def build() -> bool:
     shutil.rmtree(stage, ignore_errors=True)
     (stage / "1panel").mkdir(parents=True)
 
-    apps, all_packages, tag_keys = [], [], []
+    apps, tag_keys = [], []
+    package_count = 0
     for app_dir in sorted(APPS_DIR.iterdir()):
         if not app_dir.is_dir():
             continue
@@ -208,10 +205,11 @@ def build() -> bool:
         shutil.copyfile(app_dir / "logo.png", logo_dst)
 
         for ver, ver_dir in packages:
-            compose_dst = stage / "1panel" / key / ver / "docker-compose.yml"
-            compose_dst.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(ver_dir / "docker-compose.yml", compose_dst)
-            all_packages.append(pack_tar(key, ver, ver_dir))
+            ver_dst = stage / "1panel" / key / ver
+            ver_dst.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(ver_dir / "docker-compose.yml", ver_dst / "docker-compose.yml")
+            pack_tar(ver_dst / (key + "-" + ver + ".tar.gz"), key, ver, ver_dir)
+            package_count += 1
 
     tags = [{"key": t, "name": t, "sort": i, "locales": {}}
             for i, t in enumerate(sorted(set(tag_keys)))]
@@ -247,7 +245,7 @@ def build() -> bool:
     stage.rename(DEV_DIR)
     ts_file = DEV_DIR / "1panel.json.version.txt"
     ts_file.write_text(str(int(time.time())))
-    print("已生成 %d 个应用、%d 个版本包" % (len(apps), len(all_packages)))
+    print("已生成 %d 个应用、%d 个版本包" % (len(apps), package_count))
     return verify()
 
 
@@ -268,15 +266,16 @@ def verify() -> bool:
             ok = False
         for v in app["versions"]:
             ver = v["name"]
-            compose = DEV_DIR / "1panel" / key / ver / "docker-compose.yml"
+            ver_dir = DEV_DIR / "1panel" / key / ver
+            compose = ver_dir / "docker-compose.yml"
             if not compose.exists():
                 error(key + "/" + ver + ": dev 下缺少 docker-compose.yml，详情页会报错")
                 ok = False
             asset_name = key + "-" + ver + ".tar.gz"
-            seen_assets.add(asset_name)
-            pkg = DIST_DIR / asset_name
+            seen_assets.add(str(Path("1panel") / key / ver / asset_name))
+            pkg = ver_dir / asset_name
             if not pkg.exists():
-                error(key + "/" + ver + ": 缺少版本包 dist/" + asset_name)
+                error(key + "/" + ver + ": 缺少版本包 " + str(pkg.relative_to(DEV_DIR)))
                 ok = False
                 continue
             prefix = key + "/" + ver + "/"
@@ -285,9 +284,10 @@ def verify() -> bool:
             if bad:
                 error(asset_name + ": 包内顶层不是 " + prefix + "：" + repr(bad[:3]))
                 ok = False
-    for pkg in sorted(DIST_DIR.glob("*.tar.gz")):
-        if pkg.name not in seen_assets:
-            warn("dist/" + pkg.name + ": 索引未引用的孤立版本包，发布时应清理")
+    for p in sorted(DEV_DIR.rglob("*.tar.gz")):
+        rel = str(p.relative_to(DEV_DIR))
+        if rel not in seen_assets:
+            warn(rel + ": 索引未引用的孤立版本包")
     print("自检通过" if ok else "自检失败")
     return ok
 
@@ -295,7 +295,7 @@ def verify() -> bool:
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--verify-only", action="store_true",
-                        help="仅校验现有 dev/ 与 dist/，不重新生成")
+                        help="仅校验现有 dev/，不重新生成")
     args = parser.parse_args()
 
     if args.verify_only:
