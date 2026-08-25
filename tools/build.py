@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
-"""从 apps/ 作者目录生成 1Panel v1 协议产物。
+"""从上游 apps/ 与自定义 custom/apps/ 生成 1Panel v1 协议产物。
 
-面板拉取路径约定（mode=dev，app_repo 含 /main 分支段）：
+目录约定（app_repo 含 /main 分支段，mode=dev）：
+  apps/<key>/…                 上游应用（merge 自 1Panel-dev/appstore，勿手改）
+  custom/apps/<key>/…          自定义应用；同 key 时整体替换上游应用
+  data.yaml                    全局标签定义（来自上游，可追加私有标签）
+产物：
   dev/1panel.json.version.txt            整数时间戳，变化触发面板同步
-  dev/1panel.json.zip                    根级直含 1panel.json（面板解压后直读）
+  dev/1panel.json.zip                    根级直含 1panel.json
   dev/1panel/<key>/logo.png              图标（索引以 raw 绝对 URL 引用）
   dev/1panel/<key>/<ver>/docker-compose.yml
   dev/1panel/<key>/<ver>/<key>-<ver>.tar.gz   版本包随仓库提交，raw 直出
 
-所有产物只依赖 raw 单域名，不经过 github.com。
 本脚本不调用任何外部命令；提交回推由 .github/workflows/publish.yml 完成。
-
-lastModified 说明：不依赖 git 历史，改用应用目录内容的稳定指纹派生，
-保证跨机器构建结果一致，且内容变化时随之变化。
 """
 
 import argparse
@@ -32,24 +32,14 @@ from pathlib import Path
 import yaml
 
 REPO = Path(__file__).resolve().parent.parent
-APPS_DIR = REPO / "apps"
+UPSTREAM_DIR = REPO / "apps"
+CUSTOM_DIR = REPO / "custom" / "apps"
 DEV_DIR = REPO / "dev"
+DATA_YAML = REPO / "data.yaml"
 
 RAW_BASE = "https://raw.githubusercontent.com/lanqiguoguo/appstore/main"
 
 VERSION_NAME_RE = re.compile(r"^\d+(\.\d+)*$")
-
-# 面板渲染标签名只用 locales（不回退到 key），必须为每种语言提供非空文案
-LOCALE_FIELDS = ("en", "ja", "ms", "pt-br", "ru", "zh-hant", "zh", "ko")
-TAG_LOCALES = {
-    "Tool": {"en": "Tool", "ja": "ツール", "ms": "Alat", "pt-br": "Ferramenta",
-             "ru": "Инструмент", "zh-hant": "工具", "zh": "工具", "ko": "도구"},
-    "Local": {"en": "Local", "ja": "ローカル", "ms": "Tempatan", "pt-br": "Local",
-              "ru": "Локальный", "zh-hant": "本地", "zh": "本地", "ko": "로컬"},
-    "Server": {"en": "Server", "ja": "サーバー", "ms": "Pelayan", "pt-br": "Servidor",
-               "ru": "Сервер", "zh-hant": "伺服器", "zh": "服务器", "ko": "서버"},
-    "AI": {k: "AI" for k in LOCALE_FIELDS},
-}
 
 warnings: list[str] = []
 errors: list[str] = []
@@ -69,7 +59,15 @@ def load_yaml(path: Path):
     if not path.exists():
         return {}
     with open(path, encoding="utf-8") as f:
-        return yaml.safe_load(f) or {}
+        text = f.read()
+    try:
+        return yaml.safe_load(text) or {}
+    except yaml.YAMLError as e:
+        # 上游个别文件含 Tab 缩进（如 jupyter-notebook），按 4 空格展开后重试
+        if "\t" in text:
+            warn(str(path.relative_to(REPO)) + ": 含 Tab 缩进，已自动容忍")
+            return yaml.safe_load(text.replace("\t", "    ")) or {}
+        raise
 
 
 def sha256_file(path: Path) -> str:
@@ -115,6 +113,31 @@ def tree_snapshot(root: Path) -> dict:
         if p.is_file():
             snap[str(p.relative_to(root))] = sha256_file(p)
     return snap
+
+
+def load_global_tags() -> dict:
+    """data.yaml 的全局标签表：key -> {name, sort, locales}。"""
+    meta = load_yaml(DATA_YAML)
+    table = {}
+    for t in (meta.get("additionalProperties") or {}).get("tags") or []:
+        table[t.get("key")] = t
+    if not table:
+        error("data.yaml 中没有标签定义")
+    return table
+
+
+def collect_app_dirs() -> dict:
+    """双根收集：custom/apps 同 key 整体覆盖 apps/。"""
+    dirs = {}
+    for root, origin in ((UPSTREAM_DIR, "上游"), (CUSTOM_DIR, "自定义")):
+        if not root.is_dir():
+            continue
+        for d in sorted(root.iterdir()):
+            if d.is_dir():
+                if d.name in dirs and origin == "自定义":
+                    warn(f"{d.name}: 自定义版本覆盖上游应用")
+                dirs[d.name] = d
+    return dirs
 
 
 def build_app(key: str, app_dir: Path):
@@ -193,25 +216,33 @@ def pack_tar(out: Path, key: str, ver: str, ver_dir: Path):
 
 
 def build() -> bool:
-    if not APPS_DIR.exists():
-        error("找不到 apps/ 目录")
+    if not UPSTREAM_DIR.is_dir():
+        error("找不到 apps/ 目录（上游内容未合并？）")
+        return False
+    global_tags = load_global_tags()
+    if errors:
         return False
 
     stage = REPO / ".build-stage"
     shutil.rmtree(stage, ignore_errors=True)
     (stage / "1panel").mkdir(parents=True)
 
-    apps, tag_keys = [], []
-    package_count = 0
-    for app_dir in sorted(APPS_DIR.iterdir()):
-        if not app_dir.is_dir():
+    apps, package_count = [], 0
+    used_tag_keys = set()
+    for key, app_dir in sorted(collect_app_dirs().items()):
+        try:
+            define, packages = build_app(key, app_dir)
+        except Exception as e:  # 单个应用元数据异常只跳过自身，不中断全量构建
+            error(key + ": 解析失败，已跳过（" + type(e).__name__ + ": " + str(e)[:120] + "）")
             continue
-        key = app_dir.name
-        define, packages = build_app(key, app_dir)
         if define is None:
             continue
+        unknown = [t for t in define["additionalProperties"]["tags"] if t not in global_tags]
+        if unknown:
+            error(key + ": 引用了 data.yaml 未定义的标签 " + repr(unknown) + "，请改用已定义键或往 data.yaml 追加")
+            continue
         apps.append(define)
-        tag_keys.extend(define["additionalProperties"]["tags"])
+        used_tag_keys.update(define["additionalProperties"]["tags"])
         logo_dst = stage / "1panel" / key / "logo.png"
         logo_dst.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(app_dir / "logo.png", logo_dst)
@@ -223,10 +254,10 @@ def build() -> bool:
             pack_tar(ver_dst / (key + "-" + ver + ".tar.gz"), key, ver, ver_dir)
             package_count += 1
 
-    tags = [{"key": t, "name": t, "sort": i, "locales": TAG_LOCALES.get(t, {k: t for k in LOCALE_FIELDS})}
-            for i, t in enumerate(sorted(set(tag_keys)))]
-    # 索引级 lastModified 取各应用时间戳最大值：保证同内容构建字节一致（幂等），
-    # 面板判断商店是否更新只依赖 1panel.json.version.txt，与此字段无关
+    # 标签全量取自 data.yaml（与官方一致，前端按 sort 排序展示筛选按钮）
+    defined = [(t.get("sort", 0), k, t) for k, t in global_tags.items()]
+    tags = [{"key": k, "name": t.get("name", k), "sort": s, "locales": t.get("locales", {})}
+            for s, k, t in sorted(defined)]
     index_last_modified = max((a["lastModified"] for a in apps), default=0)
     index = {
         "valid": True,

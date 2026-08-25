@@ -1,11 +1,12 @@
-name: Build & Publish AppStore
+name: Sync Upstream & Publish AppStore
 
 on:
   push:
     branches: [main]
     paths:
-      - 'apps/**'
+      - 'custom/**'
       - 'tools/**'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -19,6 +20,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # merge 上游需要本地历史中存在共同祖先
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -27,14 +31,20 @@ jobs:
       - name: Install deps
         run: pip install pyyaml
 
-      # 全部产物（含版本包）随 dev/ 提交进仓库，由 raw 单域名直出；
-      # 回推提交不匹配上面的 paths 过滤，且带 [skip ci]，不会触发循环构建
-      - name: Build protocol artifacts
-        run: python3 tools/build.py
-
-      - name: Commit dev/ back to main
+      - name: Sync upstream appstore
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add dev/
-          git diff --cached --quiet || (git commit -m "build: regenerate dev/ [skip ci]" && git push origin main)
+          git remote add upstream https://github.com/1Panel-dev/appstore.git
+          git fetch upstream dev
+          git merge upstream/dev --no-edit
+
+      - name: Build protocol artifacts
+        run: python3 tools/build.py
+
+      # 全部产物（含版本包）随 dev/ 提交进仓库，由 raw 单域名直出；
+      # GITHUB_TOKEN 的推送不会再触发工作流，提交另带 [skip ci] 双保险防循环
+      - name: Commit and push
+        run: |
+          git add -A
+          git diff --cached --quiet || (git commit -m "sync: upstream + regenerate dev/ [skip ci]" && git push origin main)
