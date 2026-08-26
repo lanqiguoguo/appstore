@@ -3501,7 +3501,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/bytebase/logo.png",
       "name": "Bytebase",
       "readMe": "## 产品介绍\n\n**Bytebase** 是面向开发人员和 DBA 的数据库 CI/CD 解决方案。它是CNCF Landscape和Platform Engineering包含的唯一数据库 CI/CD 项目。\n\n## Bytebase 系列由以下工具组成\n\n- **Bytebase 控制台**：供开发人员和 DBA 管理数据库开发生命周期的基于 Web 的 GUI。\n- **Bytebase API**：提供 gRPC 和 RESTful API 来操作 Bytebase 的各个方面。\n- **Bytebase CLI**：帮助开发人员将数据库更改集成到现有 CI/CD 工作流中的 CLI。\n- **Bytebase GitHub App和SQL Review GitHub Action**：GitHub App 和 GitHub Action 用于检测 SQL 反模式并在 Pull Request 期间强制执行一致的 SQL 样式指南。\n- **Terraform Bytebase 提供程序**：Terraform 提供程序使团队能够通过 Terraform 管理 Bytebase 资源。典型的设置包括团队使用 Terraform 从云供应商配置数据库实例，然后使用 Bytebase 提供程序准备这些实例以供应用程序使用。\n",
-      "lastModified": 46672586,
+      "lastModified": 3919771205,
       "additionalProperties": {
         "name": "Bytebase",
         "type": "website",
@@ -3541,9 +3541,9 @@
       },
       "versions": [
         {
-          "name": "3.21.1",
-          "lastModified": 752092004,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/bytebase/3.21.1/bytebase-3.21.1.tar.gz",
+          "name": "3.22.0",
+          "lastModified": 2149207732,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/bytebase/3.22.0/bytebase-3.22.0.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -3739,7 +3739,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/casdoor/logo.png",
       "name": "Casdoor",
       "readMe": "## 默认账户密码\n\n用户名: `admin`\n密码: `123`\n\n## 产品介绍\n\nA UI-first Identity Access Management (IAM) / Single-Sign-On (SSO) platform with web UI supporting OAuth 2.0, OIDC, SAML, CAS, LDAP, SCIM, WebAuthn, TOTP, MFA, RADIUS, Google Workspace, Active Directory and Kerberos\n\n## 特性\n\n- 遵循前后端分离架构，采用 Golang 进行开发。它支持高同步，提供基于网页的用户界面管理，并支持10多种语言的本地化。\n- 支持第三方应用登录，如 GitHub、谷歌、QQ、微信等，并支持通过插件扩展第三方登录。\n- 支持基于 Cassbin 的授权管理。 它支持 ACL、RBAC、ABAC 和 RESTful鉴权管理模式。\n- 提供了手机验证码、电子邮件验证码以及重置密码的功能。\n- 支持日志的审计和记录。\n- 可以使用阿里云、腾讯云、七牛云提供的图片CDN云存储功能。\n- 允许自定义注册、登录以及找回密码页面。\n- 通过数据库同步支持与现有系统的集成，从而能够顺利过渡到 Casdoor。\n- 支持主流数据库: MySQL、PostgreSQL、SQL Server 等, 并支持扩展插件以支持新的数据库。\n",
-      "lastModified": 2087289555,
+      "lastModified": 2930203789,
       "additionalProperties": {
         "name": "Casdoor",
         "type": "website",
@@ -3778,9 +3778,9 @@
       },
       "versions": [
         {
-          "name": "3.158.0",
-          "lastModified": 3452231357,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/casdoor/3.158.0/casdoor-3.158.0.tar.gz",
+          "name": "3.159.0",
+          "lastModified": 1951440722,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/casdoor/3.159.0/casdoor-3.159.0.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -5120,7 +5120,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/code-server/logo.png",
       "name": "code-server",
       "readMe": "## 产品介绍\n\n**code-server** 是一款强大的开源工具，它将 [Visual Studio Code (VS Code)](https://code.visualstudio.com/) 带入了基于Web的在线环境。它使您可以通过Web浏览器远程访问和使用VS Code的功能，而无需在本地安装VS Code应用程序。\n\n## 主要功能\n\n- **远程开发**：允许您从任何地方使用Web浏览器访问您的开发环境。这意味着您可以在不同设备和操作系统上一致地编写、编辑和运行代码。\n- **轻量级**：是一个轻量级的应用程序，资源占用较少，因此在资源有限的服务器上运行也很高效。这使得它成为为团队提供统一的开发环境或在云中进行开发的理想工具。\n- **丰富的扩展生态系统**：您可以安装并使用VS Code的广泛扩展库，从而扩展编辑器的功能。这包括语言支持、主题、代码片段和工作流程自动化等方面。\n- **多语言支持**：提供了广泛的编程语言支持，包括JavaScript、Python、Java、C++等。您可以在一个统一的开发环境中处理多种编程任务。\n- **集成终端**：它内置了一个终端，让您可以在同一界面中执行命令、安装依赖和运行应用程序。\n- **版本控制**：集成了版本控制系统（如Git），使您可以轻松地管理和跟踪代码更改。\n- **团队协作**：允许多个开发人员同时协作，通过共享工作区和代码库来增强团队协作能力。\n- **自定义设置**：您可以根据自己的需求自定义编辑器的设置，包括主题、快捷键和工作区配置。\n",
-      "lastModified": 2499076862,
+      "lastModified": 544839787,
       "additionalProperties": {
         "name": "code-server",
         "type": "website",
@@ -5161,9 +5161,9 @@
       },
       "versions": [
         {
-          "name": "4.133.0",
-          "lastModified": 4190674132,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/code-server/4.133.0/code-server-4.133.0.tar.gz",
+          "name": "4.134.0",
+          "lastModified": 1791933298,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/code-server/4.134.0/code-server-4.134.0.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -6576,7 +6576,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/dbx/logo.png",
       "name": "DBX",
       "readMe": "## 产品介绍\n\nDBX 是一个轻量级跨平台数据库客户端，可通过 Docker 自托管 Web 版本，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、DuckDB、ClickHouse、SQL Server、Oracle、Elasticsearch 等 60+ 种数据库。\n\n## 主要功能\n\n- SQL 编辑、语法高亮、自动补全和格式化\n- 数据浏览、编辑以及 CSV、Excel、JSON、Parquet 导入导出\n- ER 图、结构对比、执行计划和字段血缘\n- Redis 键浏览与 MongoDB 文档管理\n- 内置 AI SQL 助手，支持 OpenAI 兼容接口\n- 支持 SSH 隧道、深色模式和中英文界面\n",
-      "lastModified": 4215152538,
+      "lastModified": 1060152996,
       "additionalProperties": {
         "name": "DBX",
         "type": "tool",
@@ -6615,9 +6615,9 @@
       },
       "versions": [
         {
-          "name": "0.5.93",
-          "lastModified": 3059007034,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/dbx/0.5.93/dbx-0.5.93.tar.gz",
+          "name": "0.5.96",
+          "lastModified": 317385126,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/dbx/0.5.96/dbx-0.5.96.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -11615,7 +11615,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/ghost/logo.png",
       "name": "Ghost",
       "readMe": "## 产品介绍\n\n**Ghost** 是一个用于创建专业博客和管理电子邮件新闻通讯的最佳开源平台。非常适合希望通过现代写作体验和高性能建立强大数字存在感的独立写作者、出版商和企业。\n\n## 主要特性\n\n- 简洁直观的内容编辑器（支持 Markdown 和富文本）\n- 内置电子邮件新闻通讯支持\n- 可与多种第三方服务集成\n- 高性能且对 SEO 友好\n- 内置会员系统与变现功能\n",
-      "lastModified": 825640611,
+      "lastModified": 3536416943,
       "additionalProperties": {
         "name": "Ghost",
         "type": "website",
@@ -11657,9 +11657,9 @@
       },
       "versions": [
         {
-          "name": "6.59.0",
-          "lastModified": 2261410370,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/ghost/6.59.0/ghost-6.59.0.tar.gz",
+          "name": "6.60.0",
+          "lastModified": 2781949410,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/ghost/6.60.0/ghost-6.60.0.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -12061,7 +12061,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/gitlab/logo.png",
       "name": "GitLab",
       "readMe": "## 默认账户密码\n\n- 默认用户名：`root`\n- 默认密码：安装后在 GitLab 目录下的 `./data/config/initial_root_password` 文件中查看。\n\n> **注意**：首次安装启动时时间较长，请耐心等待。\n\n## 产品介绍\n\n**GitLab** 是一个完整的 DevOps 平台，提供从代码托管到 CI/CD 自动化的一站式解决方案。它允许团队高效协作、持续集成与持续部署，并支持敏捷开发流程。\n\n## 主要功能\n\n- **代码托管与版本管理**：GitLab 基于 Git，支持分支管理、合并请求、代码审查等功能，使团队协作更加高效。\n- **持续集成/持续部署（CI/CD）**：内置强大的 CI/CD 系统，可自动构建、测试和部署代码，提高开发效率和质量。\n- **问题追踪与项目管理**：提供 Issue、Milestone、看板等项目管理工具，帮助团队规划和跟踪开发进度。\n- **安全性与权限管理**：支持用户权限控制、组管理以及安全扫描功能，保障代码和项目的安全性。\n- **高度可定制**：GitLab 支持自定义 Runner、Webhooks 和集成第三方服务，满足不同团队的开发需求。\n- **多媒体与文档支持**：支持 Markdown 文档、Wiki、文件附件，使项目文档和知识库管理更加便捷。\n- **自托管与云服务**：GitLab 提供云托管版本，同时支持在私有服务器上自托管，实现完全掌控数据。\n- **企业版功能（付费）**：如高级审计日志、性能分析、群组级别安全策略等。\n",
-      "lastModified": 2030042956,
+      "lastModified": 314704854,
       "additionalProperties": {
         "name": "GitLab",
         "type": "website",
@@ -12102,9 +12102,9 @@
       },
       "versions": [
         {
-          "name": "19.3.0-ce.0",
-          "lastModified": 329604752,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/gitlab/19.3.0-ce.0/gitlab-19.3.0-ce.0.tar.gz",
+          "name": "19.3.1-ce.0",
+          "lastModified": 2342840828,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/gitlab/19.3.1-ce.0/gitlab-19.3.1-ce.0.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -17410,7 +17410,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/langflow/logo.png",
       "name": "Langflow",
       "readMe": "## 产品介绍\n\n**Langflow** 是一个基于 LangChain 的可视化 UI 工具，使用 react-flow 设计，为用户提供了一种直观、简便的方式来实验和构建 AI 流程原型。通过拖拽式的界面，用户可以轻松创建复杂的语言模型工作流，无需编写复杂的代码。\n\n## 主要功能\n\n- **可视化流程构建**：Langflow 提供了直观的拖拽式界面，用户可以通过简单的拖拽操作来构建复杂的 AI 工作流。系统内置了丰富的组件库，包括各种 LangChain 组件、数据处理节点和输出节点，用户可以根据需要自由组合这些组件。\n- **实时预览与调试**：在构建流程的过程中，用户可以实时预览每个节点的输出结果，便于调试和优化工作流。系统提供了详细的日志信息，帮助用户快速定位和解决问题。\n- **多种数据源支持**：Langflow 支持连接多种数据源，包括文本文件、数据库、API 接口等。用户可以轻松地将外部数据集成到自己的 AI 工作流中。\n- **模板与分享**：系统提供了丰富的预置模板，用户可以基于这些模板快速开始自己的项目。同时，用户也可以将自己创建的流程保存为模板，与团队成员分享。\n\n## 配置和使用说明\n\n### 注意事项\n\n在使用 Langflow 之前，请确保您的系统满足以下要求：\n- 至少 1GB 的可用内存\n- 稳定的网络连接（用于访问外部 API）\n- 现代浏览器（推荐使用 Chrome 或 Firefox）\n\n### 访问方式\n\n安装完成后，您可以通过浏览器访问 Langflow 界面：\n- 默认端口：7860\n- 访问地址：http://您的服务器IP:端口号\n\n### 基本使用步骤\n\n1. 打开浏览器，访问 Langflow 界面\n2. 在左侧组件面板中选择需要的组件\n3. 将组件拖拽到中央画布区域\n4. 通过连接线将各个组件连接起来\n5. 配置每个组件的参数\n6. 点击运行按钮测试您的工作流\n7. 根据输出结果调整和优化流程\n",
-      "lastModified": 1852334035,
+      "lastModified": 2227773063,
       "additionalProperties": {
         "name": "Langflow",
         "type": "tool",
@@ -17450,9 +17450,9 @@
       },
       "versions": [
         {
-          "name": "1.11.4",
-          "lastModified": 2520793432,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/langflow/1.11.4/langflow-1.11.4.tar.gz",
+          "name": "1.11.5",
+          "lastModified": 3366506719,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/langflow/1.11.5/langflow-1.11.5.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -19083,7 +19083,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/mailflow/logo.png",
       "name": "mailflow",
       "readMe": "一款自托管的统一网页邮件客户端。可连接多个 IMAP/SMTP 账户（Gmail、iCloud、Outlook、自定义），并在一个简洁的界面中统一查看所有邮件。",
-      "lastModified": 1079658968,
+      "lastModified": 3466567427,
       "additionalProperties": {
         "name": "mailflow",
         "type": "website",
@@ -19106,162 +19106,6 @@
         "gpuSupport": false
       },
       "versions": [
-        {
-          "name": "v3.0.0",
-          "lastModified": 2900574432,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/mailflow/v3.0.0/mailflow-v3.0.0.tar.gz",
-          "downloadCallBackUrl": "",
-          "additionalProperties": {
-            "formFields": [
-              {
-                "default": 6009,
-                "edit": true,
-                "envKey": "PANEL_APP_PORT_HTTP",
-                "labelEn": "APP Port",
-                "labelZh": "应用端口",
-                "required": true,
-                "rule": "paramPort",
-                "type": "number"
-              },
-              {
-                "default": "",
-                "edit": true,
-                "envKey": "PANEL_SESSION_SECRET",
-                "labelEn": "Session Secret(openssl rand -hex 32)",
-                "labelZh": "会话密钥（openssl rand -hex 32）",
-                "required": true,
-                "rule": "paramCommon",
-                "type": "text"
-              },
-              {
-                "default": "",
-                "edit": true,
-                "envKey": "PANEL_APP_URL",
-                "labelEn": "Full URL users see in the browser — used in invite emails and CORS.",
-                "labelZh": "用户在浏览器中看到的完整URL——用于邀请邮件和CORS。",
-                "required": true,
-                "rule": "paramExtUrl",
-                "type": "text"
-              },
-              {
-                "default": "",
-                "edit": true,
-                "envKey": "PANEL_DB_HOST",
-                "key": "postgresql",
-                "labelEn": "Database Service",
-                "labelZh": "数据库服务",
-                "required": true,
-                "type": "service"
-              },
-              {
-                "default": "mailflow",
-                "edit": true,
-                "envKey": "PANEL_DB_NAME",
-                "labelEn": "Database Name",
-                "labelZh": "数据库名",
-                "required": true,
-                "rule": "paramCommon",
-                "type": "text"
-              },
-              {
-                "default": "",
-                "edit": true,
-                "envKey": "PANEL_DB_USER",
-                "labelEn": "Database User Name",
-                "labelZh": "数据库用户名",
-                "required": true,
-                "rule": "paramCommon",
-                "type": "text"
-              },
-              {
-                "default": "",
-                "edit": true,
-                "envKey": "PANEL_DB_PASSWORD",
-                "labelEn": "Database User Password",
-                "labelZh": "数据库密码",
-                "required": true,
-                "type": "password"
-              },
-              {
-                "default": "",
-                "edit": true,
-                "envKey": "PANEL_REDIS_HOST",
-                "key": "redis",
-                "labelEn": "Redis Service",
-                "labelZh": "缓存服务",
-                "required": true,
-                "type": "service"
-              },
-              {
-                "default": "",
-                "edit": true,
-                "envKey": "PANEL_REDIS_ROOT_PASSWORD",
-                "labelEn": "Redis Service Password",
-                "labelZh": "缓存服务密码",
-                "required": true,
-                "type": "password"
-              },
-              {
-                "default": "",
-                "edit": true,
-                "envKey": "PANEL_ENCRYPTION_KEY",
-                "labelEn": "Used to encrypt stored email credentials (passwords, OAuth tokens) at rest.(openssl rand -hex 32)",
-                "labelZh": "用于加密静态存储的电子邮件凭据（密码、OAuth令牌）。（openssl rand -hex 32）",
-                "required": true,
-                "rule": "paramCommon",
-                "type": "text"
-              },
-              {
-                "default": "",
-                "edit": true,
-                "envKey": "PANEL_VAPID_PUBLIC_KEY",
-                "labelEn": "Web Push public key. Generate with npx web-push generate-vapid-keys. Required for push notifications.",
-                "labelZh": "Web Push 公钥。使用 npx web-push generate-vapid-keys 生成。推送通知必需。",
-                "required": false,
-                "rule": "paramCommon",
-                "type": "text"
-              },
-              {
-                "default": "",
-                "edit": true,
-                "envKey": "PANEL_VAPID_PRIVATE_KEY",
-                "labelEn": "Web Push private key (keep secret).",
-                "labelZh": "Web Push 私钥（请保密）。",
-                "required": false,
-                "rule": "paramCommon",
-                "type": "text"
-              },
-              {
-                "default": "",
-                "edit": true,
-                "envKey": "PANEL_VAPID_SUBJECT",
-                "labelEn": "Contact for the push service, e.g. mailto:admin@example.com or your APP_URL.",
-                "labelZh": "推送服务的联系人，例如 mailto:admin@example.com 或您的 APP_URL。",
-                "required": false,
-                "type": "text"
-              },
-              {
-                "default": "",
-                "edit": true,
-                "envKey": "PANEL_GOOGLE_CLIENT_ID",
-                "labelEn": "google client id",
-                "labelZh": "谷歌客户端ID",
-                "required": false,
-                "type": "text"
-              },
-              {
-                "default": "",
-                "edit": true,
-                "envKey": "PANEL_GOOGLE_CLIENT_SECRET",
-                "labelEn": "google client secret",
-                "labelZh": "谷歌客户端密钥",
-                "required": false,
-                "type": "text"
-              }
-            ],
-            "supportVersion": 0
-          }
-        },
         {
           "name": "v3.1.3",
           "lastModified": 488725744,
@@ -19422,6 +19266,162 @@
           "name": "v3.1.4",
           "lastModified": 1422429486,
           "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/mailflow/v3.1.4/mailflow-v3.1.4.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": 6009,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "APP Port",
+                "labelZh": "应用端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_SESSION_SECRET",
+                "labelEn": "Session Secret(openssl rand -hex 32)",
+                "labelZh": "会话密钥（openssl rand -hex 32）",
+                "required": true,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_APP_URL",
+                "labelEn": "Full URL users see in the browser — used in invite emails and CORS.",
+                "labelZh": "用户在浏览器中看到的完整URL——用于邀请邮件和CORS。",
+                "required": true,
+                "rule": "paramExtUrl",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_DB_HOST",
+                "key": "postgresql",
+                "labelEn": "Database Service",
+                "labelZh": "数据库服务",
+                "required": true,
+                "type": "service"
+              },
+              {
+                "default": "mailflow",
+                "edit": true,
+                "envKey": "PANEL_DB_NAME",
+                "labelEn": "Database Name",
+                "labelZh": "数据库名",
+                "required": true,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_DB_USER",
+                "labelEn": "Database User Name",
+                "labelZh": "数据库用户名",
+                "required": true,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_DB_PASSWORD",
+                "labelEn": "Database User Password",
+                "labelZh": "数据库密码",
+                "required": true,
+                "type": "password"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_REDIS_HOST",
+                "key": "redis",
+                "labelEn": "Redis Service",
+                "labelZh": "缓存服务",
+                "required": true,
+                "type": "service"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_REDIS_ROOT_PASSWORD",
+                "labelEn": "Redis Service Password",
+                "labelZh": "缓存服务密码",
+                "required": true,
+                "type": "password"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_ENCRYPTION_KEY",
+                "labelEn": "Used to encrypt stored email credentials (passwords, OAuth tokens) at rest.(openssl rand -hex 32)",
+                "labelZh": "用于加密静态存储的电子邮件凭据（密码、OAuth令牌）。（openssl rand -hex 32）",
+                "required": true,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_VAPID_PUBLIC_KEY",
+                "labelEn": "Web Push public key. Generate with npx web-push generate-vapid-keys. Required for push notifications.",
+                "labelZh": "Web Push 公钥。使用 npx web-push generate-vapid-keys 生成。推送通知必需。",
+                "required": false,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_VAPID_PRIVATE_KEY",
+                "labelEn": "Web Push private key (keep secret).",
+                "labelZh": "Web Push 私钥（请保密）。",
+                "required": false,
+                "rule": "paramCommon",
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_VAPID_SUBJECT",
+                "labelEn": "Contact for the push service, e.g. mailto:admin@example.com or your APP_URL.",
+                "labelZh": "推送服务的联系人，例如 mailto:admin@example.com 或您的 APP_URL。",
+                "required": false,
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_GOOGLE_CLIENT_ID",
+                "labelEn": "google client id",
+                "labelZh": "谷歌客户端ID",
+                "required": false,
+                "type": "text"
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "PANEL_GOOGLE_CLIENT_SECRET",
+                "labelEn": "google client secret",
+                "labelZh": "谷歌客户端密钥",
+                "required": false,
+                "type": "text"
+              }
+            ],
+            "supportVersion": 0
+          }
+        },
+        {
+          "name": "v3.3.0",
+          "lastModified": 503385960,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/mailflow/v3.3.0/mailflow-v3.3.0.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -19876,7 +19876,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/mariadb/logo.png",
       "name": "MariaDB",
       "readMe": "## 产品介绍\n\n**MariaDB** 是一个流行的开源关系型数据库管理系统（RDBMS），它是MySQL的一个分支，提供了丰富的功能和性能，适用于各种应用场景。\n\n## 核心功能\n\n- **SQL支持**: MariaDB完全支持SQL（Structured Query Language），允许用户执行各种数据库操作，包括查询、插入、更新、删除等。\n- **高性能**: MariaDB通过优化的查询执行计划、索引、缓存和多线程处理，提供出色的数据库性能。\n- **跨平台**: 可在多种操作系统上运行，包括Linux、Windows、macOS等。\n- **事务支持**: 支持事务处理，包括ACID（原子性、一致性、隔离性和持久性）属性，确保数据的完整性和可靠性。\n- **复制和高可用性**: 提供数据复制和主从复制功能，以及集群支持，确保数据的高可用性和冗余备份。\n\n## 安全性\n\n- **访问控制**: 支持基于角色的访问控制，可以限制用户对数据库的访问权限。\n- **数据加密**: 提供数据传输和存储的加密选项，保护敏感数据不被未经授权的访问泄露。\n- **身份验证**: 支持各种身份验证方法，包括用户名/密码、SSL证书等。\n\n## 数据类型\n\n- **标准数据类型**: 提供各种标准的数据类型，包括整数、浮点数、日期时间、字符串等。\n- **地理空间数据**: 支持地理信息系统（GIS）功能，用于处理地理空间数据。\n\n## 存储引擎\n\n- **InnoDB**: 默认的存储引擎，支持事务和外键，适用于大多数应用。\n- **MyISAM**: 支持全文本搜索和高性能插入操作，适用于某些特定场景。\n- **其他存储引擎**: 还支持其他存储引擎，如Aria、TokuDB等，以满足不同需求。\n\n## 扩展性\n\n- **存储过程和触发器**: 允许用户定义存储过程和触发器，以实现自定义的业务逻辑。\n- **插件支持**: 支持插件系统，可以轻松扩展MariaDB的功能。\n\n## 社区支持\n\n- **活跃社区**: MariaDB拥有活跃的开源社区，提供文档、论坛和支持，以帮助用户解决问题。\n- **开源**: MariaDB是开源软件，可以自由使用、修改和分发。\n",
-      "lastModified": 2169190898,
+      "lastModified": 398134858,
       "additionalProperties": {
         "name": "MariaDB",
         "type": "runtime",
@@ -19919,9 +19919,9 @@
       },
       "versions": [
         {
-          "name": "10.11.18",
-          "lastModified": 4100735028,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/mariadb/10.11.18/mariadb-10.11.18.tar.gz",
+          "name": "10.11.19",
+          "lastModified": 2066935030,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/mariadb/10.11.19/mariadb-10.11.19.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -20031,9 +20031,9 @@
           }
         },
         {
-          "name": "11.4.12",
-          "lastModified": 2302852325,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/mariadb/11.4.12/mariadb-11.4.12.tar.gz",
+          "name": "11.4.13",
+          "lastModified": 2376168899,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/mariadb/11.4.13/mariadb-11.4.13.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -20087,9 +20087,9 @@
           }
         },
         {
-          "name": "11.8.8",
-          "lastModified": 2673349874,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/mariadb/11.8.8/mariadb-11.8.8.tar.gz",
+          "name": "11.8.9",
+          "lastModified": 746939361,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/mariadb/11.8.9/mariadb-11.8.9.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -21099,7 +21099,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/metabase/logo.png",
       "name": "Metabase",
       "readMe": "## 产品介绍\n\n**Metabase** 是一款开源的数据分析和可视化工具，它提供了丰富的功能来帮助用户探索、分析和可视化数据。以下是 Metabase 的一些主要功能简介，使用 Markdown 语法进行描述：\n\n## 主要功能\n\n- **数据连接**：Metabase 可以连接多种数据源，包括关系型数据库（如MySQL、PostgreSQL、Oracle）、NoSQL数据库（如MongoDB）、云服务（如Amazon Redshift、Google BigQuery）以及各种数据文件格式。\n- **数据查询**：用户可以通过直观的图形界面或SQL查询语言来执行数据查询，从而轻松地提取所需的数据。\n- **可视化**：Metabase 提供了多种图表类型，包括条形图、折线图、饼图等，用户可以使用这些图表来呈现数据，并自定义图表样式和颜色。\n- **数据仪表板**：用户可以创建交互式的数据仪表板，将多个图表和查询结果组合在一起，以便更好地理解数据趋势和关系。\n- **自动化报表**：Metabase 允许用户创建定期自动生成的报表，以便在特定时间发送给团队成员或其他相关方。\n- **数据权限和安全性**：Metabase 提供了细粒度的数据访问权限控制，以确保只有授权用户能够访问敏感数据。\n- **问题和答案**：用户可以使用 Metabase 的“问题”功能来直接向系统提问，系统会自动执行相应的查询并返回答案，无需编写SQL查询。\n- **自动建议**：Metabase 提供了智能的查询建议功能，帮助用户更快地构建有效的查询。\n- **数据导出**：用户可以将查询结果以多种格式导出，包括CSV、Excel、图像等，以便进一步分析或共享数据。\n- **插件和扩展性**：Metabase 支持各种插件和扩展，可以根据需要添加新的功能和数据源连接。\n",
-      "lastModified": 1858090207,
+      "lastModified": 2257245465,
       "additionalProperties": {
         "name": "Metabase",
         "type": "website",
@@ -21138,9 +21138,9 @@
       },
       "versions": [
         {
-          "name": "0.63.14",
-          "lastModified": 2511661124,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/metabase/0.63.14/metabase-0.63.14.tar.gz",
+          "name": "0.63.15",
+          "lastModified": 268165233,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/metabase/0.63.15/metabase-0.63.15.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -25924,7 +25924,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/neo4j/logo.png",
       "name": "Neo4j",
       "readMe": "## 默认账户密码\n\n用户名: `neo4j`\n密码: `neo4j`\n\n## 产品介绍\n\n**Neo4j** 是世界领先的图数据库。它是一个高性能图形存储，具有成熟且强大的数据库所需的所有功能，例如友好的查询语言和 ACID 事务。程序员使用灵活的节点和关系网络结构而不是静态表进行工作，但可以享受企业级数据库的所有好处。对于许多应用程序来说，与关系数据库相比，Neo4j 提供了数量级的性能优势。\n\n## 核心功能\n\n### 1. 图形数据模型\n\n- **节点（Nodes）**：图数据库的基本单元，表示实体。\n- **边（Relationships）**：连接节点的有向连接，表示实体间的关系。\n- **属性（Properties）**：节点和边可以附带的键值对，用于描述节点和边的特性。\n\n### 2. Cypher 查询语言\n\n- **声明性查询语言**：类似 SQL，但专为图形数据库设计。\n- **模式匹配**：基于图模式进行查询，简洁高效。\n- **读写操作**：支持复杂查询、插入、更新和删除操作。\n\n### 3. ACID 事务支持\n\n- **原子性（Atomicity）**：确保所有操作都成功，或者在失败时回滚。\n- **一致性（Consistency）**：数据库从一个一致状态转换到另一个一致状态。\n- **隔离性（Isolation）**：并发事务互不干扰。\n- **持久性（Durability）**：事务提交后，数据持久化保存。\n\n### 4. 高性能和可扩展性\n\n- **内存中图处理**：大部分操作在内存中完成，速度快。\n- **水平扩展**：支持分片和复制，处理大规模数据。\n\n### 5. 可视化工具\n\n- **Neo4j Browser**：内置的交互式可视化工具，方便查询和结果展示。\n- **Neo4j Bloom**：高级数据可视化和探索工具，适合商业用户。\n\n### 6. 安全和访问控制\n\n- **身份验证和授权**：基于角色的访问控制，确保数据安全。\n- **SSL/TLS 加密**：保护数据传输安全。\n",
-      "lastModified": 988327355,
+      "lastModified": 3002340883,
       "additionalProperties": {
         "name": "Neo4j",
         "type": "runtime",
@@ -25965,9 +25965,9 @@
       },
       "versions": [
         {
-          "name": "5.26.29",
-          "lastModified": 1776274293,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/neo4j/5.26.29/neo4j-5.26.29.tar.gz",
+          "name": "5.26.30",
+          "lastModified": 310623847,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/neo4j/5.26.30/neo4j-5.26.30.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -26918,7 +26918,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/nocobase/logo.png",
       "name": "NocoBase",
       "readMe": "## 产品介绍\n\n**NocoBase** 是一个极易扩展的开源无代码开发平台。 不必投入几年时间、数百万资金研发，花几分钟时间部署 NocoBase，马上拥有一个私有、可控、极易扩展的无代码开发平台。\n\n## 特性\n\n### 1. 数据模型驱动\n\n- 多数以表单、表格或者流程驱动的无代码产品都是在使用界面上直接创建数据结构，比如 Airtable 在表格里新增一列就是新增一个字段。这样的好处是使用简单，不足是功能和灵活性受限，难以满足较复杂场景的需求。\n- NocoBase 采用数据结构与使用界面分离的设计思路，可以为数据表创建任意数量、任意形态的区块（数据视图），每个区块里可以定义不同的样式、文案、操作。这样既兼顾了无代码的简单操作，又具备了原生开发的灵活性。\n\n### 2. 所见即所得\n\n- NocoBase 可以开发复杂和有特色的业务系统，但这并不意味着需要复杂和专业的操作。只需一次点击，就可以在使用界面上显示出配置选项，具备系统配置权限的管理员可以用所见即所得的操作方式，直接配置用户的使用界面。\n\n### 3. 一切皆插件\n\n- NocoBase 采用插件化架构，所有新功能都可以通过开发和安装插件来实现，扩展功能就像在手机上安装 APP 一样简单。\n",
-      "lastModified": 3790667442,
+      "lastModified": 3319232366,
       "additionalProperties": {
         "name": "NocoBase",
         "type": "website",
@@ -26958,9 +26958,9 @@
       },
       "versions": [
         {
-          "name": "2.2.1",
-          "lastModified": 2260996113,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/nocobase/2.2.1/nocobase-2.2.1.tar.gz",
+          "name": "2.2.2",
+          "lastModified": 3503706071,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/nocobase/2.2.2/nocobase-2.2.2.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -28944,7 +28944,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/ollama/logo.png",
       "name": "Ollama",
       "readMe": "## 使用说明\n\n> 进入 `容器` 列表，找到 Ollama 容器，点击进入终端运行并与 [DeepSeek R1](https://ollama.com/library/deepseek-r1) 聊天：\n\n```bash\nollama run deepseek-r1:1.5b\n```\n\n## 模型库\n\nOllama 支持 [ollama.com/library](https://ollama.com/library) 上提供的一系列模型\n\n> 注意：您应该至少有 8 GB 可用 RAM 来运行 7B 型号，16 GB 来运行 13B 型号，32 GB 来运行 33B 型号。\n\n## 产品介绍\n\n**Ollama** 是一个开源的大型语言模型服务，提供了类似 OpenAI 的 API 接口和聊天界面，可以非常方便地部署最新版本的 GPT 模型并通过接口使用。支持热加载模型文件，无需重新启动即可切换不同的模型。\n",
-      "lastModified": 1240038613,
+      "lastModified": 3130142717,
       "additionalProperties": {
         "name": "Ollama",
         "type": "website",
@@ -28985,9 +28985,9 @@
       },
       "versions": [
         {
-          "name": "0.32.15",
-          "lastModified": 708377130,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/ollama/0.32.15/ollama-0.32.15.tar.gz",
+          "name": "0.33.0",
+          "lastModified": 4090937779,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/ollama/0.33.0/ollama-0.33.0.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -29024,7 +29024,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/ollama-webui/logo.png",
       "name": "OpenWebUI",
       "readMe": "## 产品介绍\n\n**Open WebUI** 是针对 LLM 用户友好的 WebUI，支持的 LLM 运行程序包括 Ollama、OpenAI 兼容的 API。\n\n## 主要功能\n\n- **直观的界面**：我们的聊天界面从 ChatGPT 中汲取灵感，确保用户友好的体验。\n- **响应式设计**：在桌面和移动设备上享受无缝体验。\n- **快速响应**：享受快速响应的性能。\n- **轻松部署**：使用 Docker 或 Kubernetes（kubectl、kustomize 或 helm）无缝安装，以获得无忧体验。\n- **代码语法高亮**：通过我们的语法突出显示功能增强代码的可读性。\n- **Markdown 和 LaTeX 支持**：通过全面的 Markdown 和 LaTeX 功能来丰富交互，提升您的 LLM 体验。\n- **RAG 集成**：通过突破性的检索增强生成 (RAG) 支持深入了解聊天交互的未来。此功能将文档交互无缝集成到您的聊天体验中。您可以将文档直接加载到聊天中或将文件添加到文档库中，使用#提示中的命令轻松访问它们。在 alpha 阶段，当我们积极完善和增强此功能以确保最佳性能和可靠性时，可能会偶尔出现问题。\n- **网页浏览功能**：使用 `#URL` 后的命令将网站无缝集成到您的聊天体验中。此功能允许您将网络内容直接合并到您的对话中，从而增强交互的丰富性和深度。\n- **提示预设支持**：使用聊天输入中的命令立即访问预设提示。轻松加载预定义的对话开头并加快您的互动。通过Open WebUI Community集成轻松导入提示。\n- **RLHF 注释**：通过对消息进行“赞成”和“反对”评级来增强您的消息的能力，从而促进根据人类反馈 (RLHF) 创建强化学习数据集。利用您的消息来训练或微调模型，同时确保本地保存数据的机密性。\n- **对话管理**：轻松分类和定位特定聊天，以便快速参考和简化数据收集。\n- **下载/删除模型**：直接从 Web UI 轻松下载或删除模型。\n- **GGUF 文件模型创建**：通过直接从 Web UI 上传 GGUF 文件，轻松创建 Ollama 模型。简化的流程，可选择从您的计算机上传或从 Hugging Face 下载 GGUF 文件。\n- **多模型支持**：不同聊天模型之间无缝切换，实现多样化交互。\n- **多模式支持**：与支持多模式交互的模型无缝交互，包括图像（例如 LLava）。\n- **模型文件生成器**：通过 Web UI 轻松创建 Ollama 模型文件。通过开放 WebUI 社区集成轻松创建和添加角色/代理、自定义聊天元素以及导入模型文件。\n- **多个模特对话**：轻松地同时与多个模特互动，利用他们的独特优势来获得最佳响应。通过并行利用一组不同的模型来增强您的体验。\n- **协作聊天**：通过无缝编排群组对话来利用多个模型的集体智慧。使用@命令指定模型，在聊天界面中启用动态且多样化的对话。让自己沉浸在聊天环境中的集体智慧中。\n- **再生历史访问**：轻松重新访问和探索您的整个再生历史。\n- **聊天历史记录**：轻松访问和管理您的对话历史记录。\n- **导入/导出聊天历史记录**：将您的聊天数据无缝移入和移出平台。\n- **语音输入支持**：通过语音交互与您的模型互动；享受直接与模特交谈的便利。此外，探索在 3 秒静音后自动发送语音输入的选项，以获得简化的体验。\n- **使用高级参数进行微调控制**：通过调整温度等参数和定义系统提示来获得更深层次的控制，以根据您的特定偏好和需求定制对话。\n- **图像生成集成**：使用 AUTOMATIC1111 API（本地）和 DALL-E 无缝集成图像生成功能，通过动态视觉内容丰富您的聊天体验。\n- **OpenAI API 集成**：轻松集成 OpenAI 兼容 API，与 Ollama 模型进行多功能对话。自定义 API 基本 URL 以链接到LMStudio、Mistral、OpenRouter 等。\n- **多种 OpenAI 兼容 API 支持**：无缝集成和定制各种 OpenAI 兼容 API，增强聊天交互的多功能性。\n- **外部 Ollama 服务器连接**：通过配置环境变量无缝链接到托管在不同地址上的外部 Ollama 服务器。\n- **多个 Ollama 实例负载平衡**：轻松地在多个 Ollama 实例之间分配聊天请求，以增强性能和可靠性。\n- **多用户管理**：通过我们直观的管理面板轻松监督和管理用户，简化用户管理流程。\n- **基于角色的访问控制（RBAC）**：通过受限的权限确保安全访问；只有经过授权的个人才能访问您的 Ollama，并且为管理员保留专有的模型创建/拉取权限。\n- **后端反向代理支持**：通过 Open WebUI 后端和 Ollama 之间的直接通信增强安全性。这一关键功能消除了通过 LAN 公开 Ollama 的需要。从 Web UI 向`/ollama/api`路由发出的请求会从后端无缝重定向到 Ollama，从而增强整体系统安全性。\n- **持续更新**：我们致力于通过定期更新和新功能来改进 Open WebUI。\n\n**Open WebUI** 提供了广泛的功能集和高度的可扩展性，是理想的 LLM 用户工具。\n",
-      "lastModified": 3655243801,
+      "lastModified": 208253577,
       "additionalProperties": {
         "name": "OpenWebUI",
         "type": "website",
@@ -29064,9 +29064,9 @@
       },
       "versions": [
         {
-          "name": "0.11.0",
-          "lastModified": 1465801040,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/ollama-webui/0.11.0/ollama-webui-0.11.0.tar.gz",
+          "name": "0.11.1",
+          "lastModified": 691194453,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/ollama-webui/0.11.1/ollama-webui-0.11.1.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -31360,7 +31360,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/palworld/logo.png",
       "name": "Palworld Server",
       "readMe": "## 产品介绍\n\n**《幻兽帕鲁》** 是 **Pocketpair** 开发的一款开放世界生存制作游戏，游戏于 2023 年 11 月 02 日至 11 月 05 日进行了封闭网络测试，于 2024 年 01 月 18 日发行抢先体验版本。\n\n游戏中，玩家可以在广阔的世界中收集神奇的生物“帕鲁”，派他们进行战斗、建造、做农活，工业生产等。\n\n选择版本时，latest版本镜像来源是KagurazakaNyaa/palworld-docker，数字版本镜像来源是thijsvanloef/palworld-server-docker。\n",
-      "lastModified": 4091890122,
+      "lastModified": 3393942085,
       "additionalProperties": {
         "name": "Palworld Server",
         "type": "website",
@@ -31401,9 +31401,9 @@
       },
       "versions": [
         {
-          "name": "2.7.2",
-          "lastModified": 1873664208,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/palworld/2.7.2/palworld-2.7.2.tar.gz",
+          "name": "2.7.3",
+          "lastModified": 1960593363,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/palworld/2.7.3/palworld-2.7.3.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -38439,7 +38439,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/redpanda-console/logo.png",
       "name": "Redpanda Console",
       "readMe": "## 产品介绍\n\n**Redpanda Console** 是一个开发人员友好的 UI，用于管理 Kafka/Redpanda 工作负载。控制台为您提供了一种简单的交互式方法，用于了解主题、屏蔽数据、管理消费者组以及通过时间旅行调试探索实时数据。\n\n## 主要功能\n\n- 消息查看器：通过即席查询和动态过滤器在我们的消息查看器中探索您的主题消息。使用 JavaScript 函数过滤消息来查找您想要的任何消息。支持的编码有：JSON、Avro、Protobuf、XML、MessagePack、Text 和 Binary（十六进制视图）。使用的编码（Protobuf 除外）会自动识别。 \n-  消费者组：列出所有活动消费者组及其活动组偏移量、编辑组偏移量（按组、主题或分区）或删除消费者组。 \n- 主题概述：浏览 Kafka 主题列表，检查其配置、空间使用情况、列出使用单个主题的所有消费者或观察分区详细信息（例如低水位线和高水位线、消息计数等）、嵌入主题来自 git 存储库的文档等等。 \n- 集群概述：列出 ACL、可用代理、其空间使用情况、机架 ID 和其他信息，以获得集群中代理的高级概述。 \n- 模式注册表：列出模式注册表中的所有 Avro、Protobuf 或 JSON 模式。\n- Kafka 连接：管理来自多个连接集群的连接器、修补配置、查看其当前状态或重新启动任务。\n",
-      "lastModified": 1814491662,
+      "lastModified": 3400764786,
       "additionalProperties": {
         "name": "Redpanda Console",
         "type": "website",
@@ -38479,9 +38479,9 @@
       },
       "versions": [
         {
-          "name": "3.10.0",
-          "lastModified": 3890681108,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/redpanda-console/3.10.0/redpanda-console-3.10.0.tar.gz",
+          "name": "3.11.0",
+          "lastModified": 4173067938,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/redpanda-console/3.11.0/redpanda-console-3.11.0.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -41242,7 +41242,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/stalwart-mail/logo.png",
       "name": "Stalwart Mail Server",
       "readMe": "## 产品介绍\n\n**Stalwart 邮件服务器** 是一个支持 JMAP、IMAP4、POP3 和 SMTP 的开源邮件服务器解决方案，拥有丰富的现代功能。它使用 Rust 编写，设计注重安全性、速度、稳定性和可扩展性。\n\n## 主要功能\n\n- **完整协议支持**：JMAP、IMAP4rev2、POP3、SMTP 及 ManageSieve。\n- **高级 SMTP 功能**：内置 DMARC、DKIM、SPF、ARC、TLS 报告支持，灵活的路由与过滤。\n- **反垃圾邮件与钓鱼防护**：基于 LLM 的邮件分析、灰名单、垃圾邮件陷阱及 DNSBL 支持。\n- **灵活的存储后端**：支持 PostgreSQL、SQLite、Redis、S3、ElasticSearch 等。\n- **高安全性**：支持 S/MIME 与 OpenPGP 加密，ACME TLS 证书，自适应限流与自动 IP 封锁。\n- **可扩展性与高可用性**：支持 Kubernetes，分片存储，自动故障恢复，无单点故障。\n- **全面的身份验证支持**：OAuth2、OpenID Connect、LDAP、TOTP 双因素认证、ACL 与基于角色的访问控制。\n- **监控与管理界面**：Web 控制面板，Prometheus 指标，OpenTelemetry 支持，日志查看器与告警系统。\n\n## 安装步骤\n\n1. 安装 Stalwart 时，请确保没有其他应用程序占用相同的端口。如果发生端口冲突（例如与 OpenResty 等 Web 服务器），您可以将 Stalwart 的默认端口更改为其他可用端口。\n\n![](https://i.imgur.com/v8IiDmI.png)\n\n2. 在初始设置过程中，请向下滚动并**启用以下选项**：\n\n- **高级设置**\n- **外部访问**\n\n![](https://i.imgur.com/2wVMb3G.png)\n\n3. 安装完成并启动 Stalwart 后，请**查看应用日志**。如果日志内容类似下图，说明安装成功，Stalwart 正在运行。\n\n![](https://i.imgur.com/QM1Euld.png)\n\n> *请保存日志中显示的账户信息，稍后登录时需要使用。*\n\n4. 如果您的系统启用了**防火墙**，请确保使用 **TCP 协议** 打开 Stalwart 所需的端口，以确保邮件服务器正常运行。\n\n![](https://i.imgur.com/4aYSKN2.png)\n\n> *在此示例中，端口 `443` 已被 OpenResty 占用，因此我将 Stalwart 的端口更改为 `8443`。*\n\n5. 设置完成后，在浏览器中打开您之前设置的地址和端口。登录时，请使用**第 3 步日志中显示的用户名和密码**。\n\n![](https://i.imgur.com/0jrSZLt.png)\n\n## 高级设置与配置\n\n有关进一步的配置，可以参考以下两个视频：\n\n- https://youtu.be/JA_V0GFUwWc?si=71KKiAV59mUoL0X4  \n- https://youtu.be/PMoiJktvzDw?si=hVhQxdLuj7PJJALm\n",
-      "lastModified": 2478507654,
+      "lastModified": 1175109179,
       "additionalProperties": {
         "name": "Stalwart Mail Server",
         "type": "website",
@@ -41284,9 +41284,9 @@
       },
       "versions": [
         {
-          "name": "0.16.18-alpine",
-          "lastModified": 532902333,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/stalwart-mail/0.16.18-alpine/stalwart-mail-0.16.18-alpine.tar.gz",
+          "name": "0.16.19-alpine",
+          "lastModified": 2421719605,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/stalwart-mail/0.16.19-alpine/stalwart-mail-0.16.19-alpine.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -41712,7 +41712,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/sub2api/logo.png",
       "name": "Sub2API",
       "readMe": "## 产品介绍\n\nSub2API 是一个开源的 AI API 网关平台，用于分发和管理 AI 产品订阅配额。通过平台生成的 API Key 访问上游 AI 服务，集中处理认证、计费、负载均衡和请求转发。\n\n## 主要功能\n\n- 支持 OAuth、API Key 等多种上游账号类型\n- 提供 API Key 分发、用户和配额管理能力\n- 支持令牌级用量统计、计费和限流\n- 支持账号调度、会话粘滞和请求转发\n- 提供 Web 管理后台和运行状态监控\n",
-      "lastModified": 584950356,
+      "lastModified": 2927797257,
       "additionalProperties": {
         "name": "Sub2API",
         "type": "website",
@@ -41750,9 +41750,9 @@
       },
       "versions": [
         {
-          "name": "0.1.180",
-          "lastModified": 4053713576,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/sub2api/0.1.180/sub2api-0.1.180.tar.gz",
+          "name": "0.1.183",
+          "lastModified": 2887944941,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/sub2api/0.1.183/sub2api-0.1.183.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -47457,7 +47457,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/waline/logo.png",
       "name": "Waline",
       "readMe": "## 产品介绍\n\n**Waline** 是一款简洁、安全的评论系统。\n\n## 参数说明\n\n| 变量名称 | 必填 | 默认值 | 备注 |\n| :------: | :---: | :---: | :--- |\n| 时区<br />`Time Zone` | ✅ | `Asia/Shanghai` | 参考：[Wikipedia](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) |\n| 用户登录密钥<br />`JWT Token` | ✅ | 随机生成 | 使用默认值即可 |\n| 开启评论审核<br />`Comment Audit` | ✅ | `false` | 开启后评论需要经过管理员审核后才能显示 |\n| 作者邮箱<br />`Author Email` |  |  | 示例: `author@example.com` | \n| 博客名称<br />`Site Name` |  |  | 示例: `My Blog Site Name` |\n| 博客地址<br />`Site Url` |  |  | 示例: `https://myblog.example.com` |\n| 安全域名<br />`Secure Domains` | | | 示例: `myblog.example.com`<br />配置时安全域名需要同时配置博客名称和地址<br />多个域名使用英文逗号分隔 |\n",
-      "lastModified": 132938924,
+      "lastModified": 425377256,
       "additionalProperties": {
         "name": "Waline",
         "type": "website",
@@ -47497,9 +47497,9 @@
       },
       "versions": [
         {
-          "name": "1.41.3",
-          "lastModified": 3019792682,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/waline/1.41.3/waline-1.41.3.tar.gz",
+          "name": "1.41.5",
+          "lastModified": 2286945008,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/waline/1.41.5/waline-1.41.5.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -48499,7 +48499,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/woodpecker/logo.png",
       "name": "Woodpecker CI",
       "readMe": "# 介绍\n\nWoodpecker 是一款 CI/CD 工具。它设计轻量、操作简便且运行迅捷。\n\n> 安装时需要配置托管平台：\n> 以 GitHub 为例，点开设置，进入开发者设置，再进入 OAuth 应用中，注册一个新应用：\n> 其他随意填写，回调网址必须填写 `https://<Woodpecker实例地址>/authorize`。\n\n## 特点\n\n- Woodpecker 使用 Docker 容器执行管道步骤。若您需要超越常规 Docker 镜像的功能，可创建插件来扩展管道功能。\n- Woodpecker 始终是完全免费的。由于 Woodpecker 的源代码是开源的，您可以贡献力量来帮助项目发展。\n- Woodpecker 让您能够轻松为项目创建多个工作流。这些工作流甚至可以相互依赖。\n\n## 构成\n\nWoodpecker 由核心组件（`server` 和 `agent`）及可选组件（`autoscaler`）构成。\n\n`server` 提供用户界面，处理发往底层 `forge` （托管平台）的 Webhook 请求，提供 API 服务，并解析 YAML 文件中的管道配置。\n\n`agent` 通过特定后端（Docker、 Kubernetes、 本地）执行工作流，并通过 GRPC 连接至服务器。多个代理可同时存在，从而针对单个实例精细调整作业限制、后端选择及其他代理相关设置。\n\n`autoscaler` 可在选定的云服务商上启动新虚拟机处理待处理构建任务。构建完成后，虚拟机将在短暂过渡期后自动销毁。\n",
-      "lastModified": 2852887478,
+      "lastModified": 678377206,
       "additionalProperties": {
         "name": "Woodpecker CI",
         "type": "website",
@@ -48541,9 +48541,9 @@
       },
       "versions": [
         {
-          "name": "3.17.0-alpine",
-          "lastModified": 2405045338,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/woodpecker/3.17.0-alpine/woodpecker-3.17.0-alpine.tar.gz",
+          "name": "3.18.0-alpine",
+          "lastModified": 381077723,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/dev/1panel/woodpecker/3.18.0-alpine/woodpecker-3.18.0-alpine.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
