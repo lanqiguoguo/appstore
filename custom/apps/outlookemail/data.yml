@@ -9,6 +9,7 @@ additionalProperties:
   name: outlookemail
   tags:
   - Email
+  - Local
   shortDescZh: 一个面向多邮箱账号场景的邮件管理工具
   shortDescEn: An email management tool for multiple email accounts.
   type: website

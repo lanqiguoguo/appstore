@@ -9,6 +9,7 @@ additionalProperties:
   name: microbin
   tags:
   - Tool
+  - Local
   shortDescZh: 一个超级小、功能丰富、可配置、自包含和自托管的粘贴箱 Web 应用程序
   shortDescEn: a super tiny, feature rich, configurable, self-contained and self-hosted
     paste bin web application

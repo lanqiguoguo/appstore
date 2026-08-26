@@ -11,6 +11,7 @@ additionalProperties:
   name: ccx
   tags:
   - AI
+  - Local
   shortDescZh: CCX 是一个高性能的 AI API 代理与协议转换网关，支持 Claude、OpenAI Chat、OpenAI Images、Codex
     Responses 与 Gemini。
   shortDescEn: CCX is a high-performance AI API proxy and protocol translation gateway

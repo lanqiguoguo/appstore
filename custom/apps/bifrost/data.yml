@@ -10,6 +10,7 @@ additionalProperties:
   name: bifrost
   tags:
   - AI
+  - Local
   shortDescZh: Bifrost AI 网关 — 高性能 AI API 网关，支持 23+ 提供商、自动故障转移、负载均衡与语义缓存
   shortDescEn: Bifrost AI Gateway — High-performance AI API gateway with 23+ providers,
     automatic failover, load balancing, and semantic caching

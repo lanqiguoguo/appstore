@@ -9,6 +9,7 @@ additionalProperties:
   name: HubProxy
   tags:
   - Tool
+  - Local
   shortDescZh: 一个轻量级、高性能的多功能代理服务，提供 Docker 镜像加速、GitHub 文件加速、下载离线镜像、在线搜索 Docker 镜像等功能。
   shortDescEn: A lightweight, high-performance multi-functional proxy service that
     provides Docker image acceleration, GitHub file acceleration, downloading offline

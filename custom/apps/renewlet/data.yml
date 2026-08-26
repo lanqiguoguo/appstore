@@ -9,6 +9,7 @@ additionalProperties:
   name: renewlet
   tags:
   - Tool
+  - Local
   shortDescZh: Renewlet 是一个会在续费前提醒你的自托管订阅账本。
   shortDescEn: Renewlet is a self-hosted subscription ledger that reminds you before
     renewals

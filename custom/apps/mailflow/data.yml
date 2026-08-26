@@ -9,6 +9,7 @@ additionalProperties:
   name: mailflow
   tags:
   - Email
+  - Local
   shortDescZh: 一款自托管的统一网页邮件客户端。可连接多个 IMAP/SMTP 账户（Gmail、iCloud、Outlook、自定义），并在一个简洁的界面中统一查看所有邮件。
   shortDescEn: A self-hosted, unified webmail client. Connect multiple IMAP/SMTP accounts
     (Gmail, iCloud, Outlook, custom) and read them all in one clean interface.

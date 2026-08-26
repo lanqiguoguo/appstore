@@ -9,6 +9,7 @@ additionalProperties:
   name: miaomiaowu
   tags:
   - Tool
+  - Local
   shortDescZh: 一个轻量级、易部署的Clash订阅管理系统，支持 Nezha、DStatus 和 Komari 探针获取流量信息，导入外部机场节点等功能。
   shortDescEn: A lightweight, easy-to-deploy Clash subscription management system
     that supports obtaining traffic information from probes such as Nezha, DStatus,

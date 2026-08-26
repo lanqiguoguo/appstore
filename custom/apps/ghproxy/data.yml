@@ -9,6 +9,7 @@ additionalProperties:
   name: GHProxy
   tags:
   - Tool
+  - Local
   shortDescZh: 一个基于Go的高性能Github资源代理程序, 同时支持Docker镜像代理与脚本嵌套加速等多种功能
   shortDescEn: A high-performance GitHub resource proxy built on Go, featuring multiple
     functions such as Docker image proxying and script nesting acceleration.

@@ -9,6 +9,7 @@ additionalProperties:
   name: ALS
   tags:
   - Tool
+  - Local
   shortDescZh: 一个 Looking-glass 服务器
   shortDescEn: Another Looking-glass Server
   type: website

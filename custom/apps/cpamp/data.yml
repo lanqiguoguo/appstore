@@ -8,6 +8,7 @@ additionalProperties:
   name: CPAMP
   tags:
   - AI
+  - Local
   shortDescZh: AI 网关监控面板，追踪请求、成本、配额与账号健康
   shortDescEn: AI gateway monitoring panel for CPA request tracking, cost, quota and
     account health

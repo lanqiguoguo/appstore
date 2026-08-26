@@ -9,6 +9,7 @@ additionalProperties:
   name: komari
   tags:
   - DevOps
+  - Local
   shortDescZh: Komari 是一款轻量级的自托管服务器监控工具
   shortDescEn: Komari is a lightweight, self-hosted server monitoring tool
   type: website

@@ -9,6 +9,7 @@ additionalProperties:
   name: searxng
   tags:
   - Tool
+  - Local
   shortDescZh: SearXNG 是一个元搜索引擎。用户既不会被追踪，也不会被分析。
   shortDescEn: SearXNG is a metasearch engine. Users are neither tracked nor profiled.
   type: website

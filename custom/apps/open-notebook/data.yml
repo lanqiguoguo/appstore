@@ -9,6 +9,7 @@ additionalProperties:
   name: open-notebook
   tags:
   - AI
+  - Local
   shortDescZh: open-notebook — 一个私密、多模型、100%本地化、功能齐全的 Notebook LM 替代方案
   shortDescEn: open-notebook  — A private, multi-model, 100% local, full-featured
     alternative to Notebook LM

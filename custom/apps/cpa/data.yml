@@ -8,6 +8,7 @@ additionalProperties:
   name: CPA
   tags:
   - AI
+  - Local
   shortDescZh: AI 网关代理，为 CLI 提供多模型兼容 API 与内置 Web UI
   shortDescEn: AI gateway proxy providing OpenAI/Gemini/Claude/Codex/Grok compatible
     API with built-in Web UI
