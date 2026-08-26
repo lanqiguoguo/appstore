@@ -42,6 +42,11 @@ jobs:
       - name: Build protocol artifacts
         run: python3 tools/build.py
 
+      # stable-mode 面板（v1.10.35-lts 起 CI 注入 mode: stable）按
+      # {app_repo}/stable/... 取数；dev/ 是唯一事实源，这里原样镜像
+      - name: Mirror dev/ to stable/
+        run: rsync -a --delete dev/ stable/
+
       # 全部产物（含版本包）随 dev/ 提交进仓库，由 raw 单域名直出；
       # GITHUB_TOKEN 的推送不会再触发工作流，提交另带 [skip ci] 双保险防循环
       - name: Commit and push
