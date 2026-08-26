@@ -1,0 +1,11 @@
+﻿services:
+  looking-glass-server:
+    container_name: ${CONTAINER_NAME}
+    environment:
+      - HTTP_PORT=${PANEL_APP_PORT_HTTP}
+      - SPEEDTEST_FILE_LIST=${SPEEDTEST_FILE_LIST}
+    restart: unless-stopped
+    network_mode: host
+    image: wikihostinc/looking-glass-server
+    labels:
+      createdBy: "Apps"
