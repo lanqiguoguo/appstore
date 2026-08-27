@@ -1,16 +1,20 @@
 #!/usr/bin/env python3
 """从上游 apps/ 与自定义 custom/apps/ 生成 1Panel v1 协议产物。
 
-目录约定（app_repo 含 /main 分支段，mode=dev）：
+目录约定（app_repo 含 /main 分支段）：
   apps/<key>/…                 上游应用（merge 自 1Panel-dev/appstore，勿手改）
   custom/apps/<key>/…          自定义应用；同 key 时整体替换上游应用
   data.yaml                    全局标签定义（来自上游，可追加私有标签）
-产物：
-  dev/1panel.json.version.txt            整数时间戳，变化触发面板同步
-  dev/1panel.json.zip                    根级直含 1panel.json
-  dev/1panel/<key>/logo.png              图标（索引以 raw 绝对 URL 引用）
-  dev/1panel/<key>/<ver>/docker-compose.yml
-  dev/1panel/<key>/<ver>/<key>-<ver>.tar.gz   版本包随仓库提交，raw 直出
+产物（每个渠道一套，目录名同时用作索引内绝对 URL 的首段）：
+  <channel>/1panel.json.version.txt      整数时间戳，变化触发面板同步
+  <channel>/1panel.json.zip              根级直含 1panel.json
+  <channel>/1panel/<key>/logo.png        图标
+  <channel>/1panel/<key>/<ver>/docker-compose.yml
+  <channel>/1panel/<key>/<ver>/<key>-<ver>.tar.gz   版本包随仓库提交，raw 直出
+
+dev/ 对应面板 mode=dev 渠道，stable/ 对应 mode=stable 稳定渠道。面板只会按
+mode 目录重新派生下载地址，但图标用的是索引内嵌的绝对地址，因此各渠道索引
+必须引用自身目录——不能用简单镜像复制，否则 stable 面板会持续请求 dev。
 
 本脚本不调用任何外部命令；提交回推由 .github/workflows/publish.yml 完成。
 """
@@ -34,10 +38,11 @@ import yaml
 REPO = Path(__file__).resolve().parent.parent
 UPSTREAM_DIR = REPO / "apps"
 CUSTOM_DIR = REPO / "custom" / "apps"
-DEV_DIR = REPO / "dev"
 DATA_YAML = REPO / "data.yaml"
 
 RAW_BASE = "https://raw.githubusercontent.com/lanqiguoguo/appstore/main"
+CHANNELS = ("dev", "stable")
+OUT_DIRS = {channel: REPO / channel for channel in CHANNELS}
 
 VERSION_NAME_RE = re.compile(r"^\d+(\.\d+)*$")
 
@@ -140,7 +145,7 @@ def collect_app_dirs() -> dict:
     return dirs
 
 
-def build_app(key: str, app_dir: Path):
+def build_app(key: str, app_dir: Path, channel: str):
     logo_path = app_dir / "logo.png"
     meta_path = app_dir / "data.yml"
     if not logo_path.exists():
@@ -177,7 +182,7 @@ def build_app(key: str, app_dir: Path):
         versions.append({
             "name": ver,
             "lastModified": fingerprint_ts(ver_dir),
-            "downloadUrl": RAW_BASE + "/dev/1panel/" + key + "/" + ver + "/" + key + "-" + ver + ".tar.gz",
+            "downloadUrl": RAW_BASE + "/" + channel + "/1panel/" + key + "/" + ver + "/" + key + "-" + ver + ".tar.gz",
             "downloadCallBackUrl": "",
             "additionalProperties": {"formFields": fields, "supportVersion": 0},
         })
@@ -188,7 +193,7 @@ def build_app(key: str, app_dir: Path):
         return None, []
 
     define = {
-        "icon": RAW_BASE + "/dev/1panel/" + key + "/logo.png",
+        "icon": RAW_BASE + "/" + channel + "/1panel/" + key + "/logo.png",
         "name": prop["name"],
         "readMe": read_me,
         "lastModified": app_ts,
@@ -200,7 +205,7 @@ def build_app(key: str, app_dir: Path):
 
 def pack_tar(out: Path, key: str, ver: str, ver_dir: Path):
     """确定性打包：gzip 头与 tar 成员 mtime 固定为 0，
-    否则跨机构建字节不同会破坏 dev/ 快照幂等比较。"""
+    否则跨机构建字节不同会破坏产物快照幂等比较。"""
     buf = io.BytesIO()
     with tarfile.open(fileobj=buf, mode="w") as tf:
         for src in sorted(ver_dir.rglob("*")):
@@ -215,13 +220,8 @@ def pack_tar(out: Path, key: str, ver: str, ver_dir: Path):
     out.write_bytes(gzip.compress(buf.getvalue(), mtime=0))
 
 
-def build() -> bool:
-    if not UPSTREAM_DIR.is_dir():
-        error("找不到 apps/ 目录（上游内容未合并？）")
-        return False
-    global_tags = load_global_tags()
-    if errors:
-        return False
+def build_channel(channel: str, global_tags: dict) -> bool:
+    out_dir = OUT_DIRS[channel]
 
     stage = REPO / ".build-stage"
     shutil.rmtree(stage, ignore_errors=True)
@@ -231,7 +231,7 @@ def build() -> bool:
     used_tag_keys = set()
     for key, app_dir in sorted(collect_app_dirs().items()):
         try:
-            define, packages = build_app(key, app_dir)
+            define, packages = build_app(key, app_dir, channel)
         except Exception as e:  # 单个应用元数据异常只跳过自身，不中断全量构建
             error(key + ": 解析失败，已跳过（" + type(e).__name__ + ": " + str(e)[:120] + "）")
             continue
@@ -275,50 +275,50 @@ def build() -> bool:
     with zipfile.ZipFile(stage / "1panel.json.zip", "w") as zf:
         zf.writestr(zinfo, index_bytes)
 
-    old_snap = tree_snapshot(DEV_DIR)
+    old_snap = tree_snapshot(out_dir)
     old_snap.pop("1panel.json.version.txt", None)
     new_snap = tree_snapshot(stage)
     new_snap.pop("1panel.json.version.txt", None)
-    if DEV_DIR.exists() and old_snap == new_snap:
+    if out_dir.exists() and old_snap == new_snap:
         shutil.rmtree(stage)
-        print("内容无变化，version.txt 保持不变")
+        print("[%s] 内容无变化，version.txt 保持不变" % channel)
         return True
 
-    shutil.rmtree(DEV_DIR, ignore_errors=True)
-    stage.rename(DEV_DIR)
-    ts_file = DEV_DIR / "1panel.json.version.txt"
+    shutil.rmtree(out_dir, ignore_errors=True)
+    stage.rename(out_dir)
+    ts_file = out_dir / "1panel.json.version.txt"
     ts_file.write_text(str(int(time.time())))
-    print("已生成 %d 个应用、%d 个版本包" % (len(apps), package_count))
-    return verify()
+    print("[%s] 已生成 %d 个应用、%d 个版本包" % (channel, len(apps), package_count))
+    return verify(out_dir)
 
 
-def verify() -> bool:
+def verify(root: Path) -> bool:
     ok = True
-    with zipfile.ZipFile(DEV_DIR / "1panel.json.zip") as zf:
+    with zipfile.ZipFile(root / "1panel.json.zip") as zf:
         names = [n for n in zf.namelist() if not n.endswith("/")]
         if names != ["1panel.json"]:
-            error("zip 布局非法：" + repr(names) + "，必须仅含根级 1panel.json")
+            error(str(root) + ": zip 布局非法：" + repr(names) + "，必须仅含根级 1panel.json")
             ok = False
-    index = json.loads((DEV_DIR / "1panel.json").read_text())
+    index = json.loads((root / "1panel.json").read_text())
     seen_assets = set()
     for app in index["apps"]:
         key = app["additionalProperties"]["key"]
-        logo = DEV_DIR / "1panel" / key / "logo.png"
+        logo = root / "1panel" / key / "logo.png"
         if not logo.exists():
-            error(key + ": dev/1panel 下缺少 logo.png")
+            error(f"{root.name}/1panel 下缺少 {key}/logo.png")
             ok = False
         for v in app["versions"]:
             ver = v["name"]
-            ver_dir = DEV_DIR / "1panel" / key / ver
+            ver_dir = root / "1panel" / key / ver
             compose = ver_dir / "docker-compose.yml"
             if not compose.exists():
-                error(key + "/" + ver + ": dev 下缺少 docker-compose.yml，详情页会报错")
+                error(f"{root.name}/{key}/{ver}: 缺少 docker-compose.yml，详情页会报错")
                 ok = False
             asset_name = key + "-" + ver + ".tar.gz"
             seen_assets.add(str(Path("1panel") / key / ver / asset_name))
             pkg = ver_dir / asset_name
             if not pkg.exists():
-                error(key + "/" + ver + ": 缺少版本包 " + str(pkg.relative_to(DEV_DIR)))
+                error(key + "/" + ver + ": 缺少版本包 " + str(pkg.relative_to(root)))
                 ok = False
                 continue
             prefix = key + "/" + ver + "/"
@@ -327,24 +327,44 @@ def verify() -> bool:
             if bad:
                 error(asset_name + ": 包内顶层不是 " + prefix + "：" + repr(bad[:3]))
                 ok = False
-    for p in sorted(DEV_DIR.rglob("*.tar.gz")):
-        rel = str(p.relative_to(DEV_DIR))
+    for p in sorted(root.rglob("*.tar.gz")):
+        rel = str(p.relative_to(root))
         if rel not in seen_assets:
             warn(rel + ": 索引未引用的孤立版本包")
-    print("自检通过" if ok else "自检失败")
+    print("[%s] 自检通过" % root.name if ok else "[%s] 自检失败" % root.name)
     return ok
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--verify-only", action="store_true",
-                        help="仅校验现有 dev/，不重新生成")
+                        help="仅校验现有各渠道产物，不重新生成")
     args = parser.parse_args()
 
     if args.verify_only:
-        sys.exit(0 if verify() else 1)
+        ok = True
+        for channel in CHANNELS:
+            if not OUT_DIRS[channel].is_dir():
+                error(channel + ": 产物目录不存在")
+                ok = False
+                continue
+            ok = verify(OUT_DIRS[channel]) and ok
+        sys.exit(0 if ok else 1)
 
-    if not build():
+    if not UPSTREAM_DIR.is_dir():
+        error("找不到 apps/ 目录（上游内容未合并？）")
+        sys.exit(1)
+
+    global_tags = load_global_tags()
+    if errors:
+        sys.exit(1)
+
+    ok_all = True
+    for channel in CHANNELS:
+        print("=== 构建 %s/ ===" % channel)
+        ok_all = build_channel(channel, global_tags) and ok_all
+
+    if not ok_all:
         sys.exit(1)
     if warnings:
         print()

@@ -42,14 +42,13 @@ jobs:
       - name: Build protocol artifacts
         run: python3 tools/build.py
 
-      # stable-mode 面板（v1.10.35-lts 起 CI 注入 mode: stable）按
-      # {app_repo}/stable/... 取数；dev/ 是唯一事实源，这里原样镜像
-      - name: Mirror dev/ to stable/
-        run: rsync -a --delete dev/ stable/
+      # dev/ 与 stable/ 双渠道由 build.py 一并生成：各渠道索引内的
+      # icon/downloadUrl 绝对 URL 指向自身目录，稳定面板（init.yaml
+      # mode=stable，按 {app_repo}/stable/... 取数）不再引用 dev/
 
-      # 全部产物（含版本包）随 dev/ 提交进仓库，由 raw 单域名直出；
+      # 全部产物（含版本包）随仓库提交，由 raw 单域名直出；
       # GITHUB_TOKEN 的推送不会再触发工作流，提交另带 [skip ci] 双保险防循环
       - name: Commit and push
         run: |
           git add -A
-          git diff --cached --quiet || (git commit -m "sync: upstream + regenerate dev/ [skip ci]" && git push origin main)
+          git diff --cached --quiet || (git commit -m "sync: upstream + regenerate dev/ stable/ [skip ci]" && git push origin main)
