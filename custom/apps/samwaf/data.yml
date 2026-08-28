@@ -1,0 +1,33 @@
+name: SamWaf
+tags:
+- 安全
+- 本地
+title: SamWaf 是一款开源轻量级的 Web 应用防火墙，支持 IP 黑白名单、CC 防护、地域封禁与反向代理。
+description: SamWaf 是一款开源轻量级的 Web 应用防火墙，支持 IP 黑白名单、CC 防护、地域封禁与反向代理。
+additionalProperties:
+  key: samwaf
+  name: SamWaf
+  tags:
+  - Security
+  - Local
+  shortDescZh: 开源轻量级的 Web 应用防火墙，支持 IP 黑白名单、CC 防护、地域封禁与反向代理
+  shortDescEn: A lightweight open-source Web Application Firewall with IP allow/block
+    lists, CC protection, geo-restriction and reverse proxy
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://github.com/samwafgo/SamWaf
+  github: https://github.com/samwafgo/SamWaf
+  document: https://github.com/samwafgo/SamWaf/wiki
+  architectures:
+  - amd64
+  - arm64
+  description:
+    en: SamWaf is a lightweight, open-source Web Application Firewall designed for
+      small teams and homelabs. It provides reverse-proxy based site protection with
+      IP allow/block lists, CC attack defense, geographic blocking and TLS management.
+    zh: SamWaf
+      是一款面向小型团队和家庭实验室的开源轻量级 Web
+      应用防火墙，基于反向代理为站点提供防护，支持 IP
+      黑白名单、CC 攻击防御、地域封禁与 TLS 证书管理。

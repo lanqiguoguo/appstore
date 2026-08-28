@@ -1,0 +1,26 @@
+additionalProperties:
+  formFields:
+    - default: 26666
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Management panel port
+      labelZh: 管理面板端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 80
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP1
+      labelEn: HTTP proxy port
+      labelZh: HTTP 代理端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 443
+      edit: true
+      envKey: PANEL_APP_PORT_HTTPS2
+      labelEn: HTTPS proxy port
+      labelZh: HTTPS 代理端口
+      required: true
+      rule: paramPort
+      type: number
