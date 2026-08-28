@@ -3739,7 +3739,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/casdoor/logo.png",
       "name": "Casdoor",
       "readMe": "## 默认账户密码\n\n用户名: `admin`\n密码: `123`\n\n## 产品介绍\n\nA UI-first Identity Access Management (IAM) / Single-Sign-On (SSO) platform with web UI supporting OAuth 2.0, OIDC, SAML, CAS, LDAP, SCIM, WebAuthn, TOTP, MFA, RADIUS, Google Workspace, Active Directory and Kerberos\n\n## 特性\n\n- 遵循前后端分离架构，采用 Golang 进行开发。它支持高同步，提供基于网页的用户界面管理，并支持10多种语言的本地化。\n- 支持第三方应用登录，如 GitHub、谷歌、QQ、微信等，并支持通过插件扩展第三方登录。\n- 支持基于 Cassbin 的授权管理。 它支持 ACL、RBAC、ABAC 和 RESTful鉴权管理模式。\n- 提供了手机验证码、电子邮件验证码以及重置密码的功能。\n- 支持日志的审计和记录。\n- 可以使用阿里云、腾讯云、七牛云提供的图片CDN云存储功能。\n- 允许自定义注册、登录以及找回密码页面。\n- 通过数据库同步支持与现有系统的集成，从而能够顺利过渡到 Casdoor。\n- 支持主流数据库: MySQL、PostgreSQL、SQL Server 等, 并支持扩展插件以支持新的数据库。\n",
-      "lastModified": 2930203789,
+      "lastModified": 2511765050,
       "additionalProperties": {
         "name": "Casdoor",
         "type": "website",
@@ -3778,9 +3778,9 @@
       },
       "versions": [
         {
-          "name": "3.159.0",
-          "lastModified": 1951440722,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/casdoor/3.159.0/casdoor-3.159.0.tar.gz",
+          "name": "3.161.1",
+          "lastModified": 3678006051,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/casdoor/3.161.1/casdoor-3.161.1.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -5120,7 +5120,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/code-server/logo.png",
       "name": "code-server",
       "readMe": "## 产品介绍\n\n**code-server** 是一款强大的开源工具，它将 [Visual Studio Code (VS Code)](https://code.visualstudio.com/) 带入了基于Web的在线环境。它使您可以通过Web浏览器远程访问和使用VS Code的功能，而无需在本地安装VS Code应用程序。\n\n## 主要功能\n\n- **远程开发**：允许您从任何地方使用Web浏览器访问您的开发环境。这意味着您可以在不同设备和操作系统上一致地编写、编辑和运行代码。\n- **轻量级**：是一个轻量级的应用程序，资源占用较少，因此在资源有限的服务器上运行也很高效。这使得它成为为团队提供统一的开发环境或在云中进行开发的理想工具。\n- **丰富的扩展生态系统**：您可以安装并使用VS Code的广泛扩展库，从而扩展编辑器的功能。这包括语言支持、主题、代码片段和工作流程自动化等方面。\n- **多语言支持**：提供了广泛的编程语言支持，包括JavaScript、Python、Java、C++等。您可以在一个统一的开发环境中处理多种编程任务。\n- **集成终端**：它内置了一个终端，让您可以在同一界面中执行命令、安装依赖和运行应用程序。\n- **版本控制**：集成了版本控制系统（如Git），使您可以轻松地管理和跟踪代码更改。\n- **团队协作**：允许多个开发人员同时协作，通过共享工作区和代码库来增强团队协作能力。\n- **自定义设置**：您可以根据自己的需求自定义编辑器的设置，包括主题、快捷键和工作区配置。\n",
-      "lastModified": 544839787,
+      "lastModified": 3974285142,
       "additionalProperties": {
         "name": "code-server",
         "type": "website",
@@ -5161,9 +5161,9 @@
       },
       "versions": [
         {
-          "name": "4.134.0",
-          "lastModified": 1791933298,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/code-server/4.134.0/code-server-4.134.0.tar.gz",
+          "name": "4.135.0",
+          "lastModified": 451486051,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/code-server/4.135.0/code-server-4.135.0.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -6576,7 +6576,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/dbx/logo.png",
       "name": "DBX",
       "readMe": "## 产品介绍\n\nDBX 是一个轻量级跨平台数据库客户端，可通过 Docker 自托管 Web 版本，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、DuckDB、ClickHouse、SQL Server、Oracle、Elasticsearch 等 60+ 种数据库。\n\n## 主要功能\n\n- SQL 编辑、语法高亮、自动补全和格式化\n- 数据浏览、编辑以及 CSV、Excel、JSON、Parquet 导入导出\n- ER 图、结构对比、执行计划和字段血缘\n- Redis 键浏览与 MongoDB 文档管理\n- 内置 AI SQL 助手，支持 OpenAI 兼容接口\n- 支持 SSH 隧道、深色模式和中英文界面\n",
-      "lastModified": 1060152996,
+      "lastModified": 426838155,
       "additionalProperties": {
         "name": "DBX",
         "type": "tool",
@@ -6615,9 +6615,9 @@
       },
       "versions": [
         {
-          "name": "0.5.96",
-          "lastModified": 317385126,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/dbx/0.5.96/dbx-0.5.96.tar.gz",
+          "name": "0.5.97",
+          "lastModified": 1467121728,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/dbx/0.5.97/dbx-0.5.97.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -11853,7 +11853,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/gitea/logo.png",
       "name": "Gitea",
       "readMe": "## 产品介绍\n\n**Gitea** 是新一代的代码托管平台，具备基于 Git 的核心代码托管能力和 DevSecOps 延伸能力，为广大软件开发者提供接近 GitHub 的使用体验，并且支持用户开展私有化部署。\n\n## 优势\n\n- **简单易用**：零门槛，线上快速获取和安装，使用体验好。\n- **卓越性能**：采用 Go 语言编写，资源占用小、运行速度快。\n- **高可配置**：100+ 配置项，通过灵活的配置满足不同应用场景的需求。\n- **安全稳定**：被⼴泛验证，39k+ GitHub Star、40万+ 安装量、1000+ 贡献者。\n",
-      "lastModified": 2105548455,
+      "lastModified": 3456879106,
       "additionalProperties": {
         "name": "Gitea",
         "type": "website",
@@ -11892,9 +11892,9 @@
       },
       "versions": [
         {
-          "name": "26.4.8",
-          "lastModified": 861020859,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/gitea/26.4.8/gitea-26.4.8.tar.gz",
+          "name": "27.3.0",
+          "lastModified": 719667937,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/gitea/27.3.0/gitea-27.3.0.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -12419,7 +12419,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/gotify/logo.png",
       "name": "Gotify",
       "readMe": "## 产品介绍\n\n**Gotify** 是一个简单的服务器来发送和接收消息（通过 WebSocket 实时发送和接收）\n\n## 特征\n\n- 通过 REST-API 发送消息\n- 通过 WebSocket 接收消息\n- 管理用户、客户端和应用程序\n- [插件](https://gotify.net/docs/plugin)\n- Web-UI -> [./ui](https://github.com/gotify/server/tree/master/ui)\n- 发送消息的 CLI -> [gotify/cli](https://github.com/gotify/cli)\n- Android-APP -> [gotify/android](https://github.com/gotify/android)\n\n## 从 2.x 升级到 3.x\n\n- 升级前请停止应用，并备份应用目录中的 `data` 和 `.env`。\n- Gotify 3 不再支持 `config.yml`。1Panel 模板默认使用环境变量；如果自行添加过配置文件，请先按照官方文档使用 `migrate-config` 完成迁移。\n- `GOTIFY_SERVER_SSL_LETSENCRYPT_HOSTS`、`GOTIFY_SERVER_CORS_ALLOWORIGINS`、`GOTIFY_SERVER_CORS_ALLOWMETHODS`、`GOTIFY_SERVER_CORS_ALLOWHEADERS` 和 `GOTIFY_SERVER_STREAM_ALLOWEDORIGINS` 改为 CSV 格式，例如将 `[GET, POST]` 改为 `GET,POST`。\n- `GOTIFY_SERVER_RESPONSEHEADERS` 改为 JSON 格式，例如将 `{X-Custom-Header: \"custom value\"}` 改为 `{\"X-Custom-Header\":\"custom value\"}`；旧格式会导致 Gotify 3 启动失败。\n- 如果旧实例启用了 Let's Encrypt，且 `.env` 中的 `GOTIFY_SERVER_SSL_LETSENCRYPT_CACHE` 仍为 `certs`，请先把旧容器内的 `/app/certs` 复制到应用目录的 `data/certs`，再将该变量改为 `data/certs`，避免重建容器时丢失证书和 ACME 账户数据。\n- Gotify 3 调整了令牌展示、客户端敏感操作鉴权和消息分页行为。依赖 Gotify API 的脚本或客户端应在升级前检查兼容性。现有应用令牌和客户端令牌仍可继续使用。\n- 官方迁移文档：https://gotify.net/docs/migrate-to-3\n",
-      "lastModified": 786564181,
+      "lastModified": 2898632527,
       "additionalProperties": {
         "name": "Gotify",
         "type": "website",
@@ -12457,9 +12457,9 @@
       },
       "versions": [
         {
-          "name": "3.0.0",
-          "lastModified": 4053353616,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/gotify/3.0.0/gotify-3.0.0.tar.gz",
+          "name": "3.1.0",
+          "lastModified": 2253131052,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/gotify/3.1.0/gotify-3.1.0.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -13402,7 +13402,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/gsmanager/logo.png",
       "name": "GSManager",
       "readMe": "## 产品介绍\n\n**GameServerManager 3.0（简称GSM3）** 是一个基于现代化技术栈的游戏服务器管理平台，采用 React + TypeScript + Node.js 架构，专为简化游戏服务器的部署、管理和维护而设计。\n\n## 特性\n\n- **现代化架构** - 基于 React 18 + TypeScript + Node.js 的全栈解决方案\n- **一键部署** - 支持 Steam 平台多款热门游戏的快速部署\n- **Web 管理界面** - 基于 Ant Design 的现代化管理面板，响应式设计\n- **实时终端** - 集成 Xterm.js 的 Web 终端，支持实时命令执行和日志查看\n- **资源监控** - 实时监控服务器资源使用情况和游戏实例状态\n- **权限管理** - 基于 JWT 的用户认证和权限控制系统\n- **多游戏支持** - 支持 40+ 款 Steam 游戏服务端，持续更新\n- **数据持久化** - 游戏数据和配置文件统一管理，安全可靠\n- **WebSocket 通信** - 实时双向通信，即时状态更新\n- **Python 集成** - 内置 Python 环境，支持游戏配置文件可视化编辑\n- **Docker 支持** - 完整的容器化部署方案，一键启动\n- **可视化配置** - 游戏配置文件的图形化编辑界面\n",
-      "lastModified": 2305928606,
+      "lastModified": 4153457223,
       "additionalProperties": {
         "name": "GSManager",
         "type": "website",
@@ -13441,9 +13441,9 @@
       },
       "versions": [
         {
-          "name": "3.13.24",
-          "lastModified": 2909925265,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/gsmanager/3.13.24/gsmanager-3.13.24.tar.gz",
+          "name": "3.13.26",
+          "lastModified": 3396905660,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/gsmanager/3.13.26/gsmanager-3.13.26.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -24563,7 +24563,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/nacos/logo.png",
       "name": "Nacos",
       "readMe": "## 使用说明\n\n### 服务地址\n\n- 访问地址: `http://IP:8848/nacos`\n- 用户名: `nacos`\n- 密码: `nacos`\n\n#### 如果是 nacos3.0+ 版本\n\n- 访问地址: `http://IP:8080/index.html`\n- 用户名: `nacos`\n- 密码: 首次打开会要求初始化管理员用户 nacos 的密码\n\n### 参数调优\n\n```bash\n- JVM_XMS=64m   # -Xms default :2g\n- JVM_XMX=64m   # -Xmx default :2g\n- JVM_XMN=16m   # -Xmn default :1g\n- JVM_MS=8m     # -XX:MetaspaceSize default :128m\n- JVM_MMS=8m    # -XX:MaxMetaspaceSize default :320m\n```\n\n## 产品介绍\n\n**Nacos** 是一个更易于构建云原生应用的动态服务发现、配置管理和服务管理平台。\n\n## 特色\n\n- **易用**：动态服务发现的一站式解决方案。配置管理和动态 DNS服务。提供 20 多项开箱即用的特性，适用于面向服务的架构。轻量级的生产就绪控制台。\n- **可靠**：无缝支持 Kubernetes 和 Spring Cloud，更容易在流行的公共云（例如阿里云和 AWS）上部署和运行，支持多租户和多环境。\n- **云原生**：源自阿里巴巴集团经过时间验证的内部产品。支持具有数百万服务规模的大型场景。开源产品并提供企业级的服务级别协议（SLA）。\n- **可扩展**：支持速率限制、大规模推广计划和多区域主动-主动架构。直接或稍作扩展支持各种相关的基于互联网的使用案例。流量调度和服务治理。\n",
-      "lastModified": 579423112,
+      "lastModified": 3564635175,
       "additionalProperties": {
         "name": "Nacos",
         "type": "website",
@@ -24603,9 +24603,9 @@
       },
       "versions": [
         {
-          "name": "3.2.3",
-          "lastModified": 1945463905,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/nacos/3.2.3/nacos-3.2.3.tar.gz",
+          "name": "3.2.4",
+          "lastModified": 1268218980,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/nacos/3.2.4/nacos-3.2.4.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -26634,7 +26634,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/nexus/logo.png",
       "name": "Nexus Repository",
       "readMe": "## 产品介绍\n\n**Nexus Repository** 是一个功能强大的软件仓库管理工具，用于支持软件开发和构建过程中的软件组件管理。\n\n## 主要功能\n\n- **存储和管理软件组件**：Nexus Repository 可以存储和管理各种软件组件，如库文件、Jar包、Docker 镜像、NPM包、Maven构建等。这使得团队能够轻松地将这些组件集中存储并进行版本控制。\n- **代理远程仓库**：Nexus Repository 允许代理远程仓库，以便在本地缓存远程仓库中的组件。这提高了构建速度，同时减少了对外部仓库的依赖性，提高了可用性。\n- **安全和权限管理**：Nexus Repository 提供了灵活的权限和安全控制，允许管理员为不同的用户和团队分配访问权限。这有助于保护关键的软件组件免受未经授权的访问和操纵。\n- **丰富的搜索和元数据**：工具提供了强大的搜索功能，以帮助用户快速找到所需的组件。此外，它还提供了丰富的元数据，帮助开发人员更好地理解和评估组件。\n- **构建和部署支持**：Nexus Repository 可以与各种构建工具和持续集成系统（如Maven、Gradle、Jenkins等）集成，从而简化了构建和部署软件的过程。\n- **定制化和扩展性**：它具有高度可定制性和扩展性，可以根据特定的团队和项目需求进行配置。用户可以编写自定义插件以扩展其功能。\n- **高可用性和可伸缩性**：Nexus Repository 可以部署为高可用性集群，并支持横向扩展，以满足不断增长的存储和用户需求。\n- **用户友好的界面**：工具提供了直观的用户界面，使管理员和开发人员能够轻松地管理和访问软件组件。\n",
-      "lastModified": 633604728,
+      "lastModified": 1686984696,
       "additionalProperties": {
         "name": "Nexus Repository",
         "type": "website",
@@ -26674,9 +26674,9 @@
       },
       "versions": [
         {
-          "name": "3.95.2",
-          "lastModified": 186817673,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/nexus/3.95.2/nexus-3.95.2.tar.gz",
+          "name": "3.95.3",
+          "lastModified": 3268874173,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/nexus/3.95.3/nexus-3.95.3.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -26918,7 +26918,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/nocobase/logo.png",
       "name": "NocoBase",
       "readMe": "## 产品介绍\n\n**NocoBase** 是一个极易扩展的开源无代码开发平台。 不必投入几年时间、数百万资金研发，花几分钟时间部署 NocoBase，马上拥有一个私有、可控、极易扩展的无代码开发平台。\n\n## 特性\n\n### 1. 数据模型驱动\n\n- 多数以表单、表格或者流程驱动的无代码产品都是在使用界面上直接创建数据结构，比如 Airtable 在表格里新增一列就是新增一个字段。这样的好处是使用简单，不足是功能和灵活性受限，难以满足较复杂场景的需求。\n- NocoBase 采用数据结构与使用界面分离的设计思路，可以为数据表创建任意数量、任意形态的区块（数据视图），每个区块里可以定义不同的样式、文案、操作。这样既兼顾了无代码的简单操作，又具备了原生开发的灵活性。\n\n### 2. 所见即所得\n\n- NocoBase 可以开发复杂和有特色的业务系统，但这并不意味着需要复杂和专业的操作。只需一次点击，就可以在使用界面上显示出配置选项，具备系统配置权限的管理员可以用所见即所得的操作方式，直接配置用户的使用界面。\n\n### 3. 一切皆插件\n\n- NocoBase 采用插件化架构，所有新功能都可以通过开发和安装插件来实现，扩展功能就像在手机上安装 APP 一样简单。\n",
-      "lastModified": 3319232366,
+      "lastModified": 3443268479,
       "additionalProperties": {
         "name": "NocoBase",
         "type": "website",
@@ -26958,9 +26958,9 @@
       },
       "versions": [
         {
-          "name": "2.2.2",
-          "lastModified": 3503706071,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/nocobase/2.2.2/nocobase-2.2.2.tar.gz",
+          "name": "2.2.3",
+          "lastModified": 2221101549,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/nocobase/2.2.3/nocobase-2.2.3.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -28154,7 +28154,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/ntfy/logo.png",
       "name": "ntfy",
       "readMe": "## 产品介绍\n\n**ntfy** 是一种基于 HTTP 的简单发布-订阅 通知服务。使用 ntfy，您可以通过任何计算机的 脚本将通知发送到您的手机或桌面，而无需注册或支付任何费用。\n\n## 主要功能\n\n- **多平台支持**：Ntfy 支持在不同平台上使用，包括 Android、iOS、Windows、Linux 和 macOS 等。\n- **多种传输方式**：通知可以通过 HTTP API、命令行工具、Email、WebSocket 等多种方式发送和接收。\n- **自托管**：用户可以选择将 Ntfy 部署在自己的服务器上，实现完全的控制和隐私保护。\n- **订阅模式**：Ntfy 允许用户订阅特定主题，从而只接收相关的通知。\n- **简单集成**：通过简单的 HTTP 请求，Ntfy 可以与各种应用和脚本轻松集成。\n- **实时通知**：支持即时通知，让用户能够第一时间收到重要信息。\n- **开放源代码**：Ntfy 是一个开源项目，用户可以查看源代码，进行自定义和扩展。\n",
-      "lastModified": 4140169336,
+      "lastModified": 2771288837,
       "additionalProperties": {
         "name": "ntfy",
         "type": "website",
@@ -28195,9 +28195,9 @@
       },
       "versions": [
         {
-          "name": "2.27.0",
-          "lastModified": 318421536,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/ntfy/2.27.0/ntfy-2.27.0.tar.gz",
+          "name": "2.28.0",
+          "lastModified": 1521570514,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/ntfy/2.28.0/ntfy-2.28.0.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -28944,7 +28944,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/ollama/logo.png",
       "name": "Ollama",
       "readMe": "## 使用说明\n\n> 进入 `容器` 列表，找到 Ollama 容器，点击进入终端运行并与 [DeepSeek R1](https://ollama.com/library/deepseek-r1) 聊天：\n\n```bash\nollama run deepseek-r1:1.5b\n```\n\n## 模型库\n\nOllama 支持 [ollama.com/library](https://ollama.com/library) 上提供的一系列模型\n\n> 注意：您应该至少有 8 GB 可用 RAM 来运行 7B 型号，16 GB 来运行 13B 型号，32 GB 来运行 33B 型号。\n\n## 产品介绍\n\n**Ollama** 是一个开源的大型语言模型服务，提供了类似 OpenAI 的 API 接口和聊天界面，可以非常方便地部署最新版本的 GPT 模型并通过接口使用。支持热加载模型文件，无需重新启动即可切换不同的模型。\n",
-      "lastModified": 3130142717,
+      "lastModified": 3215744042,
       "additionalProperties": {
         "name": "Ollama",
         "type": "website",
@@ -28985,9 +28985,9 @@
       },
       "versions": [
         {
-          "name": "0.33.0",
-          "lastModified": 4090937779,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/ollama/0.33.0/ollama-0.33.0.tar.gz",
+          "name": "0.33.1",
+          "lastModified": 3859782037,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/ollama/0.33.1/ollama-0.33.1.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -34507,7 +34507,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/portainer-ce/logo.png",
       "name": "Portainer-CE",
       "readMe": "## 产品介绍\n\n**Portainer CE（Community Edition）** 是一款用于容器管理的开源工具，它提供了用户友好的Web界面，用于管理和监控容器化应用程序。\n\n## 主要功能\n\n### 容器管理\n\n- **容器创建和启动**: Portainer CE 允许用户轻松创建、配置和启动容器。您可以选择从现有镜像创建容器，也可以导入自定义镜像。\n- **容器监控**: 通过直观的界面，您可以实时监视容器的状态、资源利用率和日志，帮助您快速发现问题并进行诊断。\n- **容器编排**: Portainer CE 支持 Docker Compose，允许您以声明性的方式定义多容器应用程序，并在单个项目中管理它们。\n\n### 映像管理\n\n- **镜像浏览和搜索**: 您可以轻松地浏览可用的Docker映像，并通过内置搜索功能查找所需的映像。\n- **镜像导入和导出**: 支持导入和导出Docker映像，以便在不同环境之间共享和备份应用程序。\n\n### 堆栈和服务\n\n- **堆栈管理**: Portainer CE 支持 Docker Swarm，允许您创建、管理和监视堆栈以部署分布式应用程序。\n- **服务管理**: 轻松管理Swarm服务，包括扩展、更新和滚动回滚等操作。\n\n### 用户和团队管理\n\n- **用户和权限**: 可以创建多个用户帐户，并为它们分配不同的权限，以便多人协作管理容器和应用程序。\n\n### 系统设置\n\n- **仪表板和监控**: Portainer CE 提供仪表板，用于展示主机和容器的关键性能指标，帮助您监视整个容器化环境。\n- **存储和网络配置**: 配置存储卷和网络设置，以便容器可以互相通信和访问外部资源。\n- **应用程序模板**: 支持应用程序模板，简化常见容器化应用程序的部署。\n\n### 日志和审计\n\n- **日志查看**: 轻松查看容器和服务的实时日志，有助于故障排除和监视。\n- **审计日志**: 记录用户操作，以便进行审计和安全性分析。\n",
-      "lastModified": 160241133,
+      "lastModified": 3159200499,
       "additionalProperties": {
         "name": "Portainer-CE",
         "type": "website",
@@ -34548,9 +34548,9 @@
       },
       "versions": [
         {
-          "name": "2.44.0-alpine",
-          "lastModified": 2178898558,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/portainer-ce/2.44.0-alpine/portainer-ce-2.44.0-alpine.tar.gz",
+          "name": "2.45.0-alpine",
+          "lastModified": 281097841,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/portainer-ce/2.45.0-alpine/portainer-ce-2.45.0-alpine.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -39836,6 +39836,83 @@
       ]
     },
     {
+      "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/samwaf/logo.png",
+      "name": "SamWaf",
+      "readMe": "SamWaf 是一款开源轻量级的 Web 应用防火墙，面向小型团队与家庭实验室，基于反向代理为站点提供防护。\n\n[源码](https://github.com/samwafgo/SamWaf) | [使用文档](https://github.com/samwafgo/SamWaf/wiki)\n\n## 特性\n\n- 反向代理接入，支持 HTTP/HTTPS 站点防护\n- IP 黑白名单、地域封禁（支持 iptables 封禁）\n- CC 攻击防御、自定义防护规则\n- TLS 证书管理与自动续期（ACME）\n- 内置日志与攻击分析\n\n## 端口说明\n\n| 端口 | 用途 |\n| --- | --- |\n| 26666 | 管理面板（首次访问初始化管理员账号） |\n| 80 / 443 | 站点反代端口，按需在安装时修改以避免端口冲突 |\n\n> [!NOTE]\n> 容器需要 `NET_ADMIN` 权限以支持基于 iptables 的 IP 封禁功能。\n\n本应用使用 [samwaf-docker](https://github.com/lanqiguoguo/samwaf-docker) 构建的多架构精简镜像（amd64/arm64）。\n",
+      "lastModified": 2460620299,
+      "additionalProperties": {
+        "name": "SamWaf",
+        "type": "website",
+        "tags": [
+          "Security",
+          "Local"
+        ],
+        "shortDescZh": "开源轻量级的 Web 应用防火墙，支持 IP 黑白名单、CC 防护、地域封禁与反向代理",
+        "shortDescEn": "A lightweight open-source Web Application Firewall with IP allow/block lists, CC protection, geo-restriction and reverse proxy",
+        "description": {
+          "en": "SamWaf is a lightweight, open-source Web Application Firewall designed for small teams and homelabs. It provides reverse-proxy based site protection with IP allow/block lists, CC attack defense, geographic blocking and TLS management.",
+          "zh": "SamWaf 是一款面向小型团队和家庭实验室的开源轻量级 Web 应用防火墙，基于反向代理为站点提供防护，支持 IP 黑白名单、CC 攻击防御、地域封禁与 TLS 证书管理。"
+        },
+        "key": "samwaf",
+        "Required": [],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 0,
+        "website": "https://github.com/samwafgo/SamWaf",
+        "github": "https://github.com/samwafgo/SamWaf",
+        "document": "https://github.com/samwafgo/SamWaf/wiki",
+        "version": 0,
+        "gpuSupport": false,
+        "architectures": [
+          "amd64",
+          "arm64"
+        ]
+      },
+      "versions": [
+        {
+          "name": "v1.3.24",
+          "lastModified": 1234539663,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/samwaf/v1.3.24/samwaf-v1.3.24.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": 26666,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Management panel port",
+                "labelZh": "管理面板端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              },
+              {
+                "default": 80,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTP1",
+                "labelEn": "HTTP proxy port",
+                "labelZh": "HTTP 代理端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              },
+              {
+                "default": 443,
+                "edit": true,
+                "envKey": "PANEL_APP_PORT_HTTPS2",
+                "labelEn": "HTTPS proxy port",
+                "labelZh": "HTTPS 代理端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number"
+              }
+            ],
+            "supportVersion": 0
+          }
+        }
+      ]
+    },
+    {
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/screego/logo.png",
       "name": "screego",
       "readMe": "## 产品介绍\n\n**Screego** 是一款开源的屏幕共享与协作工具，旨在促进无缝的远程沟通和团队协作。\n\n## 主要功能\n\n- **屏幕共享**：Screego 允许用户实时分享屏幕，非常适合进行演示、远程培训或团队协作。\n- **远程协助**：用户可以通过互联网查看和控制其他计算机的桌面，提供远程支持和协助。\n- **文件传输**：无需依赖第三方工具或云存储服务，轻松在本地计算机和远程计算机之间传输文件，确保高效的文档和数据共享。\n- **多平台支持**：Screego 支持包括 Windows、Linux 和 macOS 在内的多种操作系统，提供不同平台用户的灵活选择。\n- **安全性**：通过加密连接确保远程访问的安全性，保护用户的数据和隐私，使用安全协议防止未经授权的访问。\n- **简单易用的界面**：Screego 旨在提供直观的界面和简单的设置，使用户能够快速上手，轻松启动屏幕共享或远程会话。\n- **可定制和开源**：作为开源项目，Screego 提供了定制和扩展的选项，用户可以根据自己的需求进行定制，并参与到项目的持续开发中。\n",
@@ -41074,7 +41151,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/sqlbot/logo.png",
       "name": "SQLBot",
       "readMe": "## 默认账户密码\n\n用户名: `admin`\n密码: `SQLBot@123456`\n\n**扫码加入交流群**\n\n<img alt=\"扫码加入交流群\" src=\"https://resource-fit2cloud-com.oss-cn-hangzhou.aliyuncs.com/sqlbot/contact_me_qr.png\" width=\"150\" height=\"150\">\n\n## 产品介绍\n\n**SQLBot** 是一款基于大模型和 RAG 的智能问数系统。\n\n## 优势\n\n- **开箱即用**：只需配置大模型和数据源即可开启问数之旅，通过大模型和 RAG 的结合来实现高质量的 text2sql；\n- **易于集成**：支持快速嵌入到第三方业务系统，也支持被 n8n、MaxKB、Dify、Coze 等 AI 应用开发平台集成调用，让各类应用快速拥有智能问数能力；\n- **安全可控**：提供基于工作空间的资源隔离机制，能够实现细粒度的数据权限控制。\n",
-      "lastModified": 2262468032,
+      "lastModified": 3554190894,
       "additionalProperties": {
         "name": "SQLBot",
         "type": "website",
@@ -41113,9 +41190,9 @@
       },
       "versions": [
         {
-          "name": "1.10.0",
-          "lastModified": 3857172621,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/sqlbot/1.10.0/sqlbot-1.10.0.tar.gz",
+          "name": "1.10.1",
+          "lastModified": 3582930525,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/sqlbot/1.10.1/sqlbot-1.10.1.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -44078,7 +44155,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/twenty/logo.png",
       "name": "Twenty",
       "readMe": "## 产品介绍\n\n**Twenty** 是一个由社区驱动的现代化 CRM（客户关系管理）平台，是 Salesforce 的开源替代方案。它为团队提供了高效管理客户关系、销售流程和业务数据的能力。\n\n## 主要特征\n\n- **开源与社区驱动**：完全开源，拥有活跃的开发者和用户社区。\n- **现代化体验**：简洁直观的界面与高效的交互设计。\n- **灵活部署**：支持云端托管与本地自托管，满足不同业务需求。\n- **可扩展性强**：通过 API 和插件系统轻松扩展功能。\n",
-      "lastModified": 418227070,
+      "lastModified": 3883176027,
       "additionalProperties": {
         "name": "Twenty",
         "type": "website",
@@ -44117,9 +44194,9 @@
       },
       "versions": [
         {
-          "name": "2.34.0",
-          "lastModified": 229293520,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/twenty/2.34.0/twenty-2.34.0.tar.gz",
+          "name": "2.37.0",
+          "lastModified": 1863124107,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/twenty/2.37.0/twenty-2.37.0.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -46617,7 +46694,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/vector/logo.png",
       "name": "Vector",
       "readMe": "## 产品介绍\n\n**Vector** 是一款高性能、端到端的可观测性数据管道工具，可作为 Agent 或 Aggregator 部署，帮助你收集、转换并路由日志和指标数据，从而更好地掌控自己的可观测性数据。\n\n## 主要功能\n\n- **可靠**：基于 Rust 构建，官方将可靠性作为 Vector 的首要设计目标。\n- **端到端**：既可以作为 Agent 部署，也可以作为 Aggregator 部署。\n- **统一数据管道**：统一处理日志与指标数据，跟踪能力仍在持续演进中。\n- **灵活路由**：将日志和指标路由到你当前使用的厂商，也便于未来切换到其他厂商。\n- **典型用途**：可用于降低可观测性成本、提升数据质量、增强洞察，并减少多种代理并存带来的复杂度。\n",
-      "lastModified": 1398912369,
+      "lastModified": 3820522742,
       "additionalProperties": {
         "name": "Vector",
         "type": "tool",
@@ -46659,9 +46736,9 @@
       },
       "versions": [
         {
-          "name": "0.57.0-debian",
-          "lastModified": 4172115011,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/vector/0.57.0-debian/vector-0.57.0-debian.tar.gz",
+          "name": "0.58.0-debian",
+          "lastModified": 4265284815,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/vector/0.58.0-debian/vector-0.58.0-debian.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -46710,7 +46787,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/verdaccio/logo.png",
       "name": "Verdaccio",
       "readMe": "## 产品介绍\n\n**Verdaccio** 是一个简单的、**无需配置的本地私有 npm 注册表**。无需整个数据库即可开始使用！Verdaccio 开箱即用，带有 **自己的小型数据库**，并能够代理其他注册表（例如 npmjs.org），一路缓存下载的模块。对于那些希望扩展存储功能的用户，Verdaccio **支持各种社区制作的插件，可挂接 Amazon 的 s3、Google Cloud Storage 等服务**或创建您自己的插件。\n",
-      "lastModified": 3041807980,
+      "lastModified": 178623132,
       "additionalProperties": {
         "name": "Verdaccio",
         "type": "website",
@@ -46750,9 +46827,9 @@
       },
       "versions": [
         {
-          "name": "6.10.0",
-          "lastModified": 516867570,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/verdaccio/6.10.0/verdaccio-6.10.0.tar.gz",
+          "name": "6.10.1",
+          "lastModified": 2774776527,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/verdaccio/6.10.1/verdaccio-6.10.1.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
@@ -46923,8 +47000,8 @@
     {
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/vllm/logo.png",
       "name": "vLLM",
-      "readMe": "## 使用说明\n\n### NVIDIA 版本\n\n1. 在 `https://huggingface.co/` 注册账号并获取模型权限创建 token。\n2. 机器上有 NVIDIA GPU。\n3. 修改 `/etc/docker/daemon.json` 并增加：\n\n```json\n   \"runtimes\": {\n      \"nvidia\": {\n      \"path\": \"nvidia-container-runtime\",\n      \"runtimeArgs\": []\n      }\n   }\n```\n\n4. 安装 nvidia-container-runtime 和 nvidia-docker2 组件。\n\n### Ascend 310P 版本\n\n1. 宿主机需要已安装 Ascend 驱动/CANN，执行 `npu-smi info` 能正常看到 NPU。\n2. 确认宿主机存在 `/dev/davinci*`、`/dev/davinci_manager`、`/dev/devmm_svm`、`/dev/hisi_hdc` 等设备文件。\n3. Ascend 版本的 Compose 已经显式挂载 NPU 设备和驱动目录，不需要开启通用 GPU 配置。\n4. Atlas 300I DUO / Ascend 310P 不建议使用 `triton` 或 `triton-ascend`。如果遇到 `module 'triton' has no attribute 'language'`，请检查容器内是否残留相关包并卸载。\n5. 推荐优先使用 Qwen3 W8A8SC-310 适配模型；Qwen3.5/Qwen3.6 属于预览支持，需要按模型说明调整启动参数。\n\n## 产品介绍\n\n**vLLM** is a fast and easy-to-use library for LLM inference and serving.\n\nvLLM is fast with:\n\n- State-of-the-art serving throughput\n- Efficient management of attention key and value memory with **PagedAttention**\n- Continuous batching of incoming requests\n- Fast model execution with CUDA/HIP graph\n- Quantizations: [GPTQ](https://arxiv.org/abs/2210.17323), [AWQ](https://arxiv.org/abs/2306.00978), INT4, INT8, and FP8.\n- Optimized CUDA kernels, including integration with FlashAttention and FlashInfer.\n- Speculative decoding\n- Chunked prefill\n\n**Performance benchmark**: We include a [performance benchmark](https://buildkite.com/vllm/performance-benchmark/builds/4068) that compares the performance of vLLM against other LLM serving engines ([TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM), [text-generation-inference](https://github.com/huggingface/text-generation-inference) and [lmdeploy](https://github.com/InternLM/lmdeploy)).\n\nvLLM is flexible and easy to use with:\n\n- Seamless integration with popular Hugging Face models\n- High-throughput serving with various decoding algorithms, including *parallel sampling*, *beam search*, and more\n- Tensor parallelism and pipeline parallelism support for distributed inference\n- Streaming outputs\n- OpenAI-compatible API server\n- Support NVIDIA GPUs, AMD CPUs and GPUs, Intel CPUs and GPUs, PowerPC CPUs, TPU, and AWS Neuron.\n- Prefix caching support\n- Multi-lora support\n\nvLLM seamlessly supports most popular open-source models on HuggingFace, including:\n\n- Transformer-like LLMs (e.g., Llama)\n- Mixture-of-Expert LLMs (e.g., Mixtral)\n- Embedding Models (e.g. E5-Mistral)\n- Multi-modal LLMs (e.g., LLaVA)\n\nFind the full list of supported models [here](https://docs.vllm.ai/en/latest/models/supported_models.html).\n",
-      "lastModified": 2128680055,
+      "readMe": "## 使用说明\n\n### NVIDIA 版本\n\n1. 在 `https://huggingface.co/` 注册账号并获取模型权限创建 token。\n2. 机器上有 NVIDIA GPU。\n3. 修改 `/etc/docker/daemon.json` 并增加：\n\n```json\n   \"runtimes\": {\n      \"nvidia\": {\n      \"path\": \"nvidia-container-runtime\",\n      \"runtimeArgs\": []\n      }\n   }\n```\n\n4. 安装 nvidia-container-runtime 和 nvidia-docker2 组件。\n\n### NVIDIA GB10 DSpark 版本\n\n1. 仅适用于两台固定配置的 NVIDIA GB10 服务器，主节点为 `10.0.1.1`，工作节点为 `10.0.1.2`。\n2. 主节点必须能够免密 SSH 到 `10.0.1.2`，两台机器都需要安装 Docker、NVIDIA Container Toolkit，并提供可用的 RoCE/InfiniBand 设备。\n3. 两台机器都必须提前准备模型目录 `/opt/1panel/ai/DeepSeek-V4-Flash-0731`。\n4. 启动参数、网卡和节点地址保存在应用版本目录的 `.env`，双机启动和停止分别使用 `scripts/start.sh` 与 `scripts/stop.sh`。\n\n### Ascend 310P 版本\n\n1. 宿主机需要已安装 Ascend 驱动/CANN，执行 `npu-smi info` 能正常看到 NPU。\n2. 确认宿主机存在 `/dev/davinci*`、`/dev/davinci_manager`、`/dev/devmm_svm`、`/dev/hisi_hdc` 等设备文件。\n3. Ascend 版本的 Compose 已经显式挂载 NPU 设备和驱动目录，不需要开启通用 GPU 配置。\n4. Atlas 300I DUO / Ascend 310P 不建议使用 `triton` 或 `triton-ascend`。如果遇到 `module 'triton' has no attribute 'language'`，请检查容器内是否残留相关包并卸载。\n5. 推荐优先使用 Qwen3 W8A8SC-310 适配模型；Qwen3.5/Qwen3.6 属于预览支持，需要按模型说明调整启动参数。\n\n## 产品介绍\n\n**vLLM** is a fast and easy-to-use library for LLM inference and serving.\n\nvLLM is fast with:\n\n- State-of-the-art serving throughput\n- Efficient management of attention key and value memory with **PagedAttention**\n- Continuous batching of incoming requests\n- Fast model execution with CUDA/HIP graph\n- Quantizations: [GPTQ](https://arxiv.org/abs/2210.17323), [AWQ](https://arxiv.org/abs/2306.00978), INT4, INT8, and FP8.\n- Optimized CUDA kernels, including integration with FlashAttention and FlashInfer.\n- Speculative decoding\n- Chunked prefill\n\n**Performance benchmark**: We include a [performance benchmark](https://buildkite.com/vllm/performance-benchmark/builds/4068) that compares the performance of vLLM against other LLM serving engines ([TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM), [text-generation-inference](https://github.com/huggingface/text-generation-inference) and [lmdeploy](https://github.com/InternLM/lmdeploy)).\n\nvLLM is flexible and easy to use with:\n\n- Seamless integration with popular Hugging Face models\n- High-throughput serving with various decoding algorithms, including *parallel sampling*, *beam search*, and more\n- Tensor parallelism and pipeline parallelism support for distributed inference\n- Streaming outputs\n- OpenAI-compatible API server\n- Support NVIDIA GPUs, AMD CPUs and GPUs, Intel CPUs and GPUs, PowerPC CPUs, TPU, and AWS Neuron.\n- Prefix caching support\n- Multi-lora support\n\nvLLM seamlessly supports most popular open-source models on HuggingFace, including:\n\n- Transformer-like LLMs (e.g., Llama)\n- Mixture-of-Expert LLMs (e.g., Mixtral)\n- Embedding Models (e.g. E5-Mistral)\n- Multi-modal LLMs (e.g., LLaVA)\n\nFind the full list of supported models [here](https://docs.vllm.ai/en/latest/models/supported_models.html).\n",
+      "lastModified": 1481586005,
       "additionalProperties": {
         "name": "vLLM",
         "type": "tool",
@@ -47378,7 +47455,7 @@
         },
         {
           "name": "nvidia-0.27.1",
-          "lastModified": 3672322235,
+          "lastModified": 3439381549,
           "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/vllm/nvidia-0.27.1/vllm-nvidia-0.27.1.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
@@ -47445,6 +47522,65 @@
                   "zh": "Model",
                   "ko": "모델",
                   "tr": "Model adi"
+                }
+              }
+            ],
+            "supportVersion": 0
+          }
+        },
+        {
+          "name": "nvidia-gb10-dspark-0.1.1",
+          "lastModified": 1479369069,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/vllm/nvidia-gb10-dspark-0.1.1/vllm-nvidia-gb10-dspark-0.1.1.tar.gz",
+          "downloadCallBackUrl": "",
+          "additionalProperties": {
+            "formFields": [
+              {
+                "default": 8000,
+                "disabled": true,
+                "edit": false,
+                "envKey": "PANEL_APP_PORT_HTTP",
+                "labelEn": "Port",
+                "labelZh": "端口",
+                "required": true,
+                "rule": "paramPort",
+                "type": "number",
+                "label": {
+                  "en": "Port",
+                  "es-es": "Puerto",
+                  "fa": "پورت",
+                  "ja": "ポート",
+                  "lo": "ພອດ",
+                  "ms": "Port",
+                  "pt-br": "Porta",
+                  "ru": "Порт",
+                  "zh-Hant": "埠",
+                  "zh": "端口",
+                  "ko": "포트",
+                  "tr": "Bağlantı Noktası"
+                }
+              },
+              {
+                "default": "",
+                "edit": true,
+                "envKey": "VLLM_API_KEY",
+                "labelEn": "API Key",
+                "labelZh": "API Key",
+                "required": false,
+                "type": "password",
+                "label": {
+                  "en": "API Key",
+                  "es-es": "Clave API",
+                  "fa": "کلید API",
+                  "ja": "APIキー",
+                  "lo": "API Key",
+                  "ms": "Kunci API",
+                  "pt-br": "Chave da API",
+                  "ru": "API-ключ",
+                  "zh-Hant": "API 金鑰",
+                  "zh": "API Key",
+                  "ko": "API 키",
+                  "tr": "API Anahtarı"
                 }
               }
             ],
@@ -47899,7 +48035,7 @@
       "icon": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/web-check/logo.png",
       "name": "Web-Check",
       "readMe": "## 产品介绍\n\n**web-check** 是一个用于自动化检查和监控 Web 应用程序的工具。它可以用于验证网站的可用性、性能和内容的一致性，并在检测到问题时发出警报。\n\n## 主要功能\n\n1. **可用性监控**：持续监控网站的可用性，确保网站在用户访问时是可用的。\n2. **性能监控**：测量网站的加载时间和响应时间，帮助识别性能瓶颈。\n3. **内容验证**：检查页面内容的一致性，确保关键元素和文本始终按预期显示。\n4. **警报通知**：在检测到问题时，通过邮件、短信或其他通知方式发出警报。\n5. **易于配置**：通过简单的配置文件设置监控参数，无需复杂的编码。\n6. **可扩展性**：支持插件和自定义脚本，满足特定的监控需求。\n7. **报告生成**：生成详细的监控报告，帮助分析和追踪问题。\n",
-      "lastModified": 2262080307,
+      "lastModified": 1596707238,
       "additionalProperties": {
         "name": "Web-Check",
         "type": "website",
@@ -47939,9 +48075,9 @@
       },
       "versions": [
         {
-          "name": "2.2.3",
-          "lastModified": 879527850,
-          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/web-check/2.2.3/web-check-2.2.3.tar.gz",
+          "name": "2.2.4",
+          "lastModified": 633281039,
+          "downloadUrl": "https://raw.githubusercontent.com/lanqiguoguo/appstore/main/stable/1panel/web-check/2.2.4/web-check-2.2.4.tar.gz",
           "downloadCallBackUrl": "",
           "additionalProperties": {
             "formFields": [
